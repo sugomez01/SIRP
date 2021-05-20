@@ -22,6 +22,10 @@
         Me.Hide()
     End Sub
 
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+
+    End Sub
+
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         op = MessageBox.Show("¿Está seguro que desea salir del sistema?")
         If op = 6 Then
