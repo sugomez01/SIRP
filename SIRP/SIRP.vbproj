@@ -74,10 +74,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="conexion.vb" />
+    <Compile Include="IngresaDelincuente.Designer.vb">
+      <DependentUpon>IngresaDelincuente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IngresaDelincuente.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
     <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloReportes.Designer.vb">
+      <DependentUpon>ModuloReportes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloReportes.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -101,10 +113,21 @@
     <Compile Include="Principal.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SIRPDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIRPDataSet.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="IngresaDelincuente.resx">
+      <DependentUpon>IngresaDelincuente.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloReportes.resx">
+      <DependentUpon>ModuloReportes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -127,6 +150,17 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="SIRPDataSet.xsc">
+      <DependentUpon>SIRPDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SIRPDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SIRPDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SIRPDataSet.xss">
+      <DependentUpon>SIRPDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\LOGO.png" />

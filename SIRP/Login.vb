@@ -4,6 +4,7 @@ Public Class Login
     Dim conexion As conexion = New conexion()
 
 
+
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conexion.Conectar()
         ControlBox = False
@@ -17,17 +18,24 @@ Public Class Login
                 Dim contra As String = conexion.contrasena(txtUser.Text)
                 Dim tipoInstitucion As String = conexion.tipoInstitucion(txtUser.Text)
 
+
                 If contra = txtPass.Text Then
-                    MsgBox("Bienvenido a conexion")
+                    'MsgBox("Bienvenido a conexion")
                     If conexion.tipoUsuario(txtUser.Text) = 1 Then
-                        MsgBox("administrador y su institucion es" + tipoInstitucion)
+                        MsgBox("Usuario administrador general" + tipoInstitucion)
+                        id_int = CInt(tipoInstitucion)
                     ElseIf conexion.tipoUsuario(txtUser.Text) = 2 Then
-                        MsgBox("Jefe de Zona y su institucion es" + tipoInstitucion)
+                        MsgBox("Usuario admin institucional" + tipoInstitucion)
+                        id_int = CInt(tipoInstitucion)
+                    ElseIf conexion.tipoUsuario(txtUser.Text) = 3 Then
+                        MsgBox("Usuario Jefe de Zona" + tipoInstitucion)
+                        id_int = CInt(tipoInstitucion)
                     Else
-                        MsgBox("Operador´y su institucion es" + tipoInstitucion)
+                        MsgBox("Usuario Operador" + tipoInstitucion)
+                        id_int = CInt(tipoInstitucion)
                     End If
                 Else
-                    MsgBox("Usuario o contraseña Incorrectas" + txtPass.Text + " ** " + contra)
+                    MsgBox("Usuario o contraseña Incorrectas" + txtPass.Text)
 
                 End If
             End If
@@ -37,18 +45,11 @@ Public Class Login
 
     End Sub
 
-<<<<<<< HEAD
-    Private Sub Label3_Click(sender As Object, e As EventArgs)
-=======
-    Private Sub Label3_Click(sender As Object, e As EventArgs) 
->>>>>>> 70254a2f638ff4c8a3887eec2f5e21262f37ffc0
-
-    End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
-        op = MessageBox.Show("¿Está seguro que desea salir del sistema?")
-        If op = 6 Then
-            Me.Close()
+        op = MsgBox("¿Está seguro que desea salir de la aplicación?", MsgBoxStyle.YesNo, "Salir del programa")
+        If (op = 6) Then
+            End
         End If
     End Sub
 End Class

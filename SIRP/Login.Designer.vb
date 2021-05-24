@@ -23,33 +23,33 @@ Partial Class Login
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblUser = New System.Windows.Forms.Label()
+        Me.lblPass = New System.Windows.Forms.Label()
         Me.txtUser = New System.Windows.Forms.TextBox()
         Me.txtPass = New System.Windows.Forms.TextBox()
         Me.btnIngresar = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.picLogo = New System.Windows.Forms.PictureBox()
         Me.btnSalir = New System.Windows.Forms.Button()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Label1
+        'lblUser
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(277, 259)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(131, 17)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Nombre de Usuario"
+        Me.lblUser.AutoSize = True
+        Me.lblUser.Location = New System.Drawing.Point(277, 259)
+        Me.lblUser.Name = "lblUser"
+        Me.lblUser.Size = New System.Drawing.Size(131, 17)
+        Me.lblUser.TabIndex = 1
+        Me.lblUser.Text = "Nombre de Usuario"
         '
-        'Label2
+        'lblPass
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(277, 302)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(81, 17)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Contraseña"
+        Me.lblPass.AutoSize = True
+        Me.lblPass.Location = New System.Drawing.Point(277, 302)
+        Me.lblPass.Name = "lblPass"
+        Me.lblPass.Size = New System.Drawing.Size(81, 17)
+        Me.lblPass.TabIndex = 2
+        Me.lblPass.Text = "Contraseña"
         '
         'txtUser
         '
@@ -67,26 +67,26 @@ Partial Class Login
         '
         'btnIngresar
         '
-        Me.btnIngresar.Location = New System.Drawing.Point(514, 357)
+        Me.btnIngresar.Location = New System.Drawing.Point(514, 340)
         Me.btnIngresar.Name = "btnIngresar"
         Me.btnIngresar.Size = New System.Drawing.Size(93, 25)
         Me.btnIngresar.TabIndex = 5
         Me.btnIngresar.Text = "Ingresar"
         Me.btnIngresar.UseVisualStyleBackColor = True
         '
-        'PictureBox1
+        'picLogo
         '
-        Me.PictureBox1.BackgroundImage = Global.SIRP.My.Resources.Resources.LOGO
-        Me.PictureBox1.Location = New System.Drawing.Point(0, -1)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(490, 292)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
+        Me.picLogo.BackgroundImage = Global.SIRP.My.Resources.Resources.LOGO
+        Me.picLogo.Location = New System.Drawing.Point(0, -1)
+        Me.picLogo.Name = "picLogo"
+        Me.picLogo.Size = New System.Drawing.Size(490, 292)
+        Me.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.picLogo.TabIndex = 0
+        Me.picLogo.TabStop = False
         '
         'btnSalir
         '
-        Me.btnSalir.Location = New System.Drawing.Point(545, 12)
+        Me.btnSalir.Location = New System.Drawing.Point(12, 393)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(142, 25)
         Me.btnSalir.TabIndex = 6
@@ -102,24 +102,24 @@ Partial Class Login
         Me.Controls.Add(Me.btnIngresar)
         Me.Controls.Add(Me.txtPass)
         Me.Controls.Add(Me.txtUser)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.lblPass)
+        Me.Controls.Add(Me.lblUser)
+        Me.Controls.Add(Me.picLogo)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents picLogo As PictureBox
+    Friend WithEvents lblUser As Label
+    Friend WithEvents lblPass As Label
     Friend WithEvents txtUser As TextBox
     Friend WithEvents txtPass As TextBox
     Friend WithEvents btnIngresar As Button
