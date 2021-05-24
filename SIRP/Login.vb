@@ -24,6 +24,9 @@ Public Class Login
                     If conexion.tipoUsuario(txtUser.Text) = 1 Then
                         MsgBox("Usuario administrador general" + tipoInstitucion)
                         id_int = CInt(tipoInstitucion)
+                        cambiaImagen(id_int)
+                        Me.Hide()
+                        Principal.Show()
                     ElseIf conexion.tipoUsuario(txtUser.Text) = 2 Then
                         MsgBox("Usuario admin institucional" + tipoInstitucion)
                         id_int = CInt(tipoInstitucion)
@@ -43,6 +46,16 @@ Public Class Login
             MsgBox(ex.ToString)
         End Try
 
+    End Sub
+
+    Public Sub cambiaImagen(ByVal id As Integer)
+        If id = 1 Then
+            Principal.picPrincipal.Image = Image.FromFile("C:\Users\sgome\source\repos\sugomez01\SIRP\SIRP\Resources\carabineros.png")
+        ElseIf id = 2 Then
+            Principal.picPrincipal.Image = Image.FromFile("C:\Users\sgome\source\repos\sugomez01\SIRP\SIRP\Resources'os-10.png")
+        Else
+            Principal.picPrincipal.Image = Image.FromFile("C:\Users\sgome\source\repos\sugomez01\SIRP\SIRP\Resources\pdi.png")
+        End If
     End Sub
 
 
