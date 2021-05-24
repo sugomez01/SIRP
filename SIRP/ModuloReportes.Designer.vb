@@ -29,9 +29,6 @@ Partial Class ModuloReportes
         Me.VolverAlMeúPrincipalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirDelSistemaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.SIRPDataSet = New SIRP.SIRPDataSet()
-        Me.LdelincuenteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.L_delincuenteTableAdapter = New SIRP.SIRPDataSetTableAdapters.l_delincuenteTableAdapter()
         Me.RutdelincuenteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DescnombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DescapellidoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -43,11 +40,14 @@ Partial Class ModuloReportes
         Me.LidbandaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LidusuarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FechacreacionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LdelincuenteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SIRPDataSet = New SIRP.SIRPDataSet()
+        Me.L_delincuenteTableAdapter = New SIRP.SIRPDataSetTableAdapters.l_delincuenteTableAdapter()
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SIRPDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LdelincuenteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SIRPDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -56,21 +56,21 @@ Partial Class ModuloReportes
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpcionesToolStripMenuItem, Me.VolverToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1184, 30)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1184, 28)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'OpcionesToolStripMenuItem
         '
         Me.OpcionesToolStripMenuItem.Name = "OpcionesToolStripMenuItem"
-        Me.OpcionesToolStripMenuItem.Size = New System.Drawing.Size(85, 26)
+        Me.OpcionesToolStripMenuItem.Size = New System.Drawing.Size(85, 24)
         Me.OpcionesToolStripMenuItem.Text = "Opciones"
         '
         'VolverToolStripMenuItem
         '
         Me.VolverToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VolverAlMeúPrincipalToolStripMenuItem, Me.SalirDelSistemaToolStripMenuItem})
         Me.VolverToolStripMenuItem.Name = "VolverToolStripMenuItem"
-        Me.VolverToolStripMenuItem.Size = New System.Drawing.Size(64, 26)
+        Me.VolverToolStripMenuItem.Size = New System.Drawing.Size(64, 24)
         Me.VolverToolStripMenuItem.Text = "Volver"
         '
         'VolverAlMeúPrincipalToolStripMenuItem
@@ -97,20 +97,6 @@ Partial Class ModuloReportes
         Me.DataGridView1.RowTemplate.Height = 24
         Me.DataGridView1.Size = New System.Drawing.Size(1047, 235)
         Me.DataGridView1.TabIndex = 1
-        '
-        'SIRPDataSet
-        '
-        Me.SIRPDataSet.DataSetName = "SIRPDataSet"
-        Me.SIRPDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'LdelincuenteBindingSource
-        '
-        Me.LdelincuenteBindingSource.DataMember = "l_delincuente"
-        Me.LdelincuenteBindingSource.DataSource = Me.SIRPDataSet
-        '
-        'L_delincuenteTableAdapter
-        '
-        Me.L_delincuenteTableAdapter.ClearBeforeFill = True
         '
         'RutdelincuenteDataGridViewTextBoxColumn
         '
@@ -200,6 +186,20 @@ Partial Class ModuloReportes
         Me.FechacreacionDataGridViewTextBoxColumn.Name = "FechacreacionDataGridViewTextBoxColumn"
         Me.FechacreacionDataGridViewTextBoxColumn.Width = 125
         '
+        'LdelincuenteBindingSource
+        '
+        Me.LdelincuenteBindingSource.DataMember = "l_delincuente"
+        Me.LdelincuenteBindingSource.DataSource = Me.SIRPDataSet
+        '
+        'SIRPDataSet
+        '
+        Me.SIRPDataSet.DataSetName = "SIRPDataSet"
+        Me.SIRPDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'L_delincuenteTableAdapter
+        '
+        Me.L_delincuenteTableAdapter.ClearBeforeFill = True
+        '
         'lblTitulo
         '
         Me.lblTitulo.AutoSize = True
@@ -224,8 +224,8 @@ Partial Class ModuloReportes
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SIRPDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LdelincuenteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SIRPDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

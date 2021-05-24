@@ -62,7 +62,7 @@ Public Class Login
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         op = MsgBox("¿Está seguro que desea salir de la aplicación?", MsgBoxStyle.YesNo, "Salir del programa")
         If (op = 6) Then
-            End
+            Me.Close()
         End If
     End Sub
 End Class
