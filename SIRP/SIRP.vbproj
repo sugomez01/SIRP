@@ -74,14 +74,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="conexion.vb" />
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.vb" />
     <Compile Include="IngresaDelincuente.Designer.vb">
       <DependentUpon>IngresaDelincuente.vb</DependentUpon>
     </Compile>
     <Compile Include="IngresaDelincuente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IngresoDelito.Designer.vb">
+      <DependentUpon>IngresoDelito.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IngresoDelito.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.vb">
@@ -124,11 +126,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="IngresaDelincuente.resx">
       <DependentUpon>IngresaDelincuente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IngresoDelito.resx">
+      <DependentUpon>IngresoDelito.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
