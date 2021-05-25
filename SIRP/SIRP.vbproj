@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregaInstitucion.Designer.vb">
+      <DependentUpon>AgregaInstitucion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AgregaInstitucion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="conexion.vb" />
     <Compile Include="IngresaDelincuente.Designer.vb">
       <DependentUpon>IngresaDelincuente.vb</DependentUpon>
@@ -84,6 +90,12 @@
       <DependentUpon>IngresoDelito.vb</DependentUpon>
     </Compile>
     <Compile Include="IngresoDelito.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IngresoUsuario.Designer.vb">
+      <DependentUpon>IngresoUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IngresoUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.vb">
@@ -126,11 +138,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AgregaInstitucion.resx">
+      <DependentUpon>AgregaInstitucion.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IngresaDelincuente.resx">
       <DependentUpon>IngresaDelincuente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IngresoDelito.resx">
       <DependentUpon>IngresoDelito.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IngresoUsuario.resx">
+      <DependentUpon>IngresoUsuario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>

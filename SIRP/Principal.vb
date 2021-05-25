@@ -17,4 +17,9 @@
         Me.Close()
         Login.Show()
     End Sub
+
+    Private Sub RegistrarDelincuenteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistrarDelincuenteToolStripMenuItem.Click
+        IngresaDelincuente.Show()
+        Me.Close()
+    End Sub
 End Class

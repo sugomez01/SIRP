@@ -34,6 +34,7 @@ Partial Class Principal
         Me.EliminarInstituciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CerrarSesiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RegistrarDelincuenteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.picPrincipal, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -68,7 +69,7 @@ Partial Class Principal
         '
         'OpcionesToolStripMenuItem
         '
-        Me.OpcionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CrearUsuarioToolStripMenuItem, Me.CrearInstituciónToolStripMenuItem, Me.ToolStripSeparator1, Me.EliminarUsuarioToolStripMenuItem, Me.EliminarInstituciónToolStripMenuItem})
+        Me.OpcionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CrearUsuarioToolStripMenuItem, Me.CrearInstituciónToolStripMenuItem, Me.ToolStripSeparator1, Me.EliminarUsuarioToolStripMenuItem, Me.EliminarInstituciónToolStripMenuItem, Me.RegistrarDelincuenteToolStripMenuItem})
         Me.OpcionesToolStripMenuItem.Name = "OpcionesToolStripMenuItem"
         Me.OpcionesToolStripMenuItem.Size = New System.Drawing.Size(85, 24)
         Me.OpcionesToolStripMenuItem.Text = "Opciones"
@@ -76,30 +77,30 @@ Partial Class Principal
         'CrearUsuarioToolStripMenuItem
         '
         Me.CrearUsuarioToolStripMenuItem.Name = "CrearUsuarioToolStripMenuItem"
-        Me.CrearUsuarioToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.CrearUsuarioToolStripMenuItem.Size = New System.Drawing.Size(232, 26)
         Me.CrearUsuarioToolStripMenuItem.Text = "Crear usuario"
         '
         'CrearInstituciónToolStripMenuItem
         '
         Me.CrearInstituciónToolStripMenuItem.Name = "CrearInstituciónToolStripMenuItem"
-        Me.CrearInstituciónToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.CrearInstituciónToolStripMenuItem.Size = New System.Drawing.Size(232, 26)
         Me.CrearInstituciónToolStripMenuItem.Text = "Crear institución"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(221, 6)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(229, 6)
         '
         'EliminarUsuarioToolStripMenuItem
         '
         Me.EliminarUsuarioToolStripMenuItem.Name = "EliminarUsuarioToolStripMenuItem"
-        Me.EliminarUsuarioToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.EliminarUsuarioToolStripMenuItem.Size = New System.Drawing.Size(232, 26)
         Me.EliminarUsuarioToolStripMenuItem.Text = "Eliminar usuario"
         '
         'EliminarInstituciónToolStripMenuItem
         '
         Me.EliminarInstituciónToolStripMenuItem.Name = "EliminarInstituciónToolStripMenuItem"
-        Me.EliminarInstituciónToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.EliminarInstituciónToolStripMenuItem.Size = New System.Drawing.Size(232, 26)
         Me.EliminarInstituciónToolStripMenuItem.Text = "Eliminar institución"
         '
         'SalirToolStripMenuItem
@@ -112,8 +113,14 @@ Partial Class Principal
         'CerrarSesiónToolStripMenuItem
         '
         Me.CerrarSesiónToolStripMenuItem.Name = "CerrarSesiónToolStripMenuItem"
-        Me.CerrarSesiónToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.CerrarSesiónToolStripMenuItem.Size = New System.Drawing.Size(179, 26)
         Me.CerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión"
+        '
+        'RegistrarDelincuenteToolStripMenuItem
+        '
+        Me.RegistrarDelincuenteToolStripMenuItem.Name = "RegistrarDelincuenteToolStripMenuItem"
+        Me.RegistrarDelincuenteToolStripMenuItem.Size = New System.Drawing.Size(232, 26)
+        Me.RegistrarDelincuenteToolStripMenuItem.Text = "Registrar delincuente"
         '
         'Principal
         '
@@ -147,4 +154,5 @@ Partial Class Principal
     Friend WithEvents EliminarInstituciónToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CerrarSesiónToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RegistrarDelincuenteToolStripMenuItem As ToolStripMenuItem
 End Class

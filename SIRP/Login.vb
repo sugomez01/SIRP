@@ -34,8 +34,10 @@ Public Class Login
                         MsgBox("Usuario Jefe de Zona" + tipoInstitucion)
                         id_int = CInt(tipoInstitucion)
                     Else
-                        MsgBox("Usuario Operador" + tipoInstitucion)
+                        'MsgBox("Usuario Operador" + tipoInstitucion)
                         id_int = CInt(tipoInstitucion)
+                        Principal.Show()
+                        Me.Hide()
                     End If
                 Else
                     MsgBox("Usuario o contraseña Incorrectas" + txtPass.Text)
