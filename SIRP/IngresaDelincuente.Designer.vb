@@ -58,7 +58,8 @@ Partial Class IngresaDelincuente
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpcionesToolStripMenuItem, Me.VolverToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(648, 30)
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
+        Me.MenuStrip1.Size = New System.Drawing.Size(486, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -66,59 +67,60 @@ Partial Class IngresaDelincuente
         '
         Me.OpcionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IngresarDelincuenteToolStripMenuItem, Me.ActualizarDatosDelincuenteToolStripMenuItem, Me.IngresarDelitoCometidoToolStripMenuItem, Me.IngresarUltimaVezVistoToolStripMenuItem})
         Me.OpcionesToolStripMenuItem.Name = "OpcionesToolStripMenuItem"
-        Me.OpcionesToolStripMenuItem.Size = New System.Drawing.Size(85, 26)
+        Me.OpcionesToolStripMenuItem.Size = New System.Drawing.Size(69, 20)
         Me.OpcionesToolStripMenuItem.Text = "Opciones"
         '
         'IngresarDelincuenteToolStripMenuItem
         '
         Me.IngresarDelincuenteToolStripMenuItem.Name = "IngresarDelincuenteToolStripMenuItem"
-        Me.IngresarDelincuenteToolStripMenuItem.Size = New System.Drawing.Size(282, 26)
+        Me.IngresarDelincuenteToolStripMenuItem.Size = New System.Drawing.Size(224, 22)
         Me.IngresarDelincuenteToolStripMenuItem.Text = "Ingresar Delincuente"
         '
         'ActualizarDatosDelincuenteToolStripMenuItem
         '
         Me.ActualizarDatosDelincuenteToolStripMenuItem.Name = "ActualizarDatosDelincuenteToolStripMenuItem"
-        Me.ActualizarDatosDelincuenteToolStripMenuItem.Size = New System.Drawing.Size(282, 26)
+        Me.ActualizarDatosDelincuenteToolStripMenuItem.Size = New System.Drawing.Size(224, 22)
         Me.ActualizarDatosDelincuenteToolStripMenuItem.Text = "Actualizar datos Delincuente"
         '
         'IngresarDelitoCometidoToolStripMenuItem
         '
         Me.IngresarDelitoCometidoToolStripMenuItem.Name = "IngresarDelitoCometidoToolStripMenuItem"
-        Me.IngresarDelitoCometidoToolStripMenuItem.Size = New System.Drawing.Size(282, 26)
+        Me.IngresarDelitoCometidoToolStripMenuItem.Size = New System.Drawing.Size(224, 22)
         Me.IngresarDelitoCometidoToolStripMenuItem.Text = "Ingresar Delito cometido"
         '
         'IngresarUltimaVezVistoToolStripMenuItem
         '
         Me.IngresarUltimaVezVistoToolStripMenuItem.Name = "IngresarUltimaVezVistoToolStripMenuItem"
-        Me.IngresarUltimaVezVistoToolStripMenuItem.Size = New System.Drawing.Size(282, 26)
+        Me.IngresarUltimaVezVistoToolStripMenuItem.Size = New System.Drawing.Size(224, 22)
         Me.IngresarUltimaVezVistoToolStripMenuItem.Text = "Ingresar ultima vez visto"
         '
         'VolverToolStripMenuItem
         '
         Me.VolverToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VolverAlMeúPrincipalToolStripMenuItem, Me.SalirDelSistemaToolStripMenuItem})
         Me.VolverToolStripMenuItem.Name = "VolverToolStripMenuItem"
-        Me.VolverToolStripMenuItem.Size = New System.Drawing.Size(64, 26)
+        Me.VolverToolStripMenuItem.Size = New System.Drawing.Size(51, 20)
         Me.VolverToolStripMenuItem.Text = "Volver"
         '
         'VolverAlMeúPrincipalToolStripMenuItem
         '
         Me.VolverAlMeúPrincipalToolStripMenuItem.Name = "VolverAlMeúPrincipalToolStripMenuItem"
-        Me.VolverAlMeúPrincipalToolStripMenuItem.Size = New System.Drawing.Size(244, 26)
+        Me.VolverAlMeúPrincipalToolStripMenuItem.Size = New System.Drawing.Size(194, 22)
         Me.VolverAlMeúPrincipalToolStripMenuItem.Text = "Volver al meú principal"
         '
         'SalirDelSistemaToolStripMenuItem
         '
         Me.SalirDelSistemaToolStripMenuItem.Name = "SalirDelSistemaToolStripMenuItem"
-        Me.SalirDelSistemaToolStripMenuItem.Size = New System.Drawing.Size(244, 26)
+        Me.SalirDelSistemaToolStripMenuItem.Size = New System.Drawing.Size(194, 22)
         Me.SalirDelSistemaToolStripMenuItem.Text = "Salir del sistema"
         '
         'lblNombre
         '
         Me.lblNombre.AutoSize = True
         Me.lblNombre.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNombre.Location = New System.Drawing.Point(105, 119)
+        Me.lblNombre.Location = New System.Drawing.Point(79, 97)
+        Me.lblNombre.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblNombre.Name = "lblNombre"
-        Me.lblNombre.Size = New System.Drawing.Size(81, 23)
+        Me.lblNombre.Size = New System.Drawing.Size(65, 18)
         Me.lblNombre.TabIndex = 1
         Me.lblNombre.Text = "Nombres"
         '
@@ -126,27 +128,30 @@ Partial Class IngresaDelincuente
         '
         Me.lblTitulo.AutoSize = True
         Me.lblTitulo.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitulo.Location = New System.Drawing.Point(149, 44)
+        Me.lblTitulo.Location = New System.Drawing.Point(112, 36)
+        Me.lblTitulo.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblTitulo.Name = "lblTitulo"
-        Me.lblTitulo.Size = New System.Drawing.Size(336, 29)
+        Me.lblTitulo.Size = New System.Drawing.Size(268, 23)
         Me.lblTitulo.TabIndex = 2
         Me.lblTitulo.Text = "Módulo Ingreso de Delincuentes"
         '
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(340, 114)
+        Me.TextBox1.Location = New System.Drawing.Point(255, 93)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(215, 29)
+        Me.TextBox1.Size = New System.Drawing.Size(162, 25)
         Me.TextBox1.TabIndex = 3
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(105, 158)
+        Me.Label1.Location = New System.Drawing.Point(79, 128)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(80, 23)
+        Me.Label1.Size = New System.Drawing.Size(67, 18)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Apellidos"
         '
@@ -154,9 +159,10 @@ Partial Class IngresaDelincuente
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(105, 197)
+        Me.Label2.Location = New System.Drawing.Point(79, 160)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(36, 23)
+        Me.Label2.Size = New System.Drawing.Size(29, 18)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "Rut"
         '
@@ -164,9 +170,10 @@ Partial Class IngresaDelincuente
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(105, 238)
+        Me.Label3.Location = New System.Drawing.Point(79, 193)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(61, 23)
+        Me.Label3.Size = New System.Drawing.Size(49, 18)
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "Apodo"
         '
@@ -174,9 +181,10 @@ Partial Class IngresaDelincuente
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(105, 285)
+        Me.Label4.Location = New System.Drawing.Point(79, 232)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(81, 23)
+        Me.Label4.Size = New System.Drawing.Size(67, 18)
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "Domicilio"
         '
@@ -184,9 +192,10 @@ Partial Class IngresaDelincuente
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(105, 329)
+        Me.Label5.Location = New System.Drawing.Point(79, 267)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(75, 23)
+        Me.Label5.Size = New System.Drawing.Size(63, 18)
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Teléfono"
         '
@@ -194,9 +203,10 @@ Partial Class IngresaDelincuente
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(105, 379)
+        Me.Label6.Location = New System.Drawing.Point(79, 308)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(167, 23)
+        Me.Label6.Size = New System.Drawing.Size(136, 18)
         Me.Label6.TabIndex = 9
         Me.Label6.Text = "Fecha de nacimiento"
         '
@@ -204,9 +214,10 @@ Partial Class IngresaDelincuente
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(105, 422)
+        Me.Label7.Location = New System.Drawing.Point(79, 343)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(62, 23)
+        Me.Label7.Size = New System.Drawing.Size(49, 18)
         Me.Label7.TabIndex = 10
         Me.Label7.Text = "Estado"
         '
@@ -215,74 +226,82 @@ Partial Class IngresaDelincuente
         Me.ComboBox1.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Libre", "Preso", "Orden de Arresto"})
-        Me.ComboBox1.Location = New System.Drawing.Point(340, 419)
+        Me.ComboBox1.Location = New System.Drawing.Point(255, 340)
+        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(215, 30)
+        Me.ComboBox1.Size = New System.Drawing.Size(162, 25)
         Me.ComboBox1.TabIndex = 11
         '
         'DateTimePicker1
         '
         Me.DateTimePicker1.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker1.Location = New System.Drawing.Point(340, 374)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(255, 304)
+        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(215, 29)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(162, 25)
         Me.DateTimePicker1.TabIndex = 12
         '
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(340, 155)
+        Me.TextBox2.Location = New System.Drawing.Point(255, 126)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(215, 29)
+        Me.TextBox2.Size = New System.Drawing.Size(162, 25)
         Me.TextBox2.TabIndex = 13
         '
         'TextBox3
         '
         Me.TextBox3.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(340, 194)
+        Me.TextBox3.Location = New System.Drawing.Point(255, 158)
+        Me.TextBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(215, 29)
+        Me.TextBox3.Size = New System.Drawing.Size(162, 25)
         Me.TextBox3.TabIndex = 14
         '
         'TextBox4
         '
         Me.TextBox4.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(340, 235)
+        Me.TextBox4.Location = New System.Drawing.Point(255, 191)
+        Me.TextBox4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(215, 29)
+        Me.TextBox4.Size = New System.Drawing.Size(162, 25)
         Me.TextBox4.TabIndex = 15
         '
         'TextBox5
         '
         Me.TextBox5.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(340, 282)
+        Me.TextBox5.Location = New System.Drawing.Point(255, 229)
+        Me.TextBox5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(215, 29)
+        Me.TextBox5.Size = New System.Drawing.Size(162, 25)
         Me.TextBox5.TabIndex = 16
         '
         'TextBox6
         '
         Me.TextBox6.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(340, 326)
+        Me.TextBox6.Location = New System.Drawing.Point(255, 265)
+        Me.TextBox6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(215, 29)
+        Me.TextBox6.Size = New System.Drawing.Size(162, 25)
         Me.TextBox6.TabIndex = 17
         '
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(447, 492)
+        Me.Button1.Location = New System.Drawing.Point(335, 400)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(108, 29)
+        Me.Button1.Size = New System.Drawing.Size(81, 24)
         Me.Button1.TabIndex = 18
         Me.Button1.Text = "&Registrar"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'IngresaDelincuente
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(648, 533)
+        Me.ClientSize = New System.Drawing.Size(486, 433)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBox6)
         Me.Controls.Add(Me.TextBox5)
@@ -303,6 +322,7 @@ Partial Class IngresaDelincuente
         Me.Controls.Add(Me.lblNombre)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "IngresaDelincuente"
         Me.Text = "Ingreso de Delincuente"
         Me.MenuStrip1.ResumeLayout(False)
