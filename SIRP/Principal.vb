@@ -28,7 +28,7 @@
     End Sub
 
     Public Sub bienvenidaUser()
-
+        lblBienvenido.Text = "Bienvenid@ " + Login.nombre + " " + Login.apellido
     End Sub
 
 
