@@ -57,6 +57,8 @@ Public Class Login
                 pass = dr.Item("password")
                 id_int = dr.Item("l_id_institucion")
                 id_tip_user = dr.Item("l_id_tipo_user")
+            Else
+                resultado = False
             End If
             dr.Close()
         Catch ex As Exception
@@ -73,6 +75,8 @@ Public Class Login
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
         If txtUser.Text = "" Or txtPass.Text = "" Then
             MsgBox("Debe ingresar datos")
+            txtUser.Clear()
+            txtPass.Clear()
         Else
             Try
                 If usuarioRegistrado(txtUser.Text) = True Then
@@ -96,6 +100,8 @@ Public Class Login
                         txtUser.Clear()
                         txtPass.Clear()
                     End If
+                Else
+                    MsgBox("Usuario no existe")
                 End If
             Catch ex As Exception
                 MsgBox(ex.ToString)
