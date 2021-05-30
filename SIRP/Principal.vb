@@ -6,8 +6,8 @@ Public Class Principal
 
     'Ruta para conectar a la DB
     'descomentar segun pc
-    'Public conn As SqlConnection = New SqlConnection("Data Source=LAPTOP-6GF7OE4K;Initial Catalog=SIRP;Integrated Security=True")
-    Public conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-EUII0N8;User ID=sa;Password=sasa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
+    Public conn As SqlConnection = New SqlConnection("Data Source=LAPTOP-6GF7OE4K;Initial Catalog=SIRP;Integrated Security=True")
+    'Public conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-EUII0N8;User ID=sa;Password=sasa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
 
     'declaracion de variables para realizar consultas SQL
     Private cmb As SqlCommandBuilder
@@ -61,7 +61,7 @@ Public Class Principal
 
     Private Sub Principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ControlBox = False
-        bienvenidaUser(id_int)
+        '  bienvenidaUser(id_int)
     End Sub
 
     Private Sub CerrarSesiónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CerrarSesiónToolStripMenuItem.Click
@@ -74,17 +74,17 @@ Public Class Principal
         Me.Close()
     End Sub
 
-    Public Sub bienvenidaUser(ByVal id As Integer)
-        usuarioRegistrado(Login.txtUser.Text)
-
-        lblBienvenido.Text = "Bienvenid@ " + nombre + " " + apellido
-        If id = 1 Then
-            picPrincipal.Image = Image.FromFile("C:\Users\sgome\source\repos\sugomez01\SIRP\SIRP\Resources\carabineros.png")
-        ElseIf id = 2 Then
-            picPrincipal.Image = Image.FromFile("C:\Users\sgome\source\repos\sugomez01\SIRP\SIRP\Resources'os-10.png")
-        Else
-            picPrincipal.Image = Image.FromFile("C:\Users\sgome\source\repos\sugomez01\SIRP\SIRP\Resources\pdi.png")
-        End If
-    End Sub
+    '   Public Sub bienvenidaUser(ByVal id As Integer)
+    '       usuarioRegistrado(Login.txtUser.Text)
+    '
+    '        lblBienvenido.Text = "Bienvenid@ " + nombre + " " + apellido
+    '    If id = 1 Then
+    '            picPrincipal.Image = Image.FromFile("C:\Users\sgome\source\repos\sugomez01\SIRP\SIRP\Resources\carabineros.png")
+    '    ElseIf id = 2 Then
+    '            picPrincipal.Image = Image.FromFile("C:\Users\sgome\source\repos\sugomez01\SIRP\SIRP\Resources'os-10.png")
+    '    Else
+    '            picPrincipal.Image = Image.FromFile("C:\Users\sgome\source\repos\sugomez01\SIRP\SIRP\Resources\pdi.png")
+    '    End If
+    '    End Sub
 
 End Class
