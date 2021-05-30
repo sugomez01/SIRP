@@ -78,7 +78,7 @@ Partial Class IngresoUsuario
         'IngresarInstituciónToolStripMenuItem
         '
         Me.IngresarInstituciónToolStripMenuItem.Name = "IngresarInstituciónToolStripMenuItem"
-        Me.IngresarInstituciónToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.IngresarInstituciónToolStripMenuItem.Size = New System.Drawing.Size(217, 26)
         Me.IngresarInstituciónToolStripMenuItem.Text = "Ingresar Institución"
         '
         'VolverToolStripMenuItem

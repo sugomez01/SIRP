@@ -8,4 +8,5 @@
         IngresoDelito.Show()
         Me.Close()
     End Sub
+
 End Class

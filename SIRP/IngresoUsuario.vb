@@ -2,7 +2,7 @@
 Public Class IngresoUsuario
 
     Dim id_user, id_int, id_tip_user, op As Integer
-    Dim pass, nombre, apellido As String
+    Dim pass, nombre, apellido, rut As String
 
     'Ruta para conectar a la DB
     'descomentar segun pc
@@ -44,33 +44,67 @@ Public Class IngresoUsuario
         id_tip_user = cmbTipo.SelectedValue()
     End Sub
 
+    Private Sub txtNomb_TextChanged(sender As Object, e As EventArgs) Handles txtNomb.TextChanged
+
+    End Sub
+
     Private Sub IngresoUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ControlBox = False
+        txtPass.PasswordChar = "*"
         llenaCombo()
     End Sub
 
-    Private Sub btnIngresa_Click(sender As Object, e As EventArgs) Handles btnIngresa.Click
-        Dim insert As String
-        insert = "insert into l_usuario values ('" + txtUser.Text + "','" + txtPass.Text + "','" + txtRut.Text + "','" + txtNomb.Text + "','" + txtApe.Text + "'," + id_int.ToString + "," + id_tip_user.ToString + ",getDate())"
+    Private Sub txtApe_TextChanged(sender As Object, e As EventArgs) Handles txtApe.TextChanged
 
-        If (Insertar(insert)) Then
-            MsgBox("Registro ingresado exitosamente!",, "Registro existoso")
-            op = MsgBox("¿Desea ingresar otra institución?", MsgBoxStyle.YesNo, "Confirmación")
-            If (op = 6) Then
-                txtNomb.Clear()
-                txtApe.Clear()
-                txtPass.Clear()
+    End Sub
+
+    Private Sub btnIngresa_Click(sender As Object, e As EventArgs) Handles btnIngresa.Click
+
+
+
+        If txtNomb.Text = "" Or txtApe.Text = "" Or txtPass.Text = "" Or txtRut.Text = "" Or txtUser.Text = "" Then
+            MsgBox("Debe completar todos los campos!",, "Error")
+        Else
+
+
+            Dim insert, consulta As String
+
+            consulta = "select rut_usuario,username from l_usuario where rut_usuario='" + rut + "' or username='" + txtUser.Text + "'"
+            insert = "insert into l_usuario values ('" + txtUser.Text + "','" + txtPass.Text + "','" + txtRut.Text + "','" + txtNomb.Text + "','" + txtApe.Text + "'," + id_int.ToString + "," + id_tip_user.ToString + ",getDate())"
+
+            If validaRegistro(consulta) = False Then
+                If (Insertar(insert)) Then
+                    MsgBox("Registro ingresado exitosamente!",, "Registro existoso")
+                    op = MsgBox("¿Desea ingresar otra institución?", MsgBoxStyle.YesNo, "Confirmación")
+                    If (op = 6) Then
+                        txtNomb.Clear()
+                        txtApe.Clear()
+                        txtPass.Clear()
+                        txtRut.Clear()
+                        txtUser.Clear()
+                        cmbIns.SelectedIndex = 0
+                        cmbTipo.SelectedIndex = 0
+                    Else
+                        Principal.Show()
+                        Me.Close()
+                    End If
+                Else
+                    MsgBox("Error al ingresar usuario",, "Error")
+                End If
+            Else
+                MsgBox("Rut o nombre de usuario ya existe",, "Error")
                 txtRut.Clear()
                 txtUser.Clear()
-            Else
-                Principal.Show()
-                Me.Close()
             End If
-        Else
-            MsgBox("Error al ingresar institución",, "Error")
         End If
     End Sub
 
+    Private Sub txtRut_TextChanged(sender As Object, e As EventArgs) Handles txtRut.TextChanged
+
+        If txtRut.TextLength = 8 Then txtRut.Text = ValidaRut(txtRut.Text)
+
+        rut = txtRut.Text
+    End Sub
 
     'Metodo de Conexión a la DB
     Public Sub Conectar()
@@ -81,6 +115,10 @@ Public Class IngresoUsuario
         Finally
             conn.Close()
         End Try
+    End Sub
+
+    Private Sub txtPass_TextChanged(sender As Object, e As EventArgs) Handles txtPass.TextChanged
+
     End Sub
 
     'Funcion para insertar institucion
@@ -117,5 +155,98 @@ Public Class IngresoUsuario
 
     End Sub
 
+    Private Sub txtNomb_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNomb.KeyPress
+
+        If Char.IsLetter(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+            MsgBox("Solo puede ingresar letras")
+        End If
+    End Sub
+
+    Private Sub txtApe_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtApe.KeyPress
+        If Char.IsLetter(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+            MsgBox("Solo puede ingresar letras")
+        End If
+    End Sub
+
+    Private Sub txtUser_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtUser.KeyPress
+        If Char.IsLetter(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+            MsgBox("Solo puede ingresar letras")
+        End If
+    End Sub
+
+    Private Sub txtPass_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPass.KeyPress
+        If Char.IsLetter(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = True
+            MsgBox("No debe ingresar espacios")
+        Else
+            e.Handled = False
+
+        End If
+    End Sub
+
+    Public Function ValidaRut(ByVal ElNumero As String) As String
+        Dim Resultado As String = ""
+        Dim Multiplicador As Integer = 2
+        Dim iNum As Integer = 0
+        Dim Suma As Integer = 0
+
+        For i As Integer = 8 To 1 Step -1
+            iNum = Mid(ElNumero, i, 1)
+            Suma += iNum * Multiplicador
+            Multiplicador += 1
+            If Multiplicador = 8 Then Multiplicador = 2
+        Next
+        Resultado = CStr(11 - (Suma Mod 11))
+        If Resultado = "10" Then Resultado = "K"
+        If Resultado = "11" Then Resultado = "0"
+        Return ElNumero & "-" & Resultado
+    End Function
+
+
+    'valida insert que los datos no existan en la db
+    Function validaRegistro(ByVal sql)
+        conn.Close()
+        conn.Open()
+        Dim resultado As Boolean = False
+
+        Try
+            comando = New SqlCommand(sql, conn)
+            dr = comando.ExecuteReader
+            If dr.Read Then
+                resultado = True
+            End If
+            dr.Close()
+        Catch ex As Exception
+            MsgBox("Error en el procedimiento : " + ex.ToString)
+        End Try
+
+        Return resultado
+
+    End Function
 
 End Class
