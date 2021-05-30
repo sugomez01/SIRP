@@ -10,6 +10,8 @@ Public Class IngresoDelito
     Dim id_comuna As Integer
     Dim fechaingreso As DateTime
     Dim detalle As String
+    Dim rut As String
+    Dim op As Integer
 
     Public conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-EUII0N8;User ID=sa;Password=sasa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
     'Public conn As SqlConnection = New SqlConnection("Data Source=LAPTOP-6GF7OE4K;Initial Catalog=SIRP;Integrated Security=True")
@@ -59,7 +61,8 @@ Public Class IngresoDelito
 
     Private Sub dtpFechaDelito_ValueChanged(sender As Object, e As EventArgs) Handles dtpFechaDelito.ValueChanged
 
-        fechaingreso = dtpFechaDelito.Value.Date
+        fechaingreso = dtpFechaDelito.Value.ToString()
+
 
     End Sub
 
@@ -81,16 +84,44 @@ Public Class IngresoDelito
 
     End Sub
 
+
+    Private Sub txtRut_TextChanged(sender As Object, e As EventArgs) Handles txtRut.TextChanged
+
+        If txtRut.TextLength = 8 Then txtRut.Text = ValidaRut(txtRut.Text)
+
+        rut = txtRut.Text
+
+    End Sub
+
+    Private Sub txtRut_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtRut.KeyPress
+        e.Handled = ValidaChar(e.KeyChar)
+    End Sub
+
+    Public Function ValidaChar(ByVal car As Char) As Boolean
+        ' sólo admitimos números y tecla retroceso
+        If Char.IsNumber(car, 0) = True Or Char.IsControl(car) = True Then
+            Return (False)
+        Else
+            Return (True)
+        End If
+    End Function
+
+    Private Sub txtDetalle_TextChanged(sender As Object, e As EventArgs) Handles txtDetalle.TextChanged
+
+        detalle = txtDetalle.Text
+
+    End Sub
+
     Public Sub llenaDelito()
 
-        comando = New SqlCommand("select * from l_usuario", conn)
+        comando = New SqlCommand("select * from l_delito", conn)
         ' dr = comando.ExecuteReader
         da = New SqlDataAdapter(comando)
         dt = New DataTable()
         da.Fill(dt)
 
-        ComboBox1.DisplayMember = "username"
-        ComboBox1.ValueMember = "id_usuario"
+        ComboBox1.DisplayMember = "desc_delito"
+        ComboBox1.ValueMember = "id_delito"
         ComboBox1.DataSource = dt
 
         'MsgBox(dt)
@@ -99,7 +130,7 @@ Public Class IngresoDelito
 
     Public Sub llenaBanda()
 
-        comando = New SqlCommand("select * from l_banda", conn)
+        comando = New SqlCommand("select * from l_banda where l_id_institucion = " + Login.id_int + "", conn)
         ' dr = comando.ExecuteReader
         da = New SqlDataAdapter(comando)
         dt = New DataTable()
@@ -115,7 +146,7 @@ Public Class IngresoDelito
 
     Public Sub llenaSector()
 
-        comando = New SqlCommand("select * from l_sector", conn)
+        comando = New SqlCommand("select * from l_sector where l_id_institucion = " + Login.id_int + "", conn)
         ' dr = comando.ExecuteReader
         da = New SqlDataAdapter(comando)
         dt = New DataTable()
@@ -131,7 +162,7 @@ Public Class IngresoDelito
 
     Public Sub llenaZona()
 
-        comando = New SqlCommand("select * from l_sector", conn)
+        comando = New SqlCommand("select * from l_zona", conn)
         ' dr = comando.ExecuteReader
         da = New SqlDataAdapter(comando)
         dt = New DataTable()
@@ -179,34 +210,74 @@ Public Class IngresoDelito
         Return ElNumero & "-" & Resultado
     End Function
 
-    Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
-
-        Label1.Text = id_banda.ToString + " " + id_comuna.ToString + " " + id_delito.ToString + " " + id_sector.ToString + " " + id_zona.ToString
-
-    End Sub
-
-    Private Sub txtRut_TextChanged(sender As Object, e As EventArgs) Handles txtRut.TextChanged
-
-        If txtRut.TextLength = 8 Then txtRut.Text = ValidaRut(txtRut.Text)
-
-    End Sub
-
-    Private Sub txtRut_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtRut.KeyPress
-        e.Handled = ValidaChar(e.KeyChar)
-    End Sub
-
-    Public Function ValidaChar(ByVal car As Char) As Boolean
-        ' sólo admitimos números y tecla retroceso
-        If Char.IsNumber(car, 0) = True Or Char.IsControl(car) = True Then
-            Return (False)
+    Function InsertarDelito(ByVal sql)
+        conn.Close()
+        conn.Open()
+        comando = New SqlCommand(sql, conn)
+        Dim i As Integer = comando.ExecuteNonQuery()
+        If i > 0 Then
+            Return True
         Else
-            Return (True)
+            Return False
         End If
+
     End Function
 
-    Private Sub txtDetalle_TextChanged(sender As Object, e As EventArgs) Handles txtDetalle.TextChanged
+    Function ExisteRut()
+        conn.Close()
+        conn.Open()
+        Dim resultado As Boolean = False
 
-        detalle = txtDetalle.Text
+        Try
+            comando = New SqlCommand("select * from l_delincuente where rut_delincuente = '" + rut + "'", conn)
+            dr = comando.ExecuteReader
+            If dr.Read Then
+                resultado = True
+            End If
+            dr.Close()
+        Catch ex As Exception
+            MsgBox("Error en el procedimiento : " + ex.ToString)
+        End Try
+
+        Return resultado
+
+    End Function
+
+    Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
+        Dim InsertDel
+
+
+        InsertDel = "insert into b_detalle_delito values('" + rut + "'," + id_delito.ToString + ",'" + detalle + "','" + Format(fechaingreso, "yyyy-MM-dd") + "'," + id_zona.ToString + "," + id_comuna.ToString + "," + id_sector.ToString + "," + id_banda.ToString + "," + Login.id_user.ToString + "," + Login.id_int.ToString + ",getdate())"
+        ' MsgBox(InsertDel)
+
+        If (ExisteRut() = False) Then
+
+            MsgBox("Delincuente no se encuentra registrado")
+            IngresaDelincuente.Show()
+            Me.Close()
+
+        Else
+
+            If (InsertarDelito(InsertDel)) Then
+                MsgBox("Registro ingresado exitosamente!",, "Registro existoso")
+                op = MsgBox("¿Desea ingresar otra Delito?", MsgBoxStyle.YesNo, "Confirmación")
+                If (op = 6) Then
+                    txtRut.Clear()
+                    txtDetalle.Clear()
+                Else
+                    IngresaDelincuente.Show()
+                    Me.Close()
+                End If
+            Else
+                MsgBox("Error al ingresar Delito",, "Error")
+            End If
+
+        End If
+
+
+
 
     End Sub
+
+
 End Class
