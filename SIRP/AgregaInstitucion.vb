@@ -16,6 +16,29 @@ Public Class AgregaInstitucion
     Public dr As SqlDataReader
     Public dt As DataTable
 
+    Private Sub IngresarUsuarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IngresarUsuarioToolStripMenuItem.Click
+        IngresoUsuario.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub VolverAlMenúPrincipalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VolverAlMenúPrincipalToolStripMenuItem.Click
+        Principal.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub SalirDelSistemaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirDelSistemaToolStripMenuItem.Click
+        op = MsgBox("¿Está seguro que desea salir?", MsgBoxStyle.YesNo, "Salir del Sistema")
+        If (op = 6) Then
+            Login.Show()
+            Me.Close()
+        End If
+    End Sub
+
+    Private Sub AgregaInstitucion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ControlBox = False
+    End Sub
+
+
     'Metodo de Conexión a la DB
     Public Sub Conectar()
         Try
@@ -58,7 +81,5 @@ Public Class AgregaInstitucion
         Else
             MsgBox("Error al ingresar institución",, "Error")
         End If
-
-
     End Sub
 End Class
