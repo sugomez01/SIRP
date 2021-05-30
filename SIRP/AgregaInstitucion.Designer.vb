@@ -22,15 +22,17 @@ Partial Class AgregaInstitucion
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AgregaInstitucion))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.OpcionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IngresarUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.VolverToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.VolverAlMenúPrincipalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SalirDelSistemaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtInst = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.VolverToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.VolverAlMenúPrincipalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SalirDelSistemaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -46,9 +48,35 @@ Partial Class AgregaInstitucion
         '
         'OpcionesToolStripMenuItem
         '
+        Me.OpcionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IngresarUsuarioToolStripMenuItem})
         Me.OpcionesToolStripMenuItem.Name = "OpcionesToolStripMenuItem"
         Me.OpcionesToolStripMenuItem.Size = New System.Drawing.Size(85, 24)
         Me.OpcionesToolStripMenuItem.Text = "Opciones"
+        '
+        'IngresarUsuarioToolStripMenuItem
+        '
+        Me.IngresarUsuarioToolStripMenuItem.Name = "IngresarUsuarioToolStripMenuItem"
+        Me.IngresarUsuarioToolStripMenuItem.Size = New System.Drawing.Size(199, 26)
+        Me.IngresarUsuarioToolStripMenuItem.Text = "Ingresar Usuario"
+        '
+        'VolverToolStripMenuItem1
+        '
+        Me.VolverToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VolverAlMenúPrincipalToolStripMenuItem, Me.SalirDelSistemaToolStripMenuItem})
+        Me.VolverToolStripMenuItem1.Name = "VolverToolStripMenuItem1"
+        Me.VolverToolStripMenuItem1.Size = New System.Drawing.Size(64, 24)
+        Me.VolverToolStripMenuItem1.Text = "Volver"
+        '
+        'VolverAlMenúPrincipalToolStripMenuItem
+        '
+        Me.VolverAlMenúPrincipalToolStripMenuItem.Name = "VolverAlMenúPrincipalToolStripMenuItem"
+        Me.VolverAlMenúPrincipalToolStripMenuItem.Size = New System.Drawing.Size(252, 26)
+        Me.VolverAlMenúPrincipalToolStripMenuItem.Text = "Volver al menú principal"
+        '
+        'SalirDelSistemaToolStripMenuItem
+        '
+        Me.SalirDelSistemaToolStripMenuItem.Name = "SalirDelSistemaToolStripMenuItem"
+        Me.SalirDelSistemaToolStripMenuItem.Size = New System.Drawing.Size(252, 26)
+        Me.SalirDelSistemaToolStripMenuItem.Text = "Salir del Sistema"
         '
         'Label1
         '
@@ -81,31 +109,12 @@ Partial Class AgregaInstitucion
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(498, 246)
+        Me.Button1.Location = New System.Drawing.Point(443, 265)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(102, 31)
+        Me.Button1.Size = New System.Drawing.Size(157, 31)
         Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Registrar"
+        Me.Button1.Text = "&Ingresar Registro"
         Me.Button1.UseVisualStyleBackColor = True
-        '
-        'VolverToolStripMenuItem1
-        '
-        Me.VolverToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VolverAlMenúPrincipalToolStripMenuItem, Me.SalirDelSistemaToolStripMenuItem})
-        Me.VolverToolStripMenuItem1.Name = "VolverToolStripMenuItem1"
-        Me.VolverToolStripMenuItem1.Size = New System.Drawing.Size(64, 24)
-        Me.VolverToolStripMenuItem1.Text = "Volver"
-        '
-        'VolverAlMenúPrincipalToolStripMenuItem
-        '
-        Me.VolverAlMenúPrincipalToolStripMenuItem.Name = "VolverAlMenúPrincipalToolStripMenuItem"
-        Me.VolverAlMenúPrincipalToolStripMenuItem.Size = New System.Drawing.Size(252, 26)
-        Me.VolverAlMenúPrincipalToolStripMenuItem.Text = "Volver al menú principal"
-        '
-        'SalirDelSistemaToolStripMenuItem
-        '
-        Me.SalirDelSistemaToolStripMenuItem.Name = "SalirDelSistemaToolStripMenuItem"
-        Me.SalirDelSistemaToolStripMenuItem.Size = New System.Drawing.Size(252, 26)
-        Me.SalirDelSistemaToolStripMenuItem.Text = "Salir del Sistema"
         '
         'AgregaInstitucion
         '
@@ -117,10 +126,11 @@ Partial Class AgregaInstitucion
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "AgregaInstitucion"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "AgregaInstitucion"
+        Me.Text = "Ingresa Institucion"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
@@ -137,4 +147,5 @@ Partial Class AgregaInstitucion
     Friend WithEvents VolverToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents VolverAlMenúPrincipalToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SalirDelSistemaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents IngresarUsuarioToolStripMenuItem As ToolStripMenuItem
 End Class

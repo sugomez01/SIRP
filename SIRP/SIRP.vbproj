@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActualizaDelincuente.Designer.vb">
+      <DependentUpon>ActualizaDelincuente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ActualizaDelincuente.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AgregaInstitucion.Designer.vb">
       <DependentUpon>AgregaInstitucion.vb</DependentUpon>
     </Compile>
@@ -85,16 +91,40 @@
     <Compile Include="IngresaDelincuente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="IngresoBanda.Designer.vb">
+      <DependentUpon>IngresoBanda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IngresoBanda.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IngresoControl.Designer.vb">
+      <DependentUpon>IngresoControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IngresoControl.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="IngresoDelito.Designer.vb">
       <DependentUpon>IngresoDelito.vb</DependentUpon>
     </Compile>
     <Compile Include="IngresoDelito.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="IngresoSector.Designer.vb">
+      <DependentUpon>IngresoSector.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IngresoSector.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="IngresoUsuario.Designer.vb">
       <DependentUpon>IngresoUsuario.vb</DependentUpon>
     </Compile>
     <Compile Include="IngresoUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IngresoZona.Designer.vb">
+      <DependentUpon>IngresoZona.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IngresoZona.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.vb">
