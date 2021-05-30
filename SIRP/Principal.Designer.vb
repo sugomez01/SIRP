@@ -32,9 +32,9 @@ Partial Class Principal
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.EliminarUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EliminarInstituciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RegistrarDelincuenteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CerrarSesiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RegistrarDelincuenteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.picPrincipal, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -51,9 +51,10 @@ Partial Class Principal
         'lblBienvenido
         '
         Me.lblBienvenido.AutoSize = True
+        Me.lblBienvenido.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBienvenido.Location = New System.Drawing.Point(216, 54)
         Me.lblBienvenido.Name = "lblBienvenido"
-        Me.lblBienvenido.Size = New System.Drawing.Size(78, 17)
+        Me.lblBienvenido.Size = New System.Drawing.Size(125, 29)
         Me.lblBienvenido.TabIndex = 1
         Me.lblBienvenido.Text = "Bienvenido"
         '
@@ -103,6 +104,12 @@ Partial Class Principal
         Me.EliminarInstituciónToolStripMenuItem.Size = New System.Drawing.Size(232, 26)
         Me.EliminarInstituciónToolStripMenuItem.Text = "Eliminar institución"
         '
+        'RegistrarDelincuenteToolStripMenuItem
+        '
+        Me.RegistrarDelincuenteToolStripMenuItem.Name = "RegistrarDelincuenteToolStripMenuItem"
+        Me.RegistrarDelincuenteToolStripMenuItem.Size = New System.Drawing.Size(232, 26)
+        Me.RegistrarDelincuenteToolStripMenuItem.Text = "Registrar delincuente"
+        '
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CerrarSesiónToolStripMenuItem})
@@ -115,12 +122,6 @@ Partial Class Principal
         Me.CerrarSesiónToolStripMenuItem.Name = "CerrarSesiónToolStripMenuItem"
         Me.CerrarSesiónToolStripMenuItem.Size = New System.Drawing.Size(179, 26)
         Me.CerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión"
-        '
-        'RegistrarDelincuenteToolStripMenuItem
-        '
-        Me.RegistrarDelincuenteToolStripMenuItem.Name = "RegistrarDelincuenteToolStripMenuItem"
-        Me.RegistrarDelincuenteToolStripMenuItem.Size = New System.Drawing.Size(232, 26)
-        Me.RegistrarDelincuenteToolStripMenuItem.Text = "Registrar delincuente"
         '
         'Principal
         '
