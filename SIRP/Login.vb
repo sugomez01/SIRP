@@ -8,7 +8,8 @@ Public Class Login
     Dim conexion As conexion = New conexion()
 
 
-    Public conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-EUII0N8;User ID=sa;Password=sasa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
+    ' Public conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-EUII0N8;User ID=sa;Password=sasa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
+    Public conn As SqlConnection = New SqlConnection("Data Source=LAPTOP-6GF7OE4K;Initial Catalog=SIRP;Integrated Security=True")
 
     Private cmb As SqlCommandBuilder
     Public ds As DataSet = New DataSet
@@ -126,14 +127,6 @@ Public Class Login
     End Function
 
 
-
-
-
-
-
-
-
-
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         ControlBox = False
@@ -153,7 +146,7 @@ Public Class Login
                     If tipoUsuario(txtUser.Text) = 1 Then
                         MsgBox("Usuario administrador general" + tipInst)
                         id_int = CInt(tipInst)
-                        cambiaImagen(id_int)
+                        '                     cambiaImagen(id_int)
                         Me.Hide()
                         Principal.Show()
                     ElseIf tipoUsuario(txtUser.Text) = 2 Then
@@ -166,7 +159,7 @@ Public Class Login
                         'MsgBox("Usuario Operador" + tipoInstitucion)
                         id_int = CInt(tipInst)
                         Principal.Show()
-                        Me.Hide()
+                        Me.Close()
                     End If
                 Else
                     MsgBox("Usuario o contraseña Incorrectas" + txtPass.Text)
@@ -179,15 +172,15 @@ Public Class Login
 
     End Sub
 
-    Public Sub cambiaImagen(ByVal id As Integer)
-        If id = 1 Then
-            Principal.picPrincipal.Image = Image.FromFile("C:\Users\sgome\source\repos\sugomez01\SIRP\SIRP\Resources\carabineros.png")
-        ElseIf id = 2 Then
-            Principal.picPrincipal.Image = Image.FromFile("C:\Users\sgome\source\repos\sugomez01\SIRP\SIRP\Resources'os-10.png")
-        Else
-            Principal.picPrincipal.Image = Image.FromFile("C:\Users\sgome\source\repos\sugomez01\SIRP\SIRP\Resources\pdi.png")
-        End If
-    End Sub
+    '  Public Sub cambiaImagen(ByVal id As Integer)
+    '  If id = 1 Then
+    '          Principal.picPrincipal.Image = Image.FromFile("C:\Users\sgome\source\repos\sugomez01\SIRP\SIRP\Resources\carabineros.png")
+    '  ElseIf id = 2 Then
+    '          Principal.picPrincipal.Image = Image.FromFile("C:\Users\sgome\source\repos\sugomez01\SIRP\SIRP\Resources'os-10.png")
+    '  Else
+    '          Principal.picPrincipal.Image = Image.FromFile("C:\Users\sgome\source\repos\sugomez01\SIRP\SIRP\Resources\pdi.png")
+    '  End If
+    '  End Sub
 
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click

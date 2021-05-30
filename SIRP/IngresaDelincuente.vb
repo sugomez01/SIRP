@@ -3,4 +3,9 @@
         Principal.Show()
         Me.Close()
     End Sub
+
+    Private Sub IngresarDelitoCometidoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IngresarDelitoCometidoToolStripMenuItem.Click
+        IngresoDelito.Show()
+        Me.Close()
+    End Sub
 End Class

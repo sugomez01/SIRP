@@ -34,15 +34,15 @@ Partial Class IngresoDelito
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.txtRut = New System.Windows.Forms.TextBox()
+        Me.txtDetalle = New System.Windows.Forms.TextBox()
+        Me.btnRegistrar = New System.Windows.Forms.Button()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox6 = New System.Windows.Forms.ComboBox()
+        Me.cmbSector = New System.Windows.Forms.ComboBox()
+        Me.cmbZona = New System.Windows.Forms.ComboBox()
+        Me.cmbComuna = New System.Windows.Forms.ComboBox()
+        Me.cmbBanda = New System.Windows.Forms.ComboBox()
+        Me.dtpFechaDelito = New System.Windows.Forms.DateTimePicker()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -159,34 +159,34 @@ Partial Class IngresoDelito
         Me.Label9.TabIndex = 9
         Me.Label9.Text = "Detalles del delito"
         '
-        'TextBox1
+        'txtRut
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(179, 120)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(176, 29)
-        Me.TextBox1.TabIndex = 10
+        Me.txtRut.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtRut.Location = New System.Drawing.Point(179, 120)
+        Me.txtRut.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtRut.Name = "txtRut"
+        Me.txtRut.Size = New System.Drawing.Size(176, 29)
+        Me.txtRut.TabIndex = 10
         '
-        'TextBox2
+        'txtDetalle
         '
-        Me.TextBox2.Location = New System.Drawing.Point(179, 389)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(542, 108)
-        Me.TextBox2.TabIndex = 11
+        Me.txtDetalle.Location = New System.Drawing.Point(179, 389)
+        Me.txtDetalle.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtDetalle.Multiline = True
+        Me.txtDetalle.Name = "txtDetalle"
+        Me.txtDetalle.Size = New System.Drawing.Size(542, 108)
+        Me.txtDetalle.TabIndex = 11
         '
-        'Button1
+        'btnRegistrar
         '
-        Me.Button1.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(621, 521)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(100, 32)
-        Me.Button1.TabIndex = 12
-        Me.Button1.Text = "Registrar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnRegistrar.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRegistrar.Location = New System.Drawing.Point(621, 521)
+        Me.btnRegistrar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnRegistrar.Name = "btnRegistrar"
+        Me.btnRegistrar.Size = New System.Drawing.Size(100, 32)
+        Me.btnRegistrar.TabIndex = 12
+        Me.btnRegistrar.Text = "Registrar"
+        Me.btnRegistrar.UseVisualStyleBackColor = True
         '
         'ComboBox1
         '
@@ -198,68 +198,65 @@ Partial Class IngresoDelito
         Me.ComboBox1.Size = New System.Drawing.Size(176, 30)
         Me.ComboBox1.TabIndex = 13
         '
-        'ComboBox2
+        'cmbSector
         '
-        Me.ComboBox2.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(179, 251)
-        Me.ComboBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(176, 30)
-        Me.ComboBox2.TabIndex = 14
+        Me.cmbSector.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbSector.FormattingEnabled = True
+        Me.cmbSector.Location = New System.Drawing.Point(545, 151)
+        Me.cmbSector.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.cmbSector.Name = "cmbSector"
+        Me.cmbSector.Size = New System.Drawing.Size(176, 30)
+        Me.cmbSector.TabIndex = 15
         '
-        'ComboBox3
+        'cmbZona
         '
-        Me.ComboBox3.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(545, 151)
-        Me.ComboBox3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(176, 30)
-        Me.ComboBox3.TabIndex = 15
+        Me.cmbZona.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbZona.FormattingEnabled = True
+        Me.cmbZona.Location = New System.Drawing.Point(545, 224)
+        Me.cmbZona.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.cmbZona.Name = "cmbZona"
+        Me.cmbZona.Size = New System.Drawing.Size(176, 30)
+        Me.cmbZona.TabIndex = 16
         '
-        'ComboBox4
+        'cmbComuna
         '
-        Me.ComboBox4.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(545, 224)
-        Me.ComboBox4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(176, 30)
-        Me.ComboBox4.TabIndex = 16
+        Me.cmbComuna.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbComuna.FormattingEnabled = True
+        Me.cmbComuna.Location = New System.Drawing.Point(545, 294)
+        Me.cmbComuna.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.cmbComuna.Name = "cmbComuna"
+        Me.cmbComuna.Size = New System.Drawing.Size(176, 30)
+        Me.cmbComuna.TabIndex = 17
         '
-        'ComboBox5
+        'cmbBanda
         '
-        Me.ComboBox5.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox5.FormattingEnabled = True
-        Me.ComboBox5.Location = New System.Drawing.Point(545, 294)
-        Me.ComboBox5.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.ComboBox5.Name = "ComboBox5"
-        Me.ComboBox5.Size = New System.Drawing.Size(176, 30)
-        Me.ComboBox5.TabIndex = 17
+        Me.cmbBanda.FormattingEnabled = True
+        Me.cmbBanda.Location = New System.Drawing.Point(179, 317)
+        Me.cmbBanda.Name = "cmbBanda"
+        Me.cmbBanda.Size = New System.Drawing.Size(176, 30)
+        Me.cmbBanda.TabIndex = 18
         '
-        'ComboBox6
+        'dtpFechaDelito
         '
-        Me.ComboBox6.FormattingEnabled = True
-        Me.ComboBox6.Location = New System.Drawing.Point(179, 317)
-        Me.ComboBox6.Name = "ComboBox6"
-        Me.ComboBox6.Size = New System.Drawing.Size(176, 30)
-        Me.ComboBox6.TabIndex = 18
+        Me.dtpFechaDelito.Location = New System.Drawing.Point(179, 249)
+        Me.dtpFechaDelito.Name = "dtpFechaDelito"
+        Me.dtpFechaDelito.Size = New System.Drawing.Size(176, 29)
+        Me.dtpFechaDelito.TabIndex = 19
         '
         'IngresoDelito
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(795, 591)
-        Me.Controls.Add(Me.ComboBox6)
-        Me.Controls.Add(Me.ComboBox5)
-        Me.Controls.Add(Me.ComboBox4)
-        Me.Controls.Add(Me.ComboBox3)
-        Me.Controls.Add(Me.ComboBox2)
+        Me.Controls.Add(Me.dtpFechaDelito)
+        Me.Controls.Add(Me.cmbBanda)
+        Me.Controls.Add(Me.cmbComuna)
+        Me.Controls.Add(Me.cmbZona)
+        Me.Controls.Add(Me.cmbSector)
         Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.btnRegistrar)
+        Me.Controls.Add(Me.txtDetalle)
+        Me.Controls.Add(Me.txtRut)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
@@ -294,13 +291,13 @@ Partial Class IngresoDelito
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents txtRut As TextBox
+    Friend WithEvents txtDetalle As TextBox
+    Friend WithEvents btnRegistrar As Button
     Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents ComboBox3 As ComboBox
-    Friend WithEvents ComboBox4 As ComboBox
-    Friend WithEvents ComboBox5 As ComboBox
-    Friend WithEvents ComboBox6 As ComboBox
+    Friend WithEvents cmbSector As ComboBox
+    Friend WithEvents cmbZona As ComboBox
+    Friend WithEvents cmbComuna As ComboBox
+    Friend WithEvents cmbBanda As ComboBox
+    Friend WithEvents dtpFechaDelito As DateTimePicker
 End Class
