@@ -24,18 +24,20 @@ Partial Class AgregaInstitucion
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.OpcionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.VolverToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtInst = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.VolverToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.VolverAlMenúPrincipalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SalirDelSistemaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpcionesToolStripMenuItem, Me.VolverToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpcionesToolStripMenuItem, Me.VolverToolStripMenuItem1})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(800, 28)
@@ -47,12 +49,6 @@ Partial Class AgregaInstitucion
         Me.OpcionesToolStripMenuItem.Name = "OpcionesToolStripMenuItem"
         Me.OpcionesToolStripMenuItem.Size = New System.Drawing.Size(85, 24)
         Me.OpcionesToolStripMenuItem.Text = "Opciones"
-        '
-        'VolverToolStripMenuItem
-        '
-        Me.VolverToolStripMenuItem.Name = "VolverToolStripMenuItem"
-        Me.VolverToolStripMenuItem.Size = New System.Drawing.Size(64, 24)
-        Me.VolverToolStripMenuItem.Text = "Volver"
         '
         'Label1
         '
@@ -74,13 +70,13 @@ Partial Class AgregaInstitucion
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Nombre Institución"
         '
-        'TextBox1
+        'txtInst
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(388, 147)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(212, 29)
-        Me.TextBox1.TabIndex = 3
+        Me.txtInst.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtInst.Location = New System.Drawing.Point(388, 147)
+        Me.txtInst.Name = "txtInst"
+        Me.txtInst.Size = New System.Drawing.Size(212, 29)
+        Me.txtInst.TabIndex = 3
         '
         'Button1
         '
@@ -92,18 +88,38 @@ Partial Class AgregaInstitucion
         Me.Button1.Text = "Registrar"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'VolverToolStripMenuItem1
+        '
+        Me.VolverToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VolverAlMenúPrincipalToolStripMenuItem, Me.SalirDelSistemaToolStripMenuItem})
+        Me.VolverToolStripMenuItem1.Name = "VolverToolStripMenuItem1"
+        Me.VolverToolStripMenuItem1.Size = New System.Drawing.Size(64, 24)
+        Me.VolverToolStripMenuItem1.Text = "Volver"
+        '
+        'VolverAlMenúPrincipalToolStripMenuItem
+        '
+        Me.VolverAlMenúPrincipalToolStripMenuItem.Name = "VolverAlMenúPrincipalToolStripMenuItem"
+        Me.VolverAlMenúPrincipalToolStripMenuItem.Size = New System.Drawing.Size(252, 26)
+        Me.VolverAlMenúPrincipalToolStripMenuItem.Text = "Volver al menú principal"
+        '
+        'SalirDelSistemaToolStripMenuItem
+        '
+        Me.SalirDelSistemaToolStripMenuItem.Name = "SalirDelSistemaToolStripMenuItem"
+        Me.SalirDelSistemaToolStripMenuItem.Size = New System.Drawing.Size(252, 26)
+        Me.SalirDelSistemaToolStripMenuItem.Text = "Salir del Sistema"
+        '
         'AgregaInstitucion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtInst)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "AgregaInstitucion"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "AgregaInstitucion"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
@@ -114,9 +130,11 @@ Partial Class AgregaInstitucion
 
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents OpcionesToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents VolverToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtInst As TextBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents VolverToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents VolverAlMenúPrincipalToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SalirDelSistemaToolStripMenuItem As ToolStripMenuItem
 End Class

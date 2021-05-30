@@ -5,7 +5,7 @@ Imports System.Windows.Forms
 
 Public Class Login
     Public id_user, id_int, id_tip_user, op As Integer
-    Public pass, nombre, apellido As String
+    Dim pass As String
 
     'Ruta para conectar a la DB
     'descomentar segun pc
@@ -24,9 +24,8 @@ Public Class Login
     Public Sub Conectar()
         Try
             conn.Open()
-            '    MessageBox.Show("Conectado")
         Catch ex As Exception
-            '  MessageBox.Show("Error al conectar")
+            MessageBox.Show("Error al conectar" + ex.ToString)
         Finally
             conn.Close()
         End Try
@@ -35,7 +34,6 @@ Public Class Login
 
     'Metodo para validar usuario
     Function usuarioRegistrado(ByVal nombreUSuario As String)
-
         conn.Close()
         conn.Open()
         Dim resultado As Boolean = False
@@ -47,8 +45,6 @@ Public Class Login
                 resultado = True
                 id_user = dr.Item("id_usuario")
                 pass = dr.Item("password")
-                nombre = dr.Item("desc_nombre")
-                apellido = dr.Item("desc_apellido")
                 id_int = dr.Item("l_id_institucion")
                 id_tip_user = dr.Item("l_id_tipo_user")
             End If
@@ -57,40 +53,28 @@ Public Class Login
             MsgBox(ex.ToString)
         End Try
         Return resultado
-
     End Function
 
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         ControlBox = False
         txtPass.PasswordChar = "*"
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
-
         Try
             If usuarioRegistrado(txtUser.Text) = True Then
 
                 If pass = txtPass.Text Then
-                    'MsgBox("Bienvenido a conexion")
                     If id_tip_user = 1 Then
-                        ' MsgBox("Usuario administrador general" + id_int)
-                        'cambiaImagen(id_int)
                         Me.Hide()
                         Principal.Show()
                     ElseIf id_tip_user = 2 Then
-                        MsgBox("Usuario admin institucional" + id_int)
-                        '    cambiaImagen(id_int)
                         Me.Hide()
                         Principal.Show()
                     ElseIf id_tip_user = 3 Then
-                        MsgBox("Usuario Jefe de Zona" + id_int)
-                        ' cambiaImagen(id_int)
                         Me.Hide()
                         Principal.Show()
                     Else
-                        'MsgBox("Usuario Operador" + id_int)
-                        '  cambiaImagen(id_int)
                         Principal.Show()
                         Me.Hide()
                     End If
@@ -103,21 +87,9 @@ Public Class Login
         Catch ex As Exception
             MsgBox(ex.ToString)
         End Try
-
         txtUser.Clear()
         txtPass.Clear()
     End Sub
-
-    'Public Sub cambiaImagen(ByVal id As Integer)
-    '    If id = 1 Then
-    '        Principal.picPrincipal.Image = Image.FromFile("C:\Users\sgome\source\repos\sugomez01\SIRP\SIRP\Resources\carabineros.png")
-    '    ElseIf id = 2 Then
-    '        Principal.picPrincipal.Image = Image.FromFile("C:\Users\sgome\source\repos\sugomez01\SIRP\SIRP\Resources'os-10.png")
-    '    Else
-    '        Principal.picPrincipal.Image = Image.FromFile("C:\Users\sgome\source\repos\sugomez01\SIRP\SIRP\Resources\pdi.png")
-    '    End If
-    'End Sub
-
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         op = MsgBox("¿Está seguro que desea salir de la aplicación?", MsgBoxStyle.YesNo, "Salir del programa")
@@ -126,6 +98,3 @@ Public Class Login
         End If
     End Sub
 End Class
-
-
-
