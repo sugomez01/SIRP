@@ -103,4 +103,24 @@ Public Class conexion
 
     End Function
 
+    Function retornaUsuario(ByVal nombreUSuario As String)
+        conexion.Close()
+        conexion.Open()
+        Dim cadena(2) As String
+        Try
+            comando = New SqlCommand("select id_usuario,desc_nombre,desc_apellido from l_usuario where username = '" + nombreUSuario + "'", conexion)
+            dr = comando.ExecuteReader
+            If dr.Read Then
+                cadena(0) = dr.Item("id_usuario")
+                cadena(1) = dr.Item("desc_nombre")
+                cadena(2) = dr.Item("desc_apellido")
+            End If
+            dr.Close()
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+        Return cadena
+
+    End Function
+
 End Class

@@ -1,7 +1,11 @@
 ﻿Public Class Principal
-    Private Sub Principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        lblBienvenido.Text = "Hola " & Login.txtUser.Text
+    Dim conexion As conexion = New conexion()
 
+    Private Sub Principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        '  lblBienvenido.Text = "Hola " & Login.txtUser.Text
+        conexion.Conectar()
+        ControlBox = False
+        bienvenidaUser()
 
     End Sub
 
@@ -22,4 +26,10 @@
         IngresaDelincuente.Show()
         Me.Close()
     End Sub
+
+    Public Sub bienvenidaUser()
+
+    End Sub
+
+
 End Class
