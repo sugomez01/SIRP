@@ -12,6 +12,9 @@ Public Class IngresoDelito
     Dim detalle As String
     Dim rut As String
     Dim op As Integer
+    Dim inst As String
+
+
 
     'Public conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-EUII0N8;User ID=sa;Password=sasa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
     Public conn As SqlConnection = New SqlConnection("Data Source=LAPTOP-6GF7OE4K;Initial Catalog=SIRP;Integrated Security=True")
@@ -38,6 +41,10 @@ Public Class IngresoDelito
 
 
     Private Sub IngresoDelito_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+
+        '  Label1.Text = Login.id_int.ToString()
+
 
         llenaDelito()
         llenaBanda()
@@ -130,7 +137,9 @@ Public Class IngresoDelito
 
     Public Sub llenaBanda()
 
-        comando = New SqlCommand("select * from l_banda", conn)
+        inst = Login.id_int.ToString()
+
+        comando = New SqlCommand("select * from l_banda where l_id_institucion = " + inst + "", conn)
         ' dr = comando.ExecuteReader
         da = New SqlDataAdapter(comando)
         dt = New DataTable()
@@ -146,7 +155,9 @@ Public Class IngresoDelito
 
     Public Sub llenaSector()
 
-        comando = New SqlCommand("select * from l_sector", conn)
+        inst = Login.id_int.ToString()
+
+        comando = New SqlCommand("select * from l_sector where l_id_institucion = " + inst + "", conn)
         ' dr = comando.ExecuteReader
         da = New SqlDataAdapter(comando)
         dt = New DataTable()
