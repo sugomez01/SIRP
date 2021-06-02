@@ -44,10 +44,6 @@ Public Class IngresoUsuario
         id_tip_user = cmbTipo.SelectedValue()
     End Sub
 
-    Private Sub txtNomb_TextChanged(sender As Object, e As EventArgs) Handles txtNomb.TextChanged
-
-    End Sub
-
     Private Sub IngresoUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ControlBox = False
         txtPass.PasswordChar = "*"
@@ -60,12 +56,9 @@ Public Class IngresoUsuario
 
     Private Sub btnIngresa_Click(sender As Object, e As EventArgs) Handles btnIngresa.Click
 
-
-
         If txtNomb.Text = "" Or txtApe.Text = "" Or txtPass.Text = "" Or txtRut.Text = "" Or txtUser.Text = "" Then
             MsgBox("Debe completar todos los campos!",, "Error")
         Else
-
 
             Dim insert, consulta As String
 
@@ -93,17 +86,27 @@ Public Class IngresoUsuario
                 End If
             Else
                 MsgBox("Rut o nombre de usuario ya existe",, "Error")
+                txtRut.Enabled = True
                 txtRut.Clear()
                 txtUser.Clear()
+                txtPass.Clear()
             End If
         End If
     End Sub
 
     Private Sub txtRut_TextChanged(sender As Object, e As EventArgs) Handles txtRut.TextChanged
 
-        If txtRut.TextLength = 8 Then txtRut.Text = ValidaRut(txtRut.Text)
+        If txtRut.TextLength = 8 Then
+            txtRut.Text = ValidaRut(txtRut.Text)
+            rut = txtRut.Text
+            If txtRut.Text = "" Then
+                txtRut.Enabled = True
+            Else
+                txtRut.Enabled = False
+            End If
+        End If
 
-        rut = txtRut.Text
+
     End Sub
 
     'Metodo de Conexión a la DB

@@ -66,6 +66,17 @@ Public Class AgregaInstitucion
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+        If txtInst.Text = "" Then
+            MsgBox("Debe ingresar Institución!",, "Error")
+        Else
+
+            InsertaRegistro()
+        End If
+    End Sub
+
+
+    Sub InsertaRegistro()
         Dim insert As String
         insert = "insert into l_institucion values ('" + txtInst.Text + "')"
 
