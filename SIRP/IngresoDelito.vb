@@ -8,13 +8,13 @@ Public Class IngresoDelito
     Dim id_sector As Integer
     Dim id_zona As Integer
     Dim id_comuna As Integer
-    Dim fechaingreso As DateTime
+    Dim fechaingreso As String
     Dim detalle As String
     Dim rut As String
     Dim op As Integer
 
-    Public conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-EUII0N8;User ID=sa;Password=sasa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
-    'Public conn As SqlConnection = New SqlConnection("Data Source=LAPTOP-6GF7OE4K;Initial Catalog=SIRP;Integrated Security=True")
+    'Public conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-EUII0N8;User ID=sa;Password=sasa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
+    Public conn As SqlConnection = New SqlConnection("Data Source=LAPTOP-6GF7OE4K;Initial Catalog=SIRP;Integrated Security=True")
 
 
     Private cmb As SqlCommandBuilder
@@ -130,7 +130,7 @@ Public Class IngresoDelito
 
     Public Sub llenaBanda()
 
-        comando = New SqlCommand("select * from l_banda where l_id_institucion = " + Login.id_int + "", conn)
+        comando = New SqlCommand("select * from l_banda", conn)
         ' dr = comando.ExecuteReader
         da = New SqlDataAdapter(comando)
         dt = New DataTable()
@@ -146,7 +146,7 @@ Public Class IngresoDelito
 
     Public Sub llenaSector()
 
-        comando = New SqlCommand("select * from l_sector where l_id_institucion = " + Login.id_int + "", conn)
+        comando = New SqlCommand("select * from l_sector", conn)
         ' dr = comando.ExecuteReader
         da = New SqlDataAdapter(comando)
         dt = New DataTable()
@@ -168,8 +168,8 @@ Public Class IngresoDelito
         dt = New DataTable()
         da.Fill(dt)
 
-        cmbZona.DisplayMember = "desc_sector"
-        cmbZona.ValueMember = "id_sector"
+        cmbZona.DisplayMember = "desc_zona"
+        cmbZona.ValueMember = "id_zona"
         cmbZona.DataSource = dt
 
         'MsgBox(dt)

@@ -131,15 +131,15 @@ Public Class Principal
     Public Sub bienvenidaUser(ByVal id As Integer)
         lblBienvenido.Text = "Bienvenid@ " + Login.nombre + " " + Login.apellido
 
-        If id = 1 Then
-            picPrincipal.Image = Image.FromFile("C:\Users\sgome\source\repos\sugomez01\SIRP\SIRP\Resources\carabineros.png")
-        ElseIf id = 2 Then
-            picPrincipal.Image = Image.FromFile("C:\Users\sgome\source\repos\sugomez01\SIRP\SIRP\Resources\os-10.png")
-        ElseIf id = 3 Then
-            picPrincipal.Image = Image.FromFile("C:\Users\sgome\source\repos\sugomez01\SIRP\SIRP\Resources\pdi.png")
-        Else
-            picPrincipal.Visible = False
-        End If
+        '    If id = 1 Then
+        '    picPrincipal.Image = Image.FromFile("C:\Users\sgome\source\repos\sugomez01\SIRP\SIRP\Resources\carabineros.png")
+        '    ElseIf id = 2 Then
+        '    picPrincipal.Image = Image.FromFile("C:\Users\sgome\source\repos\sugomez01\SIRP\SIRP\Resources\os-10.png")
+        '    ElseIf id = 3 Then
+        '    picPrincipal.Image = Image.FromFile("C:\Users\sgome\source\repos\sugomez01\SIRP\SIRP\Resources\pdi.png")
+        '    Else
+        '    picPrincipal.Visible = False
+        '    End If
     End Sub
 
 End Class
