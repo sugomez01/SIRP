@@ -37,14 +37,16 @@ Partial Class IngresoUsuario
         Me.lblPass = New System.Windows.Forms.Label()
         Me.lblInst = New System.Windows.Forms.Label()
         Me.lblTipo = New System.Windows.Forms.Label()
+        Me.btnIngresa = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.txtNomb = New System.Windows.Forms.TextBox()
         Me.txtApe = New System.Windows.Forms.TextBox()
         Me.txtRut = New System.Windows.Forms.TextBox()
+        Me.txtDV = New System.Windows.Forms.TextBox()
         Me.txtUser = New System.Windows.Forms.TextBox()
         Me.txtPass = New System.Windows.Forms.TextBox()
         Me.cmbIns = New System.Windows.Forms.ComboBox()
         Me.cmbTipo = New System.Windows.Forms.ComboBox()
-        Me.btnIngresa = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -170,64 +172,6 @@ Partial Class IngresoUsuario
         Me.lblTipo.TabIndex = 8
         Me.lblTipo.Text = "Tipo de usuario"
         '
-        'txtNomb
-        '
-        Me.txtNomb.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNomb.Location = New System.Drawing.Point(305, 122)
-        Me.txtNomb.Name = "txtNomb"
-        Me.txtNomb.Size = New System.Drawing.Size(313, 29)
-        Me.txtNomb.TabIndex = 9
-        '
-        'txtApe
-        '
-        Me.txtApe.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtApe.Location = New System.Drawing.Point(305, 168)
-        Me.txtApe.Name = "txtApe"
-        Me.txtApe.Size = New System.Drawing.Size(313, 29)
-        Me.txtApe.TabIndex = 10
-        '
-        'txtRut
-        '
-        Me.txtRut.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRut.Location = New System.Drawing.Point(305, 218)
-        Me.txtRut.Name = "txtRut"
-        Me.txtRut.Size = New System.Drawing.Size(313, 29)
-        Me.txtRut.TabIndex = 11
-        '
-        'txtUser
-        '
-        Me.txtUser.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUser.Location = New System.Drawing.Point(305, 267)
-        Me.txtUser.Name = "txtUser"
-        Me.txtUser.Size = New System.Drawing.Size(313, 29)
-        Me.txtUser.TabIndex = 12
-        '
-        'txtPass
-        '
-        Me.txtPass.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPass.Location = New System.Drawing.Point(305, 312)
-        Me.txtPass.Name = "txtPass"
-        Me.txtPass.Size = New System.Drawing.Size(313, 29)
-        Me.txtPass.TabIndex = 13
-        '
-        'cmbIns
-        '
-        Me.cmbIns.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmbIns.FormattingEnabled = True
-        Me.cmbIns.Location = New System.Drawing.Point(305, 368)
-        Me.cmbIns.Name = "cmbIns"
-        Me.cmbIns.Size = New System.Drawing.Size(313, 30)
-        Me.cmbIns.TabIndex = 14
-        '
-        'cmbTipo
-        '
-        Me.cmbTipo.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmbTipo.FormattingEnabled = True
-        Me.cmbTipo.Location = New System.Drawing.Point(305, 422)
-        Me.cmbTipo.Name = "cmbTipo"
-        Me.cmbTipo.Size = New System.Drawing.Size(313, 30)
-        Me.cmbTipo.TabIndex = 15
-        '
         'btnIngresa
         '
         Me.btnIngresa.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -239,19 +183,97 @@ Partial Class IngresoUsuario
         Me.btnIngresa.Text = "&Ingresar Registro"
         Me.btnIngresa.UseVisualStyleBackColor = True
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(509, 222)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(16, 23)
+        Me.Label2.TabIndex = 18
+        Me.Label2.Text = "-"
+        '
+        'txtNomb
+        '
+        Me.txtNomb.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNomb.Location = New System.Drawing.Point(303, 123)
+        Me.txtNomb.Name = "txtNomb"
+        Me.txtNomb.Size = New System.Drawing.Size(278, 29)
+        Me.txtNomb.TabIndex = 19
+        '
+        'txtApe
+        '
+        Me.txtApe.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtApe.Location = New System.Drawing.Point(303, 175)
+        Me.txtApe.Name = "txtApe"
+        Me.txtApe.Size = New System.Drawing.Size(278, 29)
+        Me.txtApe.TabIndex = 20
+        '
+        'txtRut
+        '
+        Me.txtRut.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtRut.Location = New System.Drawing.Point(303, 222)
+        Me.txtRut.Name = "txtRut"
+        Me.txtRut.Size = New System.Drawing.Size(200, 29)
+        Me.txtRut.TabIndex = 21
+        '
+        'txtDV
+        '
+        Me.txtDV.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDV.Location = New System.Drawing.Point(531, 222)
+        Me.txtDV.Name = "txtDV"
+        Me.txtDV.Size = New System.Drawing.Size(50, 29)
+        Me.txtDV.TabIndex = 22
+        '
+        'txtUser
+        '
+        Me.txtUser.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUser.Location = New System.Drawing.Point(303, 271)
+        Me.txtUser.Name = "txtUser"
+        Me.txtUser.Size = New System.Drawing.Size(278, 29)
+        Me.txtUser.TabIndex = 23
+        '
+        'txtPass
+        '
+        Me.txtPass.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPass.Location = New System.Drawing.Point(303, 316)
+        Me.txtPass.Name = "txtPass"
+        Me.txtPass.Size = New System.Drawing.Size(278, 29)
+        Me.txtPass.TabIndex = 24
+        '
+        'cmbIns
+        '
+        Me.cmbIns.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbIns.FormattingEnabled = True
+        Me.cmbIns.Location = New System.Drawing.Point(303, 372)
+        Me.cmbIns.Name = "cmbIns"
+        Me.cmbIns.Size = New System.Drawing.Size(278, 30)
+        Me.cmbIns.TabIndex = 25
+        '
+        'cmbTipo
+        '
+        Me.cmbTipo.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbTipo.FormattingEnabled = True
+        Me.cmbTipo.Location = New System.Drawing.Point(303, 426)
+        Me.cmbTipo.Name = "cmbTipo"
+        Me.cmbTipo.Size = New System.Drawing.Size(278, 30)
+        Me.cmbTipo.TabIndex = 26
+        '
         'IngresoUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(743, 567)
-        Me.Controls.Add(Me.btnIngresa)
         Me.Controls.Add(Me.cmbTipo)
         Me.Controls.Add(Me.cmbIns)
         Me.Controls.Add(Me.txtPass)
         Me.Controls.Add(Me.txtUser)
+        Me.Controls.Add(Me.txtDV)
         Me.Controls.Add(Me.txtRut)
         Me.Controls.Add(Me.txtApe)
         Me.Controls.Add(Me.txtNomb)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.btnIngresa)
         Me.Controls.Add(Me.lblTipo)
         Me.Controls.Add(Me.lblInst)
         Me.Controls.Add(Me.lblPass)
@@ -287,12 +309,14 @@ Partial Class IngresoUsuario
     Friend WithEvents lblPass As Label
     Friend WithEvents lblInst As Label
     Friend WithEvents lblTipo As Label
+    Friend WithEvents btnIngresa As Button
+    Friend WithEvents Label2 As Label
     Friend WithEvents txtNomb As TextBox
     Friend WithEvents txtApe As TextBox
     Friend WithEvents txtRut As TextBox
+    Friend WithEvents txtDV As TextBox
     Friend WithEvents txtUser As TextBox
     Friend WithEvents txtPass As TextBox
     Friend WithEvents cmbIns As ComboBox
     Friend WithEvents cmbTipo As ComboBox
-    Friend WithEvents btnIngresa As Button
 End Class
