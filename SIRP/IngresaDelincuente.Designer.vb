@@ -51,6 +51,7 @@ Partial Class IngresaDelincuente
         Me.btnRegistrar = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.cmbBanda = New System.Windows.Forms.ComboBox()
+        Me.txtDigito = New System.Windows.Forms.TextBox()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -61,7 +62,7 @@ Partial Class IngresaDelincuente
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(5, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(648, 28)
+        Me.MenuStrip1.Size = New System.Drawing.Size(648, 30)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -69,7 +70,7 @@ Partial Class IngresaDelincuente
         '
         Me.OpcionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IngresarDelincuenteToolStripMenuItem, Me.ActualizarDatosDelincuenteToolStripMenuItem, Me.IngresarDelitoCometidoToolStripMenuItem, Me.IngresarUltimaVezVistoToolStripMenuItem})
         Me.OpcionesToolStripMenuItem.Name = "OpcionesToolStripMenuItem"
-        Me.OpcionesToolStripMenuItem.Size = New System.Drawing.Size(85, 24)
+        Me.OpcionesToolStripMenuItem.Size = New System.Drawing.Size(85, 26)
         Me.OpcionesToolStripMenuItem.Text = "Opciones"
         '
         'IngresarDelincuenteToolStripMenuItem
@@ -100,7 +101,7 @@ Partial Class IngresaDelincuente
         '
         Me.VolverToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VolverAlMeúPrincipalToolStripMenuItem, Me.SalirDelSistemaToolStripMenuItem})
         Me.VolverToolStripMenuItem.Name = "VolverToolStripMenuItem"
-        Me.VolverToolStripMenuItem.Size = New System.Drawing.Size(64, 24)
+        Me.VolverToolStripMenuItem.Size = New System.Drawing.Size(64, 26)
         Me.VolverToolStripMenuItem.Text = "Volver"
         '
         'VolverAlMeúPrincipalToolStripMenuItem
@@ -249,7 +250,7 @@ Partial Class IngresaDelincuente
         Me.txtRut.Location = New System.Drawing.Point(340, 194)
         Me.txtRut.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtRut.Name = "txtRut"
-        Me.txtRut.Size = New System.Drawing.Size(215, 29)
+        Me.txtRut.Size = New System.Drawing.Size(161, 29)
         Me.txtRut.TabIndex = 14
         '
         'txtApodo
@@ -309,11 +310,20 @@ Partial Class IngresaDelincuente
         Me.cmbBanda.Size = New System.Drawing.Size(215, 30)
         Me.cmbBanda.TabIndex = 20
         '
+        'txtDigito
+        '
+        Me.txtDigito.Font = New System.Drawing.Font("Calibri", 10.8!)
+        Me.txtDigito.Location = New System.Drawing.Point(507, 194)
+        Me.txtDigito.Name = "txtDigito"
+        Me.txtDigito.Size = New System.Drawing.Size(47, 29)
+        Me.txtDigito.TabIndex = 21
+        '
         'IngresaDelincuente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(648, 533)
+        Me.Controls.Add(Me.txtDigito)
         Me.Controls.Add(Me.cmbBanda)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.btnRegistrar)
@@ -375,4 +385,5 @@ Partial Class IngresaDelincuente
     Friend WithEvents btnRegistrar As Button
     Friend WithEvents Label8 As Label
     Friend WithEvents cmbBanda As ComboBox
+    Friend WithEvents txtDigito As TextBox
 End Class

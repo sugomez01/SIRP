@@ -16,8 +16,8 @@ Public Class IngresoDelito
 
 
 
-    Public conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-EUII0N8;User ID=sa;Password=sasa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
-    'Public conn As SqlConnection = New SqlConnection("Data Source=LAPTOP-6GF7OE4K;Initial Catalog=SIRP;Integrated Security=True")
+    'Public conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-EUII0N8;User ID=sa;Password=sasa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
+    Public conn As SqlConnection = New SqlConnection("Data Source=LAPTOP-6GF7OE4K;Initial Catalog=SIRP;Integrated Security=True")
 
 
     Private cmb As SqlCommandBuilder
@@ -68,7 +68,7 @@ Public Class IngresoDelito
 
     Private Sub dtpFechaDelito_ValueChanged(sender As Object, e As EventArgs) Handles dtpFechaDelito.ValueChanged
 
-        fechaingreso = dtpFechaDelito.Value.ToString()
+        fechaingreso = Format(dtpFechaDelito.Value, "yyyy/MM/dd").ToString()
 
 
     End Sub
@@ -91,14 +91,6 @@ Public Class IngresoDelito
 
     End Sub
 
-
-    Private Sub txtRut_TextChanged(sender As Object, e As EventArgs) Handles txtRut.TextChanged
-
-        If txtRut.TextLength = 8 Then txtRut.Text = ValidaRut(txtRut.Text)
-
-        rut = txtRut.Text
-
-    End Sub
 
     Private Sub txtRut_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtRut.KeyPress
         e.Handled = ValidaChar(e.KeyChar)
@@ -203,22 +195,45 @@ Public Class IngresoDelito
 
     End Sub
 
-    Public Function ValidaRut(ByVal ElNumero As String) As String
-        Dim Resultado As String = ""
-        Dim Multiplicador As Integer = 2
-        Dim iNum As Integer = 0
-        Dim Suma As Integer = 0
+    Function validaRut()
+        Dim rut As String = txtRut.Text
+        Dim digito As String = txtDigito.Text
+        Dim dig2 As String
+        Dim contador, contar, acumulador, division, dig As Integer
+        contar = 2
+        Dim retorno As Boolean
 
-        For i As Integer = 8 To 1 Step -1
-            iNum = Mid(ElNumero, i, 1)
-            Suma += iNum * Multiplicador
-            Multiplicador += 1
-            If Multiplicador = 8 Then Multiplicador = 2
-        Next
-        Resultado = CStr(11 - (Suma Mod 11))
-        If Resultado = "10" Then Resultado = "K"
-        If Resultado = "11" Then Resultado = "0"
-        Return ElNumero & "-" & Resultado
+        Do While rut <> 0
+            contador = (rut Mod 10) * contar
+            acumulador = acumulador + contador
+            rut = rut \ 10
+            contar = contar + 1
+            If contar = 8 Then
+                contar = 2
+            End If
+        Loop
+
+        division = acumulador Mod 11
+        If division = 0 Then
+            division = 11
+        End If
+        dig = 11 - division
+        dig2 = CStr(dig)
+        If dig2 = 10 Then
+            dig2 = "K"
+        End If
+        If dig2 = digito Then
+            ' MsgBox("rut validado")
+            retorno = True
+        Else
+            retorno = False
+            MsgBox("Rut erróneo, favor validar")
+            txtRut.Clear()
+            txtDigito.Clear()
+        End If
+
+
+        Return retorno
     End Function
 
     Function InsertarDelito(ByVal sql)
@@ -257,35 +272,38 @@ Public Class IngresoDelito
     Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
         Dim InsertDel
 
+        rut = txtRut.Text + "-" + txtDigito.Text
 
-        InsertDel = "insert into b_detalle_delito values('" + rut + "'," + id_delito.ToString + ",'" + detalle + "','" + Format(fechaingreso, "yyyy-MM-dd") + "'," + id_zona.ToString + "," + id_comuna.ToString + "," + id_sector.ToString + "," + id_banda.ToString + "," + Login.id_user.ToString + "," + Login.id_int.ToString + ",getdate())"
-        ' MsgBox(InsertDel)
+        InsertDel = "insert into b_detalle_delito values('" + rut + "'," + id_delito.ToString + ",'" + detalle + "','" + fechaingreso + "'," + id_zona.ToString + "," + id_comuna.ToString + "," + id_sector.ToString + "," + id_banda.ToString + "," + Login.id_user.ToString + "," + Login.id_int.ToString + ",getdate())"
+        MsgBox(InsertDel)
 
-        If (ExisteRut() = False) Then
+        If validaRut() = True Then
 
-            MsgBox("Delincuente no se encuentra registrado")
-            IngresaDelincuente.Show()
-            Me.Close()
+            If (ExisteRut() = False) Then
 
-        Else
+                MsgBox("Delincuente no se encuentra registrado")
+                IngresaDelincuente.Show()
+                Me.Close()
 
-            If (InsertarDelito(InsertDel)) Then
-                MsgBox("Registro ingresado exitosamente!",, "Registro existoso")
-                op = MsgBox("¿Desea ingresar otra Delito?", MsgBoxStyle.YesNo, "Confirmación")
-                If (op = 6) Then
-                    txtRut.Clear()
-                    txtDetalle.Clear()
-                Else
-                    IngresaDelincuente.Show()
-                    Me.Close()
-                End If
             Else
-                MsgBox("Error al ingresar Delito",, "Error")
+
+                If (InsertarDelito(InsertDel)) Then
+                    MsgBox("Registro ingresado exitosamente!",, "Registro existoso")
+                    op = MsgBox("¿Desea ingresar otra Delito?", MsgBoxStyle.YesNo, "Confirmación")
+                    If (op = 6) Then
+                        txtRut.Clear()
+                        txtDetalle.Clear()
+                    Else
+                        IngresaDelincuente.Show()
+                        Me.Close()
+                    End If
+                Else
+                    MsgBox("Error al ingresar Delito",, "Error")
+                End If
+
             End If
 
         End If
-
-
 
 
     End Sub

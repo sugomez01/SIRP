@@ -2,8 +2,8 @@
 
 Public Class IngresaDelincuente
 
-    Dim id_user, id_int, id_tip_user, op, banda, estado As Integer
-    Dim pass, nombre, apellido, rut, fechaNac As String
+    Dim id_user, id_int, id_tip_user, op, banda As Integer
+    Dim estado, fechaNac As String
 
 
 
@@ -19,58 +19,72 @@ Public Class IngresaDelincuente
     Public comando As SqlCommand
     Public dr As SqlDataReader
 
+    Private Sub IngresaDelincuente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        llenaCombo()
+    End Sub
+
     Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
 
         If txtApellido.Text = "" Or txtApodo.Text = "" Or txtDomicilio.Text = "" Or txtNombre.Text = "" Or txtTelefono.Text = "" Then
             MsgBox("Debe completar todos los campos!",, "Error")
         Else
 
-            Dim insert, consulta As String
+            If validaRut() = True Then
+                Dim insert, consulta, rut, apellido, nombre As String
 
-            consulta = "select rut_delincuente from l_delincuente where rut_delincuente='" + txtRut.Text + "'"
-            insert = "insert into l_delincuente values ('" + txtNombre.Text + "','" + txtApellido.Text + "','" + txtRut.Text + "','" + txtApodo.Text + "','" + txtTelefono.Text + "' ," + banda.ToString + ".'20210612'," + estado.ToString + "," + id_int.ToString + "," + id_tip_user.ToString + ",getDate())"
+                apellido = txtApellido.Text.ToString()
+                nombre = txtNombre.Text.ToString()
 
-            If validaRegistro(consulta) = False Then
-                If (Insertar(insert)) Then
-                    MsgBox("Registro ingresado exitosamente!",, "Registro existoso")
-                    op = MsgBox("¿Desea ingresar otra institución?", MsgBoxStyle.YesNo, "Confirmación")
-                    If (op = 6) Then
-                        txtNombre.Clear()
-                        txtApellido.Clear()
-                        txtApodo.Clear()
-                        txtRut.Clear()
-                        txtTelefono.Clear()
-                        cmbEstado.SelectedIndex = 0
+                rut = txtRut.Text + "-" + txtDigito.Text
+                consulta = "select rut_delincuente from l_delincuente where rut_delincuente='" + rut + "'"
+                insert = "insert into l_delincuente values ('" + rut + "','" + nombre + "','" + apellido + "','" + txtApodo.Text.ToString + "'," + txtTelefono.Text.ToString + " ," + banda.ToString + "," + "'" + fechaNac + "'," + estado.ToString + "," + id_int.ToString + "," + id_tip_user.ToString + ",getDate())"
+
+                MsgBox(insert)
+
+                If validaRegistro(consulta) = False Then
+                    If (Insertar(insert)) Then
+                        MsgBox("Registro ingresado exitosamente!",, "Registro existoso")
+                        op = MsgBox("¿Desea ingresar otro delincuente?", MsgBoxStyle.YesNo, "Confirmación")
+                        If (op = 6) Then
+                            txtNombre.Clear()
+                            txtApellido.Clear()
+                            txtApodo.Clear()
+                            txtRut.Clear()
+                            txtTelefono.Clear()
+                            cmbEstado.SelectedIndex = 0
+                        Else
+                            Principal.Show()
+                            Me.Close()
+                        End If
                     Else
-                        Principal.Show()
-                        Me.Close()
+                        MsgBox("Error al ingresar usuario",, "Error")
                     End If
                 Else
-                    MsgBox("Error al ingresar usuario",, "Error")
+                    MsgBox("Rut o nombre de usuario ya existe",, "Error")
+                    txtRut.Enabled = True
+                    txtDigito.Enabled = True
+                    txtNombre.Clear()
+                    txtApellido.Clear()
+                    txtApodo.Clear()
+                    txtRut.Clear()
+                    txtDigito.Clear()
+                    txtTelefono.Clear()
                 End If
-            Else
-                MsgBox("Rut o nombre de usuario ya existe",, "Error")
-                txtRut.Enabled = True
-                txtNombre.Clear()
-                txtApellido.Clear()
-                txtApodo.Clear()
-                txtRut.Clear()
-                txtTelefono.Clear()
+
             End If
+
         End If
 
     End Sub
 
     Private Sub cmbEstado_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbEstado.SelectedIndexChanged
-        estado = cmbEstado.SelectedValue(0)
+        estado = cmbEstado.SelectedValue().ToString
     End Sub
 
-    Private Sub IngresaDelincuente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        llenaCombo()
-    End Sub
 
     Private Sub dtpFechaNac_ValueChanged(sender As Object, e As EventArgs) Handles dtpFechaNac.ValueChanged
-        fechaNac = dtpFechaNac.Value.ToString()
+        fechaNac = Format(dtpFechaNac.Value, "yyyy/MM/dd").ToString()
+
     End Sub
 
     Private Sub cmbBanda_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbBanda.SelectedIndexChanged
@@ -123,8 +137,8 @@ Public Class IngresaDelincuente
         da = New SqlDataAdapter(comando)
         dt = New DataTable()
         da.Fill(dt)
-        cmbEstado.DisplayMember = "desc_institucion"
-        cmbEstado.ValueMember = "id_institucion"
+        cmbEstado.DisplayMember = "desc_estado"
+        cmbEstado.ValueMember = "id_estado"
         cmbEstado.DataSource = dt
 
         comando = New SqlCommand("select * from l_banda where l_id_institucion = " + id_int.ToString() + "", conn)
@@ -157,5 +171,72 @@ Public Class IngresaDelincuente
         Return resultado
 
     End Function
+
+    Function validaRut()
+        Dim rut As String = txtRut.Text
+        Dim digito As String = txtDigito.Text
+        Dim dig2 As String
+        Dim contador, contar, acumulador, division, dig As Integer
+        contar = 2
+        Dim retorno As Boolean
+
+        Do While rut <> 0
+            contador = (rut Mod 10) * contar
+            acumulador = acumulador + contador
+            rut = rut \ 10
+            contar = contar + 1
+            If contar = 8 Then
+                contar = 2
+            End If
+        Loop
+
+        division = acumulador Mod 11
+        If division = 0 Then
+            division = 11
+        End If
+        dig = 11 - division
+        dig2 = CStr(dig)
+        If dig2 = 10 Then
+            dig2 = "K"
+        End If
+        If dig2 = digito Then
+            ' MsgBox("rut validado")
+            retorno = True
+        Else
+            retorno = False
+            MsgBox("Rut erróneo, favor validar")
+            txtRut.Clear()
+            txtDigito.Clear()
+        End If
+
+
+        Return retorno
+    End Function
+
+    Private Sub txtNombre_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNombre.KeyPress
+        If Char.IsLetter(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+            MsgBox("Solo puede ingresar letras")
+        End If
+    End Sub
+
+    Private Sub txtApellido_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtApellido.KeyPress
+        If Char.IsLetter(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+            MsgBox("Solo puede ingresar letras")
+        End If
+    End Sub
 
 End Class

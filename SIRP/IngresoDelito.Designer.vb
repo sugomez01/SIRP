@@ -43,6 +43,7 @@ Partial Class IngresoDelito
         Me.cmbComuna = New System.Windows.Forms.ComboBox()
         Me.cmbBanda = New System.Windows.Forms.ComboBox()
         Me.dtpFechaDelito = New System.Windows.Forms.DateTimePicker()
+        Me.txtDigito = New System.Windows.Forms.TextBox()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -165,7 +166,7 @@ Partial Class IngresoDelito
         Me.txtRut.Location = New System.Drawing.Point(179, 120)
         Me.txtRut.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtRut.Name = "txtRut"
-        Me.txtRut.Size = New System.Drawing.Size(176, 29)
+        Me.txtRut.Size = New System.Drawing.Size(140, 29)
         Me.txtRut.TabIndex = 10
         '
         'txtDetalle
@@ -243,11 +244,19 @@ Partial Class IngresoDelito
         Me.dtpFechaDelito.Size = New System.Drawing.Size(176, 29)
         Me.dtpFechaDelito.TabIndex = 19
         '
+        'txtDigito
+        '
+        Me.txtDigito.Location = New System.Drawing.Point(325, 120)
+        Me.txtDigito.Name = "txtDigito"
+        Me.txtDigito.Size = New System.Drawing.Size(30, 29)
+        Me.txtDigito.TabIndex = 20
+        '
         'IngresoDelito
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(795, 591)
+        Me.Controls.Add(Me.txtDigito)
         Me.Controls.Add(Me.dtpFechaDelito)
         Me.Controls.Add(Me.cmbBanda)
         Me.Controls.Add(Me.cmbComuna)
@@ -300,4 +309,5 @@ Partial Class IngresoDelito
     Friend WithEvents cmbComuna As ComboBox
     Friend WithEvents cmbBanda As ComboBox
     Friend WithEvents dtpFechaDelito As DateTimePicker
+    Friend WithEvents txtDigito As TextBox
 End Class
