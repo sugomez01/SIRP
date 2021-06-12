@@ -41,14 +41,17 @@ Partial Class IngresaDelincuente
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cmbEstado = New System.Windows.Forms.ComboBox()
         Me.dtpFechaNac = New System.Windows.Forms.DateTimePicker()
         Me.txtApellido = New System.Windows.Forms.TextBox()
         Me.txtRut = New System.Windows.Forms.TextBox()
         Me.txtApodo = New System.Windows.Forms.TextBox()
         Me.txtDomicilio = New System.Windows.Forms.TextBox()
         Me.txtTelefono = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnRegistrar = New System.Windows.Forms.Button()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.cmbBanda = New System.Windows.Forms.ComboBox()
+        Me.txtDigito = New System.Windows.Forms.TextBox()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -196,7 +199,7 @@ Partial Class IngresaDelincuente
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(105, 379)
+        Me.Label6.Location = New System.Drawing.Point(105, 419)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(167, 23)
         Me.Label6.TabIndex = 9
@@ -206,27 +209,27 @@ Partial Class IngresaDelincuente
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(105, 422)
+        Me.Label7.Location = New System.Drawing.Point(105, 462)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(62, 23)
         Me.Label7.TabIndex = 10
         Me.Label7.Text = "Estado"
         '
-        'ComboBox1
+        'cmbEstado
         '
-        Me.ComboBox1.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Libre", "Preso", "Orden de Arresto"})
-        Me.ComboBox1.Location = New System.Drawing.Point(340, 418)
-        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(215, 30)
-        Me.ComboBox1.TabIndex = 11
+        Me.cmbEstado.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbEstado.FormattingEnabled = True
+        Me.cmbEstado.Items.AddRange(New Object() {"Libre", "Preso", "Orden de Arresto"})
+        Me.cmbEstado.Location = New System.Drawing.Point(340, 458)
+        Me.cmbEstado.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.cmbEstado.Name = "cmbEstado"
+        Me.cmbEstado.Size = New System.Drawing.Size(215, 30)
+        Me.cmbEstado.TabIndex = 11
         '
         'dtpFechaNac
         '
         Me.dtpFechaNac.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtpFechaNac.Location = New System.Drawing.Point(340, 374)
+        Me.dtpFechaNac.Location = New System.Drawing.Point(340, 414)
         Me.dtpFechaNac.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.dtpFechaNac.Name = "dtpFechaNac"
         Me.dtpFechaNac.Size = New System.Drawing.Size(215, 29)
@@ -247,7 +250,7 @@ Partial Class IngresaDelincuente
         Me.txtRut.Location = New System.Drawing.Point(340, 194)
         Me.txtRut.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtRut.Name = "txtRut"
-        Me.txtRut.Size = New System.Drawing.Size(215, 29)
+        Me.txtRut.Size = New System.Drawing.Size(161, 29)
         Me.txtRut.TabIndex = 14
         '
         'txtApodo
@@ -277,30 +280,60 @@ Partial Class IngresaDelincuente
         Me.txtTelefono.Size = New System.Drawing.Size(215, 29)
         Me.txtTelefono.TabIndex = 17
         '
-        'Button1
+        'btnRegistrar
         '
-        Me.Button1.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(447, 492)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(108, 30)
-        Me.Button1.TabIndex = 18
-        Me.Button1.Text = "&Registrar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnRegistrar.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRegistrar.Location = New System.Drawing.Point(447, 492)
+        Me.btnRegistrar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnRegistrar.Name = "btnRegistrar"
+        Me.btnRegistrar.Size = New System.Drawing.Size(108, 30)
+        Me.btnRegistrar.TabIndex = 18
+        Me.btnRegistrar.Text = "&Registrar"
+        Me.btnRegistrar.UseVisualStyleBackColor = True
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Calibri", 10.8!)
+        Me.Label8.Location = New System.Drawing.Point(105, 376)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(58, 23)
+        Me.Label8.TabIndex = 19
+        Me.Label8.Text = "Banda"
+        '
+        'cmbBanda
+        '
+        Me.cmbBanda.Font = New System.Drawing.Font("Calibri", 10.8!)
+        Me.cmbBanda.FormattingEnabled = True
+        Me.cmbBanda.Location = New System.Drawing.Point(340, 370)
+        Me.cmbBanda.Name = "cmbBanda"
+        Me.cmbBanda.Size = New System.Drawing.Size(215, 30)
+        Me.cmbBanda.TabIndex = 20
+        '
+        'txtDigito
+        '
+        Me.txtDigito.Font = New System.Drawing.Font("Calibri", 10.8!)
+        Me.txtDigito.Location = New System.Drawing.Point(507, 194)
+        Me.txtDigito.Name = "txtDigito"
+        Me.txtDigito.Size = New System.Drawing.Size(47, 29)
+        Me.txtDigito.TabIndex = 21
         '
         'IngresaDelincuente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(648, 533)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.txtDigito)
+        Me.Controls.Add(Me.cmbBanda)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.btnRegistrar)
         Me.Controls.Add(Me.txtTelefono)
         Me.Controls.Add(Me.txtDomicilio)
         Me.Controls.Add(Me.txtApodo)
         Me.Controls.Add(Me.txtRut)
         Me.Controls.Add(Me.txtApellido)
         Me.Controls.Add(Me.dtpFechaNac)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cmbEstado)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -342,12 +375,15 @@ Partial Class IngresaDelincuente
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cmbEstado As ComboBox
     Friend WithEvents dtpFechaNac As DateTimePicker
     Friend WithEvents txtApellido As TextBox
     Friend WithEvents txtRut As TextBox
     Friend WithEvents txtApodo As TextBox
     Friend WithEvents txtDomicilio As TextBox
     Friend WithEvents txtTelefono As TextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnRegistrar As Button
+    Friend WithEvents Label8 As Label
+    Friend WithEvents cmbBanda As ComboBox
+    Friend WithEvents txtDigito As TextBox
 End Class

@@ -186,6 +186,9 @@
     <EmbeddedResource Include="IngresaDelincuente.resx">
       <DependentUpon>IngresaDelincuente.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IngresoControl.resx">
+      <DependentUpon>IngresoControl.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IngresoDelito.resx">
       <DependentUpon>IngresoDelito.vb</DependentUpon>
     </EmbeddedResource>
