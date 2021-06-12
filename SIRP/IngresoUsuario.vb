@@ -62,7 +62,7 @@ Public Class IngresoUsuario
 
             Dim insert, consulta As String
 
-            consulta = "select rut_usuario,username from l_usuario where rut_usuario='" + rut + "' or username='" + txtUser.Text + "'"
+            consulta = "select rut_delincuente from l_usuario where rut_usuario='" + rut + "' or username='" + txtUser.Text + "'"
             insert = "insert into l_usuario values ('" + txtUser.Text + "','" + txtPass.Text + "','" + txtRut.Text + "','" + txtNomb.Text + "','" + txtApe.Text + "'," + id_int.ToString + "," + id_tip_user.ToString + ",getDate())"
 
             If validaRegistro(consulta) = False Then
