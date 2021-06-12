@@ -28,42 +28,34 @@ Public Class Principal
     'Menu
     Private Sub CrearInstituciónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CreaInstitucion.Click
         AgregaInstitucion.Show()
-        Me.Close()
     End Sub
 
     Private Sub CrearUsuarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CreaUser.Click
         IngresoUsuario.Show()
-        Me.Close()
     End Sub
 
     Private Sub CreaZona_Click(sender As Object, e As EventArgs) Handles CreaZona.Click
         IngresoZona.Show()
-        Me.Close()
     End Sub
 
     Private Sub CreaSector_Click(sender As Object, e As EventArgs) Handles CreaSector.Click
         IngresoSector.Show()
-        Me.Close()
     End Sub
 
     Private Sub CreaDelito_Click(sender As Object, e As EventArgs) Handles CreaDelito.Click
         IngresoDelito.Show()
-        Me.Close()
     End Sub
 
     Private Sub CreaControl_Click(sender As Object, e As EventArgs) Handles CreaControl.Click
         IngresoControl.Show()
-        Me.Close()
     End Sub
 
     Private Sub CreaBanda_Click(sender As Object, e As EventArgs) Handles CreaBanda.Click
         IngresoBanda.Show()
-        Me.Close()
     End Sub
 
     Private Sub ActDelincuente_Click(sender As Object, e As EventArgs) Handles ActDelincuente.Click
         ActualizaDelincuente.Show()
-        Me.Close()
     End Sub
 
     Private Sub CerrarSesiónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CerrarSesion.Click
@@ -76,7 +68,6 @@ Public Class Principal
 
     Private Sub RegistrarDelincuenteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CreaDelincuente.Click
         IngresaDelincuente.Show()
-        Me.Close()
     End Sub
 
     'Metodo para conectar
@@ -130,16 +121,15 @@ Public Class Principal
     'Muestra Nombre usuario y logo segun corresponda
     Public Sub bienvenidaUser(ByVal id As Integer)
         lblBienvenido.Text = "Bienvenid@ " + Login.nombre + " " + Login.apellido
-
-        '    If id = 1 Then
-        '    picPrincipal.Image = Image.FromFile("C:\Users\sgome\source\repos\sugomez01\SIRP\SIRP\Resources\carabineros.png")
-        '    ElseIf id = 2 Then
-        '    picPrincipal.Image = Image.FromFile("C:\Users\sgome\source\repos\sugomez01\SIRP\SIRP\Resources\os-10.png")
-        '    ElseIf id = 3 Then
-        '    picPrincipal.Image = Image.FromFile("C:\Users\sgome\source\repos\sugomez01\SIRP\SIRP\Resources\pdi.png")
-        '    Else
-        '    picPrincipal.Visible = False
-        '    End If
+        If id = 1 Then
+            picPrincipal.Image = Image.FromFile("C:\Users\sgome\source\repos\sugomez01\SIRP\SIRP\Resources\carabineros.png")
+        ElseIf id = 2 Then
+            picPrincipal.Image = Image.FromFile("C:\Users\sgome\source\repos\sugomez01\SIRP\SIRP\Resources\os10.png")
+        ElseIf id = 3 Then
+            picPrincipal.Image = Image.FromFile("C:\Users\sgome\source\repos\sugomez01\SIRP\SIRP\Resources\pdi.png")
+        Else
+            picPrincipal.Visible = False
+        End If
     End Sub
 
 End Class
