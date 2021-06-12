@@ -47,6 +47,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>police_avatar_person_2845.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -83,6 +86,12 @@
       <DependentUpon>AgregaInstitucion.vb</DependentUpon>
     </Compile>
     <Compile Include="AgregaInstitucion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cargando.Designer.vb">
+      <DependentUpon>Cargando.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cargando.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="IngresaDelincuente.Designer.vb">
@@ -143,6 +152,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -170,11 +180,17 @@
     <EmbeddedResource Include="AgregaInstitucion.resx">
       <DependentUpon>AgregaInstitucion.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Cargando.resx">
+      <DependentUpon>Cargando.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IngresaDelincuente.resx">
       <DependentUpon>IngresaDelincuente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IngresoDelito.resx">
       <DependentUpon>IngresoDelito.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IngresoSector.resx">
+      <DependentUpon>IngresoSector.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IngresoUsuario.resx">
       <DependentUpon>IngresoUsuario.vb</DependentUpon>
@@ -220,6 +236,57 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\LOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pass1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prueba2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ingreso1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ingreso2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ingreso3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_ingresar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\working.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="police_avatar_person_2845.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

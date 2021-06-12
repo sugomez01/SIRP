@@ -22,11 +22,9 @@ Partial Class IngresoDelito
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(IngresoDelito))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.OpcionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.VolverToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -43,14 +41,13 @@ Partial Class IngresoDelito
         Me.cmbComuna = New System.Windows.Forms.ComboBox()
         Me.cmbBanda = New System.Windows.Forms.ComboBox()
         Me.dtpFechaDelito = New System.Windows.Forms.DateTimePicker()
-        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(239, 43)
+        Me.Label1.Location = New System.Drawing.Point(318, 35)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(313, 35)
         Me.Label1.TabIndex = 0
@@ -60,40 +57,17 @@ Partial Class IngresoDelito
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(26, 123)
+        Me.Label2.Location = New System.Drawing.Point(26, 131)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(36, 23)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Rut"
         '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpcionesToolStripMenuItem, Me.VolverToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(9, 3, 0, 3)
-        Me.MenuStrip1.Size = New System.Drawing.Size(795, 30)
-        Me.MenuStrip1.TabIndex = 2
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'OpcionesToolStripMenuItem
-        '
-        Me.OpcionesToolStripMenuItem.Name = "OpcionesToolStripMenuItem"
-        Me.OpcionesToolStripMenuItem.Size = New System.Drawing.Size(85, 24)
-        Me.OpcionesToolStripMenuItem.Text = "Opciones"
-        '
-        'VolverToolStripMenuItem
-        '
-        Me.VolverToolStripMenuItem.Name = "VolverToolStripMenuItem"
-        Me.VolverToolStripMenuItem.Size = New System.Drawing.Size(64, 24)
-        Me.VolverToolStripMenuItem.Text = "Volver"
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(26, 190)
+        Me.Label3.Location = New System.Drawing.Point(558, 131)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(55, 23)
         Me.Label3.TabIndex = 3
@@ -103,7 +77,7 @@ Partial Class IngresoDelito
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(26, 254)
+        Me.Label4.Location = New System.Drawing.Point(26, 215)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(125, 23)
         Me.Label4.TabIndex = 4
@@ -113,7 +87,7 @@ Partial Class IngresoDelito
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(436, 227)
+        Me.Label5.Location = New System.Drawing.Point(74, 305)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(48, 23)
         Me.Label5.TabIndex = 5
@@ -123,7 +97,7 @@ Partial Class IngresoDelito
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(436, 297)
+        Me.Label6.Location = New System.Drawing.Point(320, 305)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(74, 23)
         Me.Label6.TabIndex = 6
@@ -133,7 +107,7 @@ Partial Class IngresoDelito
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(436, 154)
+        Me.Label7.Location = New System.Drawing.Point(605, 305)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(59, 23)
         Me.Label7.TabIndex = 7
@@ -143,7 +117,7 @@ Partial Class IngresoDelito
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(26, 320)
+        Me.Label8.Location = New System.Drawing.Point(558, 215)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(58, 23)
         Me.Label8.TabIndex = 8
@@ -153,7 +127,7 @@ Partial Class IngresoDelito
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(26, 389)
+        Me.Label9.Location = New System.Drawing.Point(105, 395)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(145, 23)
         Me.Label9.TabIndex = 9
@@ -162,7 +136,7 @@ Partial Class IngresoDelito
         'txtRut
         '
         Me.txtRut.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRut.Location = New System.Drawing.Point(179, 120)
+        Me.txtRut.Location = New System.Drawing.Point(179, 128)
         Me.txtRut.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtRut.Name = "txtRut"
         Me.txtRut.Size = New System.Drawing.Size(176, 29)
@@ -170,7 +144,7 @@ Partial Class IngresoDelito
         '
         'txtDetalle
         '
-        Me.txtDetalle.Location = New System.Drawing.Point(179, 389)
+        Me.txtDetalle.Location = New System.Drawing.Point(256, 392)
         Me.txtDetalle.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtDetalle.Multiline = True
         Me.txtDetalle.Name = "txtDetalle"
@@ -179,8 +153,9 @@ Partial Class IngresoDelito
         '
         'btnRegistrar
         '
+        Me.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRegistrar.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRegistrar.Location = New System.Drawing.Point(621, 521)
+        Me.btnRegistrar.Location = New System.Drawing.Point(700, 527)
         Me.btnRegistrar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnRegistrar.Name = "btnRegistrar"
         Me.btnRegistrar.Size = New System.Drawing.Size(100, 32)
@@ -192,7 +167,7 @@ Partial Class IngresoDelito
         '
         Me.ComboBox1.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(179, 187)
+        Me.ComboBox1.Location = New System.Drawing.Point(654, 128)
         Me.ComboBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(176, 30)
@@ -202,7 +177,7 @@ Partial Class IngresoDelito
         '
         Me.cmbSector.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbSector.FormattingEnabled = True
-        Me.cmbSector.Location = New System.Drawing.Point(545, 151)
+        Me.cmbSector.Location = New System.Drawing.Point(670, 302)
         Me.cmbSector.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.cmbSector.Name = "cmbSector"
         Me.cmbSector.Size = New System.Drawing.Size(176, 30)
@@ -212,7 +187,7 @@ Partial Class IngresoDelito
         '
         Me.cmbZona.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbZona.FormattingEnabled = True
-        Me.cmbZona.Location = New System.Drawing.Point(545, 224)
+        Me.cmbZona.Location = New System.Drawing.Point(128, 302)
         Me.cmbZona.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.cmbZona.Name = "cmbZona"
         Me.cmbZona.Size = New System.Drawing.Size(176, 30)
@@ -222,7 +197,7 @@ Partial Class IngresoDelito
         '
         Me.cmbComuna.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbComuna.FormattingEnabled = True
-        Me.cmbComuna.Location = New System.Drawing.Point(545, 294)
+        Me.cmbComuna.Location = New System.Drawing.Point(400, 302)
         Me.cmbComuna.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.cmbComuna.Name = "cmbComuna"
         Me.cmbComuna.Size = New System.Drawing.Size(176, 30)
@@ -231,14 +206,14 @@ Partial Class IngresoDelito
         'cmbBanda
         '
         Me.cmbBanda.FormattingEnabled = True
-        Me.cmbBanda.Location = New System.Drawing.Point(179, 317)
+        Me.cmbBanda.Location = New System.Drawing.Point(654, 212)
         Me.cmbBanda.Name = "cmbBanda"
         Me.cmbBanda.Size = New System.Drawing.Size(176, 30)
         Me.cmbBanda.TabIndex = 18
         '
         'dtpFechaDelito
         '
-        Me.dtpFechaDelito.Location = New System.Drawing.Point(179, 249)
+        Me.dtpFechaDelito.Location = New System.Drawing.Point(179, 210)
         Me.dtpFechaDelito.Name = "dtpFechaDelito"
         Me.dtpFechaDelito.Size = New System.Drawing.Size(176, 29)
         Me.dtpFechaDelito.TabIndex = 19
@@ -247,7 +222,7 @@ Partial Class IngresoDelito
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(795, 591)
+        Me.ClientSize = New System.Drawing.Size(946, 614)
         Me.Controls.Add(Me.dtpFechaDelito)
         Me.Controls.Add(Me.cmbBanda)
         Me.Controls.Add(Me.cmbComuna)
@@ -266,14 +241,12 @@ Partial Class IngresoDelito
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.MenuStrip1)
         Me.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MainMenuStrip = Me.MenuStrip1
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "IngresoDelito"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "IngresoDelito"
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -281,9 +254,6 @@ Partial Class IngresoDelito
 
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents OpcionesToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents VolverToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label

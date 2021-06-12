@@ -5,7 +5,9 @@ Imports System.Windows.Forms
 
 Public Class Login
     Public id_user, id_int, id_tip_user, op As Integer
-    Public nombre, apellido, pass As String
+    Public nombre, apellido, pass, sexo As String
+    Dim formPosition As Point
+    Dim mouseAction As Boolean
 
     'Ruta para conectar a la DB
     'descomentar segun pc
@@ -20,10 +22,6 @@ Public Class Login
     Public dr As SqlDataReader
     Public dt As DataTable
 
-    Private Sub txtUser_TextChanged(sender As Object, e As EventArgs) Handles txtUser.TextChanged
-
-    End Sub
-
     'Metodo de Conexión a la DB
     Public Sub Conectar()
         Try
@@ -35,8 +33,30 @@ Public Class Login
         End Try
     End Sub
 
-    Private Sub txtPass_TextChanged(sender As Object, e As EventArgs) Handles txtPass.TextChanged
+    Private Sub Login_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
+        formPosition = New Point(Cursor.Position.X - Location.X, Cursor.Position.Y - Location.Y)
+        mouseAction = True
+    End Sub
 
+    Private Sub Login_MouseMove(sender As Object, e As MouseEventArgs) Handles MyBase.MouseMove
+        If mouseAction = True Then
+            Location = New Point(Cursor.Position.X - formPosition.X, Cursor.Position.Y - formPosition.Y)
+        End If
+    End Sub
+
+    Private Sub Login_MouseUp(sender As Object, e As MouseEventArgs) Handles MyBase.MouseUp
+        mouseAction = False
+    End Sub
+
+    Private Sub btnSalir_Click_1(sender As Object, e As EventArgs) Handles btnSalir.Click
+        op = MsgBox("¿Está seguro que desea salir?", MsgBoxStyle.YesNo, "Salir del Sistema")
+        If (op = 6) Then
+            Me.Close()
+        Else
+            txtUser.Clear()
+            txtPass.Clear()
+            txtUser.Focus()
+        End If
     End Sub
 
 
@@ -46,7 +66,7 @@ Public Class Login
         conn.Open()
         Dim resultado As Boolean = False
         Try
-            comando = New SqlCommand("select id_usuario,password,desc_nombre,desc_apellido,l_id_institucion,l_id_tipo_user from l_usuario where username = '" + nombreUSuario + "'", conn)
+            comando = New SqlCommand("select id_usuario,password,desc_nombre,desc_apellido,sexo,l_id_institucion,l_id_tipo_user from l_usuario where username = '" + nombreUSuario + "'", conn)
             dr = comando.ExecuteReader
 
             If dr.Read Then
@@ -55,6 +75,7 @@ Public Class Login
                 nombre = dr.Item("desc_nombre")
                 apellido = dr.Item("desc_apellido")
                 pass = dr.Item("password")
+                sexo = dr.Item("sexo")
                 id_int = dr.Item("l_id_institucion")
                 id_tip_user = dr.Item("l_id_tipo_user")
             Else
@@ -68,7 +89,7 @@ Public Class Login
     End Function
 
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ControlBox = False
+        'ControlBox = False
         txtPass.PasswordChar = "*"
     End Sub
 
@@ -77,6 +98,7 @@ Public Class Login
             MsgBox("Debe ingresar datos")
             txtUser.Clear()
             txtPass.Clear()
+            txtUser.Focus()
         Else
             Try
                 If usuarioRegistrado(txtUser.Text) = True Then
@@ -111,7 +133,7 @@ Public Class Login
         End If
     End Sub
 
-    Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
+    Private Sub btnSalir_Click(sender As Object, e As EventArgs)
         op = MsgBox("¿Está seguro que desea salir de la aplicación?", MsgBoxStyle.YesNo, "Salir del programa")
         If (op = 6) Then
             Me.Close()

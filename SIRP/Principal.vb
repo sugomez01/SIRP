@@ -58,11 +58,22 @@ Public Class Principal
         ActualizaDelincuente.Show()
     End Sub
 
+
     Private Sub CerrarSesiónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CerrarSesion.Click
         op = MsgBox("¿Está seguro que desea salir?", MsgBoxStyle.YesNo, "Salir del Sistema")
         If (op = 6) Then
             Login.Show()
             Me.Close()
+            ActualizaDelincuente.Close()
+            AgregaInstitucion.Close()
+            IngresaDelincuente.Close()
+            IngresoBanda.Close()
+            IngresoControl.Close()
+            IngresoDelito.Close()
+            IngresoSector.Close()
+            IngresoUsuario.Close()
+            IngresoZona.Close()
+            ModuloReportes.Close()
         End If
     End Sub
 
@@ -120,9 +131,15 @@ Public Class Principal
 
     'Muestra Nombre usuario y logo segun corresponda
     Public Sub bienvenidaUser(ByVal id As Integer)
-        lblBienvenido.Text = "Bienvenid@ " + Login.nombre + " " + Login.apellido
+        If Login.sexo = "F" Then
+            lblBienvenido.Text = "Bienvenida " + Login.nombre + " " + Login.apellido
+        Else
+            lblBienvenido.Text = "Bienvenido " + Login.nombre + " " + Login.apellido
+        End If
+
         If id = 1 Then
             picPrincipal.Image = Image.FromFile("C:\Users\sgome\source\repos\sugomez01\SIRP\SIRP\Resources\carabineros.png")
+            Me.BackColor = System.Drawing.ColorTranslator.FromHtml("#91D599")
         ElseIf id = 2 Then
             picPrincipal.Image = Image.FromFile("C:\Users\sgome\source\repos\sugomez01\SIRP\SIRP\Resources\os10.png")
         ElseIf id = 3 Then
