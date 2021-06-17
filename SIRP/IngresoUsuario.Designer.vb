@@ -47,6 +47,8 @@ Partial Class IngresoUsuario
         Me.txtPass = New System.Windows.Forms.TextBox()
         Me.cmbIns = New System.Windows.Forms.ComboBox()
         Me.cmbTipo = New System.Windows.Forms.ComboBox()
+        Me.lblSexo = New System.Windows.Forms.Label()
+        Me.cmbSexo = New System.Windows.Forms.ComboBox()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -66,7 +68,7 @@ Partial Class IngresoUsuario
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpcionesToolStripMenuItem, Me.VolverToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(743, 28)
+        Me.MenuStrip1.Size = New System.Drawing.Size(732, 28)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -176,7 +178,7 @@ Partial Class IngresoUsuario
         '
         Me.btnIngresa.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnIngresa.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnIngresa.Location = New System.Drawing.Point(515, 510)
+        Me.btnIngresa.Location = New System.Drawing.Point(435, 602)
         Me.btnIngresa.Name = "btnIngresa"
         Me.btnIngresa.Size = New System.Drawing.Size(165, 31)
         Me.btnIngresa.TabIndex = 16
@@ -195,6 +197,7 @@ Partial Class IngresoUsuario
         '
         'txtNomb
         '
+        Me.txtNomb.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtNomb.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNomb.Location = New System.Drawing.Point(303, 123)
         Me.txtNomb.Name = "txtNomb"
@@ -203,6 +206,7 @@ Partial Class IngresoUsuario
         '
         'txtApe
         '
+        Me.txtApe.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtApe.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtApe.Location = New System.Drawing.Point(303, 175)
         Me.txtApe.Name = "txtApe"
@@ -259,11 +263,32 @@ Partial Class IngresoUsuario
         Me.cmbTipo.Size = New System.Drawing.Size(278, 30)
         Me.cmbTipo.TabIndex = 26
         '
+        'lblSexo
+        '
+        Me.lblSexo.AutoSize = True
+        Me.lblSexo.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSexo.Location = New System.Drawing.Point(125, 494)
+        Me.lblSexo.Name = "lblSexo"
+        Me.lblSexo.Size = New System.Drawing.Size(129, 23)
+        Me.lblSexo.TabIndex = 27
+        Me.lblSexo.Text = "Seleccione Sexo"
+        '
+        'cmbSexo
+        '
+        Me.cmbSexo.FormattingEnabled = True
+        Me.cmbSexo.Items.AddRange(New Object() {"FEMENINO", "MASCULINO", "OTRO"})
+        Me.cmbSexo.Location = New System.Drawing.Point(303, 493)
+        Me.cmbSexo.Name = "cmbSexo"
+        Me.cmbSexo.Size = New System.Drawing.Size(278, 24)
+        Me.cmbSexo.TabIndex = 29
+        '
         'IngresoUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(743, 567)
+        Me.ClientSize = New System.Drawing.Size(732, 680)
+        Me.Controls.Add(Me.cmbSexo)
+        Me.Controls.Add(Me.lblSexo)
         Me.Controls.Add(Me.cmbTipo)
         Me.Controls.Add(Me.cmbIns)
         Me.Controls.Add(Me.txtPass)
@@ -319,4 +344,6 @@ Partial Class IngresoUsuario
     Friend WithEvents txtPass As TextBox
     Friend WithEvents cmbIns As ComboBox
     Friend WithEvents cmbTipo As ComboBox
+    Friend WithEvents lblSexo As Label
+    Friend WithEvents cmbSexo As ComboBox
 End Class

@@ -2,12 +2,12 @@
 Public Class IngresoUsuario
 
     Dim id_user, id_int, id_tip_user, op As Integer
-    Dim pass, nombre, apellido, rut As String
+    Dim pass, nombre, apellido, rut, sexo As String
 
     'Ruta para conectar a la DB
     'descomentar segun pc
-    Public conn As SqlConnection = New SqlConnection("Data Source=LAPTOP-6GF7OE4K;Initial Catalog=SIRP;Integrated Security=True")
-    'Public conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-EUII0N8;User ID=sa;Password=sasa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
+    'Public conn As SqlConnection = New SqlConnection("Data Source=LAPTOP-6GF7OE4K;Initial Catalog=SIRP;Integrated Security=True")
+    Public conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-EUII0N8;User ID=sa;Password=sasa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
 
     'declaracion de variables para realizar consultas SQL
     Private cmb As SqlCommandBuilder
@@ -57,37 +57,54 @@ Public Class IngresoUsuario
         Else
             If validaRut() = True Then
                 Dim insert, consulta1, consulta2 As String
-
                 rut = txtRut.Text & "-" & txtDV.Text
+
+                If cmbSexo.SelectedItem = "FEMENINO" Then
+                    sexo = "F"
+                ElseIf cmbSexo.SelectedItem = "MASCULINO" Then
+                    sexo = "M"
+                Else
+                    sexo = "O"
+                End If
+
                 consulta1 = "select rut_usuario from l_usuario where rut_usuario='" + rut + "'"
                 consulta2 = "select username from l_usuario where username='" + txtUser.Text + "'"
-                insert = "insert into l_usuario values ('" + txtUser.Text + "','" + txtPass.Text + "','" + rut + "','" + txtNomb.Text + "','" + txtApe.Text + "'," + id_int.ToString + "," + id_tip_user.ToString + ",getDate())"
+                insert = "insert into l_usuario values ('" + txtUser.Text.ToUpper + "','" + txtPass.Text.ToUpper + "','" + rut + "','" + txtNomb.Text.ToUpper + "','" + txtApe.Text.ToUpper + "','" + sexo + "'," + id_int.ToString + "," + id_tip_user.ToString + ",getDate(),NULL)"
 
                 If validaRegistro(consulta1) = False Then
-                    If validaRegistro(consulta2) = False Then
-                        If (Insertar(insert)) Then
-                            MsgBox("Registro ingresado exitosamente!",, "Registro existoso")
-                            op = MsgBox("¿Desea ingresar otro usuario?", MsgBoxStyle.YesNo, "Confirmación")
-                            If (op = 6) Then
-                                txtNomb.Clear()
-                                txtApe.Clear()
-                                txtPass.Clear()
-                                txtRut.Clear()
-                                txtDV.Clear()
-                                txtUser.Clear()
-                                cmbIns.SelectedIndex = 0
-                                cmbTipo.SelectedIndex = 0
-                                txtRut.Enabled = True
-                                txtDV.Enabled = True
+                        If validaRegistro(consulta2) = False Then
+                            If (Insertar(insert)) Then
+                                MsgBox("Registro ingresado exitosamente!",, "Registro existoso")
+                                op = MsgBox("¿Desea ingresar otro usuario?", MsgBoxStyle.YesNo, "Confirmación")
+                                If (op = 6) Then
+                                    txtNomb.Clear()
+                                    txtApe.Clear()
+                                    txtPass.Clear()
+                                    txtRut.Clear()
+                                    txtDV.Clear()
+                                    txtUser.Clear()
+                                    cmbIns.SelectedIndex = 0
+                                    cmbTipo.SelectedIndex = 0
+                                    txtRut.Enabled = True
+                                    txtDV.Enabled = True
+                                Else
+                                    Principal.Show()
+                                    Me.Close()
+                                End If
                             Else
-                                Principal.Show()
-                                Me.Close()
+                                MsgBox("Error al ingresar usuario",, "Error")
                             End If
                         Else
-                            MsgBox("Error al ingresar usuario",, "Error")
+                            MsgBox("Nombre de usuario ya existe",, "Error")
+                            txtRut.Enabled = True
+                            txtDV.Enabled = True
+                            txtRut.Clear()
+                            txtDV.Clear()
+                            txtUser.Clear()
+                            txtPass.Clear()
                         End If
                     Else
-                        MsgBox("Nombre de usuario ya existe",, "Error")
+                        MsgBox("Rut ya se encuentra registrado",, "Error")
                         txtRut.Enabled = True
                         txtDV.Enabled = True
                         txtRut.Clear()
@@ -95,17 +112,8 @@ Public Class IngresoUsuario
                         txtUser.Clear()
                         txtPass.Clear()
                     End If
-                Else
-                    MsgBox("Rut ya se encuentra registrado",, "Error")
-                    txtRut.Enabled = True
-                    txtDV.Enabled = True
-                    txtRut.Clear()
-                    txtDV.Clear()
-                    txtUser.Clear()
-                    txtPass.Clear()
                 End If
             End If
-        End If
 
     End Sub
 

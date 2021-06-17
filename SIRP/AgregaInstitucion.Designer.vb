@@ -23,66 +23,21 @@ Partial Class AgregaInstitucion
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AgregaInstitucion))
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.OpcionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.IngresarUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.VolverToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.VolverAlMenúPrincipalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SalirDelSistemaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtInst = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.MenuStrip1.SuspendLayout()
+        Me.ofdImagen = New System.Windows.Forms.OpenFileDialog()
+        Me.picPrueba = New System.Windows.Forms.PictureBox()
+        Me.bntSubir = New System.Windows.Forms.Button()
+        CType(Me.picPrueba, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpcionesToolStripMenuItem, Me.VolverToolStripMenuItem1})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(800, 28)
-        Me.MenuStrip1.TabIndex = 0
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'OpcionesToolStripMenuItem
-        '
-        Me.OpcionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IngresarUsuarioToolStripMenuItem})
-        Me.OpcionesToolStripMenuItem.Name = "OpcionesToolStripMenuItem"
-        Me.OpcionesToolStripMenuItem.Size = New System.Drawing.Size(85, 24)
-        Me.OpcionesToolStripMenuItem.Text = "Opciones"
-        '
-        'IngresarUsuarioToolStripMenuItem
-        '
-        Me.IngresarUsuarioToolStripMenuItem.Name = "IngresarUsuarioToolStripMenuItem"
-        Me.IngresarUsuarioToolStripMenuItem.Size = New System.Drawing.Size(199, 26)
-        Me.IngresarUsuarioToolStripMenuItem.Text = "Ingresar Usuario"
-        '
-        'VolverToolStripMenuItem1
-        '
-        Me.VolverToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VolverAlMenúPrincipalToolStripMenuItem, Me.SalirDelSistemaToolStripMenuItem})
-        Me.VolverToolStripMenuItem1.Name = "VolverToolStripMenuItem1"
-        Me.VolverToolStripMenuItem1.Size = New System.Drawing.Size(64, 24)
-        Me.VolverToolStripMenuItem1.Text = "Volver"
-        '
-        'VolverAlMenúPrincipalToolStripMenuItem
-        '
-        Me.VolverAlMenúPrincipalToolStripMenuItem.Name = "VolverAlMenúPrincipalToolStripMenuItem"
-        Me.VolverAlMenúPrincipalToolStripMenuItem.Size = New System.Drawing.Size(252, 26)
-        Me.VolverAlMenúPrincipalToolStripMenuItem.Text = "Volver al menú principal"
-        '
-        'SalirDelSistemaToolStripMenuItem
-        '
-        Me.SalirDelSistemaToolStripMenuItem.Name = "SalirDelSistemaToolStripMenuItem"
-        Me.SalirDelSistemaToolStripMenuItem.Size = New System.Drawing.Size(252, 26)
-        Me.SalirDelSistemaToolStripMenuItem.Text = "Salir del Sistema"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(278, 73)
+        Me.Label1.Location = New System.Drawing.Point(285, 23)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(202, 29)
         Me.Label1.TabIndex = 1
@@ -92,7 +47,7 @@ Partial Class AgregaInstitucion
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(151, 150)
+        Me.Label2.Location = New System.Drawing.Point(158, 100)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(160, 23)
         Me.Label2.TabIndex = 2
@@ -101,7 +56,7 @@ Partial Class AgregaInstitucion
         'txtInst
         '
         Me.txtInst.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtInst.Location = New System.Drawing.Point(388, 147)
+        Me.txtInst.Location = New System.Drawing.Point(395, 97)
         Me.txtInst.Name = "txtInst"
         Me.txtInst.Size = New System.Drawing.Size(212, 29)
         Me.txtInst.TabIndex = 3
@@ -109,43 +64,61 @@ Partial Class AgregaInstitucion
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(443, 265)
+        Me.Button1.Location = New System.Drawing.Point(459, 372)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(157, 31)
         Me.Button1.TabIndex = 4
         Me.Button1.Text = "&Ingresar Registro"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'ofdImagen
+        '
+        Me.ofdImagen.FileName = "OpenFileDialog1"
+        '
+        'picPrueba
+        '
+        Me.picPrueba.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.picPrueba.Location = New System.Drawing.Point(395, 170)
+        Me.picPrueba.Name = "picPrueba"
+        Me.picPrueba.Size = New System.Drawing.Size(211, 153)
+        Me.picPrueba.TabIndex = 5
+        Me.picPrueba.TabStop = False
+        '
+        'bntSubir
+        '
+        Me.bntSubir.Location = New System.Drawing.Point(162, 170)
+        Me.bntSubir.Name = "bntSubir"
+        Me.bntSubir.Size = New System.Drawing.Size(170, 38)
+        Me.bntSubir.TabIndex = 6
+        Me.bntSubir.Text = "Subir Logo"
+        Me.bntSubir.UseVisualStyleBackColor = True
+        '
         'AgregaInstitucion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.bntSubir)
+        Me.Controls.Add(Me.picPrueba)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.txtInst)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.MenuStrip1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "AgregaInstitucion"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Ingresa Institucion"
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
+        CType(Me.picPrueba, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents OpcionesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents txtInst As TextBox
     Friend WithEvents Button1 As Button
-    Friend WithEvents VolverToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents VolverAlMenúPrincipalToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents SalirDelSistemaToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents IngresarUsuarioToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ofdImagen As OpenFileDialog
+    Friend WithEvents picPrueba As PictureBox
+    Friend WithEvents bntSubir As Button
 End Class

@@ -16,22 +16,30 @@ Public Class AgregaInstitucion
     Public dr As SqlDataReader
     Public dt As DataTable
 
-    Private Sub IngresarUsuarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IngresarUsuarioToolStripMenuItem.Click
+    Private Sub IngresarUsuarioToolStripMenuItem_Click(sender As Object, e As EventArgs)
         IngresoUsuario.Show()
         Me.Close()
     End Sub
 
-    Private Sub VolverAlMenúPrincipalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VolverAlMenúPrincipalToolStripMenuItem.Click
+    Private Sub VolverAlMenúPrincipalToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Principal.Show()
         Me.Close()
     End Sub
 
-    Private Sub SalirDelSistemaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirDelSistemaToolStripMenuItem.Click
+    Private Sub SalirDelSistemaToolStripMenuItem_Click(sender As Object, e As EventArgs)
         op = MsgBox("¿Está seguro que desea salir?", MsgBoxStyle.YesNo, "Salir del Sistema")
         If (op = 6) Then
             Login.Show()
             Me.Close()
         End If
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles bntSubir.Click
+        ofdImagen.InitialDirectory = "C:\"
+        If ofdImagen.ShowDialog = DialogResult.OK Then
+            picPrueba.BackgroundImage = Image.FromFile(ofdImagen.FileName)
+        End If
+
     End Sub
 
     Private Sub AgregaInstitucion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -66,7 +74,6 @@ Public Class AgregaInstitucion
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
         If txtInst.Text = "" Then
             MsgBox("Debe ingresar Institución!",, "Error")
         Else
@@ -86,7 +93,7 @@ Public Class AgregaInstitucion
             If (op = 6) Then
                 txtInst.Clear()
             Else
-                Principal.Show()
+                MenuPrincipal.Show()
                 Me.Close()
             End If
         Else

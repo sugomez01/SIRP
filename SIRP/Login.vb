@@ -11,8 +11,8 @@ Public Class Login
 
     'Ruta para conectar a la DB
     'descomentar segun pc
-    Public conn As SqlConnection = New SqlConnection("Data Source=LAPTOP-6GF7OE4K;Initial Catalog=SIRP;Integrated Security=True")
-    'Public conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-EUII0N8;User ID=sa;Password=sasa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
+    'Public conn As SqlConnection = New SqlConnection("Data Source=LAPTOP-6GF7OE4K;Initial Catalog=SIRP;Integrated Security=True")
+    Public conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-EUII0N8;User ID=sa;Password=sasa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
 
     'declaracion de variables para realizar consultas SQL
     Private cmb As SqlCommandBuilder
@@ -51,6 +51,7 @@ Public Class Login
     Private Sub btnSalir_Click_1(sender As Object, e As EventArgs) Handles btnSalir.Click
         op = MsgBox("¿Está seguro que desea salir?", MsgBoxStyle.YesNo, "Salir del Sistema")
         If (op = 6) Then
+            Principal.cierres()
             Me.Close()
         Else
             txtUser.Clear()
@@ -90,40 +91,48 @@ Public Class Login
 
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'ControlBox = False
-        txtPass.PasswordChar = "*"
+        txtUser.Focus()
+        'txtPass.PasswordChar = "*"
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
-        If txtUser.Text = "" Or txtPass.Text = "" Then
-            MsgBox("Debe ingresar datos")
+        If txtUser.Text = "" Then
+            MsgBox("Debe ingresar usuario")
             txtUser.Clear()
             txtPass.Clear()
             txtUser.Focus()
+        ElseIf txtPass.Text = "" Then
+            MsgBox("Debe ingresar contraseña")
+            txtPass.Clear()
+            txtPass.Focus()
         Else
             Try
                 If usuarioRegistrado(txtUser.Text) = True Then
-
                     If pass = txtPass.Text Then
+                        actualizaConexion(id_user)
                         If id_tip_user = 1 Then
                             Me.Hide()
-                            Principal.Show()
+                            MenuPrincipal.Show()
                         ElseIf id_tip_user = 2 Then
                             Me.Hide()
-                            Principal.Show()
+                            MenuPrincipal.Show()
                         ElseIf id_tip_user = 3 Then
                             Me.Hide()
-                            Principal.Show()
+                            MenuPrincipal.Show()
                         Else
-                            Principal.Show()
                             Me.Hide()
+                            MenuPrincipal.Show()
                         End If
                     Else
-                        MsgBox("Usuario o contraseña erróneas")
-                        txtUser.Clear()
+                        MsgBox("Contraseña errónea")
                         txtPass.Clear()
+                        txtPass.Focus()
                     End If
                 Else
                     MsgBox("Usuario no existe")
+                    txtUser.Clear()
+                    txtPass.Clear()
+                    txtUser.Focus()
                 End If
             Catch ex As Exception
                 MsgBox(ex.ToString)
@@ -155,4 +164,29 @@ Public Class Login
             MsgBox("No debe ingresar espacios")
         End If
     End Sub
+
+    Sub actualizaConexion(ByVal id As Integer)
+        Dim insert As String
+        insert = "insert into l_conexion values (" + id.ToString + ",getDate())"
+        If (Insertar(insert)) Then
+            '  MsgBox("ACTUALIZADO",, "Registro existoso")
+        Else
+            MsgBox("Error al conectar",, "Error")
+        End If
+    End Sub
+
+    Function Insertar(ByVal sql)
+        conn.Close()
+        conn.Open()
+        comando = New SqlCommand(sql, conn)
+        Dim i As Integer = comando.ExecuteNonQuery()
+        If i > 0 Then
+            Return True
+        Else
+            Return False
+        End If
+
+    End Function
+
+
 End Class

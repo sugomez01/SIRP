@@ -5,11 +5,11 @@
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         If ProgressBar1.Value < 100 Then
-            ProgressBar1.Value = ProgressBar1.Value + 20
+            ProgressBar1.Value = ProgressBar1.Value + 50
             lblMsje.Text = "CARGANDO EL SISTEMA AL " + ProgressBar1.Value.ToString + "%"
         Else
             Timer1.Enabled = False
-            MsgBox("Carga del sistema completada!")
+            'MsgBox("Carga del sistema completada!")
             Me.Close()
         End If
     End Sub
