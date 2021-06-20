@@ -26,7 +26,7 @@ Public Class Principal
 
     'Menu
     Private Sub CrearInstituciónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CreaInstitucion.Click
-        MenuInstitucion.Show()
+        CambioInstitucion.Show()
     End Sub
 
     Private Sub CrearUsuarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CreaUser.Click
@@ -143,7 +143,7 @@ Public Class Principal
     Public Sub cierres()
         Me.Close()
         ActualizaDelincuente.Close()
-        MenuInstitucion.Close()
+        CambioInstitucion.Close()
         frmDelincuente.Close()
         IngresoBanda.Close()
         IngresoControl.Close()

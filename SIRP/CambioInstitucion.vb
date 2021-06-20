@@ -1,5 +1,5 @@
 ﻿Imports System.Data.SqlClient
-Public Class MenuInstitucion
+Public Class CambioInstitucion
     Dim id_user, id_int, id_tip_user, op As Integer
     Dim pass, nombre, apellido As String
 

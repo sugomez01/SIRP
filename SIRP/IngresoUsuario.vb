@@ -24,7 +24,7 @@ Public Class IngresoUsuario
     End Sub
 
     Private Sub IngresarInstituciónToolStripMenuItem_Click(sender As Object, e As EventArgs)
-        MenuInstitucion.Show()
+        CambioInstitucion.Show()
         Me.Close()
     End Sub
 

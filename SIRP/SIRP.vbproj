@@ -83,10 +83,10 @@
     <Compile Include="ActualizaDelincuente.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuInstitucion.Designer.vb">
-      <DependentUpon>MenuInstitucion.vb</DependentUpon>
+    <Compile Include="CambioInstitucion.Designer.vb">
+      <DependentUpon>CambioInstitucion.vb</DependentUpon>
     </Compile>
-    <Compile Include="MenuInstitucion.vb">
+    <Compile Include="CambioInstitucion.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Cargando.Designer.vb">
@@ -131,22 +131,10 @@
     <Compile Include="IngresoUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IngresoZona.Designer.vb">
-      <DependentUpon>IngresoZona.vb</DependentUpon>
-    </Compile>
-    <Compile Include="IngresoZona.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
     <Compile Include="Login.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MenuJefe.Designer.vb">
-      <DependentUpon>MenuJefe.vb</DependentUpon>
-    </Compile>
-    <Compile Include="MenuJefe.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MenuPrincipal.Designer.vb">
@@ -190,8 +178,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="MenuInstitucion.resx">
-      <DependentUpon>MenuInstitucion.vb</DependentUpon>
+    <EmbeddedResource Include="CambioInstitucion.resx">
+      <DependentUpon>CambioInstitucion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cargando.resx">
       <DependentUpon>Cargando.vb</DependentUpon>
@@ -216,9 +204,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MenuJefe.resx">
-      <DependentUpon>MenuJefe.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.vb</DependentUpon>

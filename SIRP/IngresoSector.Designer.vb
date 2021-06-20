@@ -22,6 +22,7 @@ Partial Class IngresoSector
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(IngresoSector))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblZona = New System.Windows.Forms.Label()
         Me.lblComuna = New System.Windows.Forms.Label()
@@ -100,7 +101,7 @@ Partial Class IngresoSector
         Me.cmbZona.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.cmbZona.FormattingEnabled = True
         Me.cmbZona.Location = New System.Drawing.Point(129, 109)
-        Me.cmbZona.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmbZona.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbZona.Name = "cmbZona"
         Me.cmbZona.Size = New System.Drawing.Size(186, 28)
         Me.cmbZona.TabIndex = 0
@@ -110,7 +111,7 @@ Partial Class IngresoSector
         Me.cmbComuna.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.cmbComuna.FormattingEnabled = True
         Me.cmbComuna.Location = New System.Drawing.Point(129, 159)
-        Me.cmbComuna.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmbComuna.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbComuna.Name = "cmbComuna"
         Me.cmbComuna.Size = New System.Drawing.Size(186, 28)
         Me.cmbComuna.TabIndex = 1
@@ -120,7 +121,7 @@ Partial Class IngresoSector
         Me.txtSector.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtSector.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.txtSector.Location = New System.Drawing.Point(129, 214)
-        Me.txtSector.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtSector.Margin = New System.Windows.Forms.Padding(2)
         Me.txtSector.Name = "txtSector"
         Me.txtSector.Size = New System.Drawing.Size(186, 27)
         Me.txtSector.TabIndex = 2
@@ -131,7 +132,7 @@ Partial Class IngresoSector
         Me.txtDetalle.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.txtDetalle.ForeColor = System.Drawing.Color.Black
         Me.txtDetalle.Location = New System.Drawing.Point(402, 142)
-        Me.txtDetalle.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtDetalle.Margin = New System.Windows.Forms.Padding(2)
         Me.txtDetalle.Multiline = True
         Me.txtDetalle.Name = "txtDetalle"
         Me.txtDetalle.Size = New System.Drawing.Size(293, 99)
@@ -171,6 +172,7 @@ Partial Class IngresoSector
         Me.Controls.Add(Me.Label1)
         Me.ForeColor = System.Drawing.Color.White
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "IngresoSector"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "IngresoSector"

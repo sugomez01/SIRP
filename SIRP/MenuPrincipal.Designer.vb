@@ -463,7 +463,7 @@ Partial Class MenuPrincipal
         Me.btnBanda.Margin = New System.Windows.Forms.Padding(2)
         Me.btnBanda.Name = "btnBanda"
         Me.btnBanda.Size = New System.Drawing.Size(121, 121)
-        Me.btnBanda.TabIndex = 2
+        Me.btnBanda.TabIndex = 1
         Me.btnBanda.UseVisualStyleBackColor = False
         '
         'btnDelincuente
@@ -482,7 +482,7 @@ Partial Class MenuPrincipal
         Me.btnDelincuente.Margin = New System.Windows.Forms.Padding(2)
         Me.btnDelincuente.Name = "btnDelincuente"
         Me.btnDelincuente.Size = New System.Drawing.Size(121, 121)
-        Me.btnDelincuente.TabIndex = 0
+        Me.btnDelincuente.TabIndex = 2
         Me.btnDelincuente.UseVisualStyleBackColor = False
         '
         'btnDelito
@@ -501,7 +501,7 @@ Partial Class MenuPrincipal
         Me.btnDelito.Margin = New System.Windows.Forms.Padding(2)
         Me.btnDelito.Name = "btnDelito"
         Me.btnDelito.Size = New System.Drawing.Size(121, 121)
-        Me.btnDelito.TabIndex = 4
+        Me.btnDelito.TabIndex = 3
         Me.btnDelito.UseVisualStyleBackColor = False
         '
         'btnControl
@@ -539,7 +539,7 @@ Partial Class MenuPrincipal
         Me.btnReporte.Margin = New System.Windows.Forms.Padding(2)
         Me.btnReporte.Name = "btnReporte"
         Me.btnReporte.Size = New System.Drawing.Size(121, 121)
-        Me.btnReporte.TabIndex = 4
+        Me.btnReporte.TabIndex = 5
         Me.btnReporte.UseVisualStyleBackColor = False
         '
         'picPrincipal
@@ -724,7 +724,7 @@ Partial Class MenuPrincipal
         Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(62, 60)
-        Me.Button1.TabIndex = 1
+        Me.Button1.TabIndex = 6
         Me.Button1.UseVisualStyleBackColor = False
         '
         'MenuPrincipal

@@ -48,24 +48,24 @@ Public Class MenuPrincipal
     End Sub
 
     Private Sub btnIngresaInst_Click(sender As Object, e As EventArgs) Handles btnIngresaInst.Click
-        MenuInstitucion.Show()
-        MenuInstitucion.btnRegistra.Show()
-        MenuInstitucion.lblIngresa.Show()
-        MenuInstitucion.txtInst.Show()
-        MenuInstitucion.btnElimina.Hide()
-        MenuInstitucion.cmbInstituciones.Hide()
-        MenuInstitucion.lblElimina.Hide()
+        CambioInstitucion.Show()
+        CambioInstitucion.btnRegistra.Show()
+        CambioInstitucion.lblIngresa.Show()
+        CambioInstitucion.txtInst.Show()
+        CambioInstitucion.btnElimina.Hide()
+        CambioInstitucion.cmbInstituciones.Hide()
+        CambioInstitucion.lblElimina.Hide()
 
     End Sub
 
     Private Sub btnEliminaInst_Click(sender As Object, e As EventArgs) Handles btnEliminaInst.Click
-        MenuInstitucion.Show()
-        MenuInstitucion.btnRegistra.Hide()
-        MenuInstitucion.lblIngresa.Hide()
-        MenuInstitucion.txtInst.Hide()
-        MenuInstitucion.btnElimina.Show()
-        MenuInstitucion.cmbInstituciones.Show()
-        MenuInstitucion.lblElimina.Show()
+        CambioInstitucion.Show()
+        CambioInstitucion.btnRegistra.Hide()
+        CambioInstitucion.lblIngresa.Hide()
+        CambioInstitucion.txtInst.Hide()
+        CambioInstitucion.btnElimina.Show()
+        CambioInstitucion.cmbInstituciones.Show()
+        CambioInstitucion.lblElimina.Show()
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
@@ -192,7 +192,7 @@ Public Class MenuPrincipal
     Public Sub cierres()
         Me.Close()
         ActualizaDelincuente.Close()
-        MenuInstitucion.Close()
+        CambioInstitucion.Close()
         frmDelincuente.Close()
         IngresoBanda.Close()
         IngresoControl.Close()
