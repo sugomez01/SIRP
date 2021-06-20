@@ -48,7 +48,8 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>police_avatar_person_2845.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -253,15 +254,6 @@
     <None Include="Resources\LOGO.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\user.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\user1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pass.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\user2.png" />
   </ItemGroup>
   <ItemGroup>
@@ -271,53 +263,18 @@
     <None Include="Resources\fondo.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\prueba2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\login.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\login 2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\login 3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\salir.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ingreso1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ingreso2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ingreso3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\btn_ingresar.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\working.gif" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="police_avatar_person_2845.ico" />
     <None Include="Resources\eliminaUser.png" />
     <None Include="Resources\agregaUser.png" />
     <None Include="Resources\eliminaInstitucion1.png" />
     <None Include="Resources\agregaInstitucion2.png" />
-    <None Include="Resources\agregaInstitucion1.png" />
-    <None Include="Resources\eliminaInstitucion.png" />
-    <None Include="Resources\agregaInstitucion.png" />
     <None Include="Resources\boton.png" />
     <None Include="Resources\login 21.png" />
-    <None Include="Resources\ingresar.png" />
-    <None Include="Resources\exit.png" />
-    <None Include="Resources\BOTON_INICIARSESION.png" />
     <None Include="Resources\pdi2.png" />
     <None Include="Resources\os-101.png" />
     <None Include="Resources\carabineros2.png" />
-    <None Include="Resources\ins.png" />
     <None Include="Resources\cerrarSesion.png" />
     <None Include="Resources\chile.gif" />
   </ItemGroup>
