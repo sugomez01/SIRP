@@ -18,17 +18,17 @@ Public Class IngresoUsuario
     Public dt As DataTable
 
 
-    Private Sub VolverAlMenúPrincipalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VolverAlMenúPrincipalToolStripMenuItem.Click
+    Private Sub VolverAlMenúPrincipalToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Principal.Show()
         Me.Close()
     End Sub
 
-    Private Sub IngresarInstituciónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IngresarInstituciónToolStripMenuItem.Click
-        AgregaInstitucion.Show()
+    Private Sub IngresarInstituciónToolStripMenuItem_Click(sender As Object, e As EventArgs)
+        MenuInstitucion.Show()
         Me.Close()
     End Sub
 
-    Private Sub SalirDelSisemaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirDelSisemaToolStripMenuItem.Click
+    Private Sub SalirDelSisemaToolStripMenuItem_Click(sender As Object, e As EventArgs)
         op = MsgBox("¿Está seguro que desea salir?", MsgBoxStyle.YesNo, "Salir del Sistema")
         If (op = 6) Then
             Login.Show()
@@ -69,29 +69,30 @@ Public Class IngresoUsuario
 
                 consulta1 = "select rut_usuario from l_usuario where rut_usuario='" + rut + "'"
                 consulta2 = "select username from l_usuario where username='" + txtUser.Text + "'"
-                insert = "insert into l_usuario values ('" + txtUser.Text.ToUpper + "','" + txtPass.Text.ToUpper + "','" + rut + "','" + txtNomb.Text.ToUpper + "','" + txtApe.Text.ToUpper + "','" + sexo + "'," + id_int.ToString + "," + id_tip_user.ToString + ",getDate(),NULL)"
+                insert = "insert into l_usuario values ('" + txtUser.Text + "','" + txtPass.Text + "','" + rut + "','" + txtNomb.Text + "','" + txtApe.Text + "','" + sexo + "'," + id_int.ToString + "," + id_tip_user.ToString + ",getDate())"
 
                 If validaRegistro(consulta1) = False Then
                         If validaRegistro(consulta2) = False Then
                             If (Insertar(insert)) Then
-                                MsgBox("Registro ingresado exitosamente!",, "Registro existoso")
-                                op = MsgBox("¿Desea ingresar otro usuario?", MsgBoxStyle.YesNo, "Confirmación")
-                                If (op = 6) Then
-                                    txtNomb.Clear()
-                                    txtApe.Clear()
-                                    txtPass.Clear()
-                                    txtRut.Clear()
-                                    txtDV.Clear()
-                                    txtUser.Clear()
-                                    cmbIns.SelectedIndex = 0
-                                    cmbTipo.SelectedIndex = 0
-                                    txtRut.Enabled = True
-                                    txtDV.Enabled = True
-                                Else
-                                    Principal.Show()
-                                    Me.Close()
-                                End If
-                            Else
+                            MsgBox("Usuario ingresado exitosamente!",, "Registro existoso")
+                            Me.Close()
+                            'op = MsgBox("¿Desea ingresar otro usuario?", MsgBoxStyle.YesNo, "Confirmación")
+                            '    If (op = 6) Then
+                            '        txtNomb.Clear()
+                            '        txtApe.Clear()
+                            '        txtPass.Clear()
+                            '        txtRut.Clear()
+                            '        txtDV.Clear()
+                            '        txtUser.Clear()
+                            '        cmbIns.SelectedIndex = 0
+                            '        cmbTipo.SelectedIndex = 0
+                            '        txtRut.Enabled = True
+                            '        txtDV.Enabled = True
+                            '    Else
+                            '        Principal.Show()
+                            '        Me.Close()
+                            '    End If
+                        Else
                                 MsgBox("Error al ingresar usuario",, "Error")
                             End If
                         Else

@@ -1,5 +1,5 @@
 ﻿Imports System.Data.SqlClient
-Public Class AgregaInstitucion
+Public Class MenuInstitucion
     Dim id_user, id_int, id_tip_user, op As Integer
     Dim pass, nombre, apellido As String
 
@@ -34,12 +34,15 @@ Public Class AgregaInstitucion
         End If
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles bntSubir.Click
-        ofdImagen.InitialDirectory = "C:\"
-        If ofdImagen.ShowDialog = DialogResult.OK Then
-            picPrueba.BackgroundImage = Image.FromFile(ofdImagen.FileName)
-        End If
 
+
+    Private Sub lblIngresa_Click(sender As Object, e As EventArgs) Handles lblIngresa.Click
+
+    End Sub
+
+    Private Sub btnElimina_Click(sender As Object, e As EventArgs) Handles btnElimina.Click
+        MenuPrincipal.Show()
+        Me.Close()
     End Sub
 
     Private Sub AgregaInstitucion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -65,39 +68,26 @@ Public Class AgregaInstitucion
         comando = New SqlCommand(sql, conn)
         Dim i As Integer = comando.ExecuteNonQuery()
         If i > 0 Then
+            MsgBox("Institución agregada exitosamente")
             Return True
         Else
+            MsgBox("Error al eliminar Institución")
             Return False
         End If
 
     End Function
 
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnRegistra.Click
         If txtInst.Text = "" Then
             MsgBox("Debe ingresar Institución!",, "Error")
         Else
-
-            InsertaRegistro()
+            'AGREGAR VALIDACION (EXISTE INSTITUCION)
+            Dim insert As String
+            insert = "insert into l_institucion values ('" + txtInst.Text + "')"
+            Insertar(insert)
+            Me.Close()
         End If
     End Sub
 
-
-    Sub InsertaRegistro()
-        Dim insert As String
-        insert = "insert into l_institucion values ('" + txtInst.Text + "')"
-
-        If (Insertar(insert)) Then
-            MsgBox("Registro ingresado exitosamente!",, "Registro existoso")
-            op = MsgBox("¿Desea ingresar otra institución?", MsgBoxStyle.YesNo, "Confirmación")
-            If (op = 6) Then
-                txtInst.Clear()
-            Else
-                MenuPrincipal.Show()
-                Me.Close()
-            End If
-        Else
-            MsgBox("Error al ingresar institución",, "Error")
-        End If
-    End Sub
 End Class

@@ -48,8 +48,28 @@ Public Class MenuPrincipal
     End Sub
 
     Private Sub btnIngresaInst_Click(sender As Object, e As EventArgs) Handles btnIngresaInst.Click
-        IngresaDelincuente.Show()
-        Me.Close()
+        MenuInstitucion.Show()
+        MenuInstitucion.btnRegistra.Show()
+        MenuInstitucion.lblIngresa.Show()
+        MenuInstitucion.txtInst.Show()
+        MenuInstitucion.btnElimina.Hide()
+        MenuInstitucion.cmbInstituciones.Hide()
+        MenuInstitucion.lblElimina.Hide()
+
+    End Sub
+
+    Private Sub btnEliminaInst_Click(sender As Object, e As EventArgs) Handles btnEliminaInst.Click
+        MenuInstitucion.Show()
+        MenuInstitucion.btnRegistra.Hide()
+        MenuInstitucion.lblIngresa.Hide()
+        MenuInstitucion.txtInst.Hide()
+        MenuInstitucion.btnElimina.Show()
+        MenuInstitucion.cmbInstituciones.Show()
+        MenuInstitucion.lblElimina.Show()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        IngresoUsuario.Show()
     End Sub
 
     Public Sub validaUser(ByVal id As Integer)
@@ -140,7 +160,7 @@ Public Class MenuPrincipal
     Public Sub cierres()
         Me.Close()
         ActualizaDelincuente.Close()
-        AgregaInstitucion.Close()
+        MenuInstitucion.Close()
         IngresaDelincuente.Close()
         IngresoBanda.Close()
         IngresoControl.Close()

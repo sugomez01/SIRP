@@ -126,7 +126,7 @@ Public Class Login
                     Else
                         MsgBox("Contraseña errónea")
                         txtPass.Clear()
-                        txtPass.Focus()
+                        txtUser.Focus()
                     End If
                 Else
                     MsgBox("Usuario no existe")
