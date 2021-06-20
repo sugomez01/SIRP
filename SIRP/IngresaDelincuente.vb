@@ -1,9 +1,9 @@
 ﻿Imports System.Data.SqlClient
 
-Public Class IngresaDelincuente
+Public Class frmDelincuente
 
-    Dim id_user, id_int, id_tip_user, op, banda As Integer
-    Dim estado, fechaNac As String
+    Dim id_user, id_int, banda As Integer
+    Dim estado, fechaNac, id_comuna, fono As String
 
 
 
@@ -24,11 +24,15 @@ Public Class IngresaDelincuente
     End Sub
 
     Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
-
-        If txtApellido.Text = "" Or txtApodo.Text = "" Or txtDomicilio.Text = "" Or txtNombre.Text = "" Or txtTelefono.Text = "" Then
+        id_user = Login.id_user
+        If txtApellido.Text = "" Or txtDomicilio.Text = "" Or txtNombre.Text = "" Then
             MsgBox("Debe completar todos los campos!",, "Error")
         Else
-
+            If txtTelefono.Text = "" Then
+                fono = "NULL"
+            Else
+                fono = txtTelefono.Text
+            End If
             If validaRut() = True Then
                 Dim insert, consulta, rut, apellido, nombre As String
 
@@ -37,30 +41,29 @@ Public Class IngresaDelincuente
 
                 rut = txtRut.Text + "-" + txtDigito.Text
                 consulta = "select rut_delincuente from l_delincuente where rut_delincuente='" + rut + "'"
-                insert = "insert into l_delincuente values ('" + rut + "','" + nombre + "','" + apellido + "','" + txtApodo.Text.ToString + "'," + txtTelefono.Text.ToString + " ," + banda.ToString + "," + "'" + fechaNac + "'," + estado.ToString + "," + id_int.ToString + "," + id_tip_user.ToString + ",getDate())"
-
-                MsgBox(insert)
-
+                'insert = "insert into l_delincuente values ('" + rut + "','" + nombre + "','" + apellido + "','" + txtApodo.Text.ToString + "'," + txtTelefono.Text.ToString + " ," + banda.ToString + "," + "'" + fechaNac + "'," + estado.ToString + "," + id_int.ToString + "," + id_tip_user.ToString + ",getDate())"
+                insert = "insert into l_delincuente values ('" + rut + "','" + nombre + "','" + apellido + "','" + txtApodo.Text.ToString + "', " + id_comuna + ",'" + txtDomicilio.Text.ToString + "'," + fono + "," + "'" + fechaNac + "'," + estado.ToString + "," + banda.ToString + "," + id_user.ToString + ",getDate())"
                 If validaRegistro(consulta) = False Then
                     If (Insertar(insert)) Then
                         MsgBox("Registro ingresado exitosamente!",, "Registro existoso")
-                        op = MsgBox("¿Desea ingresar otro delincuente?", MsgBoxStyle.YesNo, "Confirmación")
-                        If (op = 6) Then
-                            txtNombre.Clear()
-                            txtApellido.Clear()
-                            txtApodo.Clear()
-                            txtRut.Clear()
-                            txtTelefono.Clear()
-                            cmbEstado.SelectedIndex = 0
-                        Else
-                            Principal.Show()
-                            Me.Close()
-                        End If
+                        'op = MsgBox("¿Desea ingresar otro delincuente?", MsgBoxStyle.YesNo, "Confirmación")
+                        'If (op = 6) Then
+                        '    txtNombre.Clear()
+                        '    txtApellido.Clear()
+                        '    txtApodo.Clear()
+                        '    txtRut.Clear()
+                        '    txtTelefono.Clear()
+                        '    cmbEstado.SelectedIndex = 0
+                        'Else
+                        '    Principal.Show()
+                        '    Me.Close()
+                        'End If
+                        Me.Close()
                     Else
-                        MsgBox("Error al ingresar usuario",, "Error")
+                        MsgBox("Error al ingresar registro de delincuente, por favor contacte al Administrador",, "Error")
                     End If
                 Else
-                    MsgBox("Rut o nombre de usuario ya existe",, "Error")
+                    MsgBox("Delincuente ya existe",, "Error")
                     txtRut.Enabled = True
                     txtDigito.Enabled = True
                     txtNombre.Clear()
@@ -93,12 +96,12 @@ Public Class IngresaDelincuente
 
     Public dt As DataTable
 
-    Private Sub VolverAlMeúPrincipalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VolverAlMeúPrincipalToolStripMenuItem.Click
+    Private Sub VolverAlMeúPrincipalToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Principal.Show()
         Me.Close()
     End Sub
 
-    Private Sub IngresarDelitoCometidoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IngresarDelitoCometidoToolStripMenuItem.Click
+    Private Sub IngresarDelitoCometidoToolStripMenuItem_Click(sender As Object, e As EventArgs)
         IngresoDelito.Show()
         Me.Close()
     End Sub
@@ -129,6 +132,18 @@ Public Class IngresaDelincuente
 
     End Function
 
+    Private Sub txtTelefono_TextChanged(sender As Object, e As EventArgs) Handles txtTelefono.TextChanged
+
+    End Sub
+
+    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles lblFono.Click
+
+    End Sub
+
+    Private Sub TableLayoutPanel1_Paint(sender As Object, e As PaintEventArgs) Handles TableLayoutPanel1.Paint
+
+    End Sub
+
     Sub llenaCombo()
 
         id_int = Login.id_int
@@ -149,6 +164,13 @@ Public Class IngresaDelincuente
         cmbBanda.ValueMember = "id_banda"
         cmbBanda.DataSource = dt
 
+        comando = New SqlCommand("select * from l_comuna", conn)
+        da = New SqlDataAdapter(comando)
+        dt = New DataTable()
+        da.Fill(dt)
+        cmbComuna.DisplayMember = "desc_comuna"
+        cmbComuna.ValueMember = "id_comuna"
+        cmbComuna.DataSource = dt
 
     End Sub
 
@@ -237,6 +259,10 @@ Public Class IngresaDelincuente
             e.Handled = True
             MsgBox("Solo puede ingresar letras")
         End If
+    End Sub
+
+    Private Sub cmbComuna_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbComuna.SelectedIndexChanged
+        id_comuna = cmbComuna.SelectedValue.ToString
     End Sub
 
 End Class

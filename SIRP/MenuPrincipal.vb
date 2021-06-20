@@ -9,8 +9,8 @@ Public Class MenuPrincipal
 
     'Ruta para conectar a la DB
     'descomentar segun pc
-    Public conn As SqlConnection = New SqlConnection("Data Source=LAPTOP-6GF7OE4K;Initial Catalog=SIRP;Integrated Security=True")
-    'Public conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-EUII0N8;User ID=sa;Password=sasa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
+    'Public conn As SqlConnection = New SqlConnection("Data Source=LAPTOP-6GF7OE4K;Initial Catalog=SIRP;Integrated Security=True")
+    Public conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-EUII0N8;User ID=sa;Password=sasa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
 
     'declaracion de variables para realizar consultas SQL
     Private cmb As SqlCommandBuilder
@@ -72,11 +72,40 @@ Public Class MenuPrincipal
         IngresoUsuario.Show()
     End Sub
 
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles btnSector.Click
+        IngresoSector.Show()
+    End Sub
+
+    Private Sub btnReporte_Click(sender As Object, e As EventArgs) Handles btnReporte.Click
+        ModuloReportes.Show()
+    End Sub
+
+    Private Sub btnControl_Click(sender As Object, e As EventArgs) Handles btnControl.Click
+        IngresoControl.Show()
+    End Sub
+
+    Private Sub btnDelito_Click(sender As Object, e As EventArgs) Handles btnDelito.Click
+        IngresoDelito.Show()
+    End Sub
+
+    Private Sub btnBanda_Click(sender As Object, e As EventArgs) Handles btnBanda.Click
+        IngresoBanda.Show()
+    End Sub
+
+    Private Sub btnDelincuente_Click(sender As Object, e As EventArgs) Handles btnDelincuente.Click
+        frmDelincuente.Show()
+    End Sub
+
     Public Sub validaUser(ByVal id As Integer)
         If id = 1 Then
             PanelAdmin.Visible = True
+            PanelJefe.Visible = False
+        ElseIf id = 3 Then
+            PanelAdmin.Visible = False
+            PanelJefe.Visible = True
         Else
             PanelAdmin.Visible = False
+            PanelJefe.Visible = False
         End If
         '    CreaUser.Visible = True
         '    CreaInstitucion.Visible = True
@@ -146,12 +175,15 @@ Public Class MenuPrincipal
         End If
 
         If id = 1 Then
-            picPrincipal.BackgroundImage = Image.FromFile("C:\Users\shifl\OneDrive\Escritorio\Proyecto de titulo\SIRP\SIRP\Resources\carabineros.png")
+            'picPrincipal.BackgroundImage = Image.FromFile("C:\Users\shifl\OneDrive\Escritorio\Proyecto de titulo\SIRP\SIRP\Resources\carabineros.png")
+            picPrincipal.BackgroundImage = Image.FromFile("C:\Users\sgome\Desktop\SIRP\SIRP\Resources\carabineros.png")
         ElseIf id = 2 Then
-            picPrincipal.BackgroundImage = Image.FromFile("C:\Users\shifl\OneDrive\Escritorio\Proyecto de titulo\SIRP\SIRP\Resources\os10.png")
+            'picPrincipal.BackgroundImage = Image.FromFile("C:\Users\shifl\OneDrive\Escritorio\Proyecto de titulo\SIRP\SIRP\Resources\os10.png")
+            picPrincipal.BackgroundImage = Image.FromFile("C:\Users\sgome\Desktop\SIRP\SIRP\Resources\os10.png")
         ElseIf id = 3 Then
             picPrincipal.BackColor = Color.White
-            picPrincipal.BackgroundImage = Image.FromFile("C:\Users\shifl\OneDrive\Escritorio\Proyecto de titulo\SIRP\SIRP\Resources\pdi.png")
+            'picPrincipal.BackgroundImage = Image.FromFile("C:\Users\shifl\OneDrive\Escritorio\Proyecto de titulo\SIRP\SIRP\Resources\pdi.png")
+            picPrincipal.BackgroundImage = Image.FromFile("C:\Users\sgome\Desktop\SIRP\SIRP\Resources\pdi.png")
         Else
             picPrincipal.Visible = False
         End If
@@ -161,7 +193,7 @@ Public Class MenuPrincipal
         Me.Close()
         ActualizaDelincuente.Close()
         MenuInstitucion.Close()
-        IngresaDelincuente.Close()
+        frmDelincuente.Close()
         IngresoBanda.Close()
         IngresoControl.Close()
         IngresoDelito.Close()
