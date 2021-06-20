@@ -82,10 +82,10 @@
     <Compile Include="ActualizaDelincuente.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AgregaInstitucion.Designer.vb">
-      <DependentUpon>AgregaInstitucion.vb</DependentUpon>
+    <Compile Include="MenuInstitucion.Designer.vb">
+      <DependentUpon>MenuInstitucion.vb</DependentUpon>
     </Compile>
-    <Compile Include="AgregaInstitucion.vb">
+    <Compile Include="MenuInstitucion.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Cargando.Designer.vb">
@@ -142,6 +142,12 @@
     <Compile Include="Login.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MenuPrincipal.Designer.vb">
+      <DependentUpon>MenuPrincipal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ModuloReportes.Designer.vb">
       <DependentUpon>ModuloReportes.vb</DependentUpon>
     </Compile>
@@ -177,8 +183,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AgregaInstitucion.resx">
-      <DependentUpon>AgregaInstitucion.vb</DependentUpon>
+    <EmbeddedResource Include="MenuInstitucion.resx">
+      <DependentUpon>MenuInstitucion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cargando.resx">
       <DependentUpon>Cargando.vb</DependentUpon>
@@ -203,6 +209,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModuloReportes.resx">
       <DependentUpon>ModuloReportes.vb</DependentUpon>
@@ -293,6 +302,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="police_avatar_person_2845.ico" />
+    <None Include="Resources\eliminaUser.png" />
+    <None Include="Resources\agregaUser.png" />
+    <None Include="Resources\eliminaInstitucion1.png" />
+    <None Include="Resources\agregaInstitucion2.png" />
+    <None Include="Resources\agregaInstitucion1.png" />
+    <None Include="Resources\eliminaInstitucion.png" />
+    <None Include="Resources\agregaInstitucion.png" />
+    <None Include="Resources\boton.png" />
+    <None Include="Resources\login 21.png" />
+    <None Include="Resources\ingresar.png" />
+    <None Include="Resources\exit.png" />
+    <None Include="Resources\BOTON_INICIARSESION.png" />
+    <None Include="Resources\pdi2.png" />
+    <None Include="Resources\os-101.png" />
+    <None Include="Resources\carabineros2.png" />
+    <None Include="Resources\ins.png" />
+    <None Include="Resources\cerrarSesion.png" />
+    <None Include="Resources\chile.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

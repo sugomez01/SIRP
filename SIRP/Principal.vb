@@ -20,14 +20,13 @@ Public Class Principal
 
     'Carga pagina Principal
     Private Sub Principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ControlBox = False
         validaUser(Login.id_tip_user)
         bienvenidaUser(Login.id_int)
     End Sub
 
     'Menu
     Private Sub CrearInstituciónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CreaInstitucion.Click
-        AgregaInstitucion.Show()
+        MenuInstitucion.Show()
     End Sub
 
     Private Sub CrearUsuarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CreaUser.Click
@@ -63,17 +62,7 @@ Public Class Principal
         op = MsgBox("¿Está seguro que desea salir?", MsgBoxStyle.YesNo, "Salir del Sistema")
         If (op = 6) Then
             Login.Show()
-            Me.Close()
-            ActualizaDelincuente.Close()
-            AgregaInstitucion.Close()
-            IngresaDelincuente.Close()
-            IngresoBanda.Close()
-            IngresoControl.Close()
-            IngresoDelito.Close()
-            IngresoSector.Close()
-            IngresoUsuario.Close()
-            IngresoZona.Close()
-            ModuloReportes.Close()
+            cierres()
         End If
     End Sub
 
@@ -132,9 +121,11 @@ Public Class Principal
     'Muestra Nombre usuario y logo segun corresponda
     Public Sub bienvenidaUser(ByVal id As Integer)
         If Login.sexo = "F" Then
-            lblBienvenido.Text = "Bienvenida " + Login.nombre + " " + Login.apellido
+            lblBienvenido.Text = "BIENVENIDA " + Login.nombre + " " + Login.apellido
+        ElseIf Login.sexo = "M" Then
+            lblBienvenido.Text = "BIENVENIDO " + Login.nombre + " " + Login.apellido
         Else
-            lblBienvenido.Text = "Bienvenido " + Login.nombre + " " + Login.apellido
+            lblBienvenido.Text = "BIENVENIDE " + Login.nombre + " " + Login.apellido
         End If
 
         If id = 1 Then
@@ -147,6 +138,20 @@ Public Class Principal
         Else
             picPrincipal.Visible = False
         End If
+    End Sub
+
+    Public Sub cierres()
+        Me.Close()
+        ActualizaDelincuente.Close()
+        MenuInstitucion.Close()
+        IngresaDelincuente.Close()
+        IngresoBanda.Close()
+        IngresoControl.Close()
+        IngresoDelito.Close()
+        IngresoSector.Close()
+        IngresoUsuario.Close()
+        IngresoZona.Close()
+        ModuloReportes.Close()
     End Sub
 
 End Class
