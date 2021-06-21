@@ -7,8 +7,8 @@ Public Class IngresoSector
 
     'CONEXION A SQL
 
-    Public conn As SqlConnection = New SqlConnection("Data Source=LAPTOP-6GF7OE4K;Initial Catalog=SIRP;Integrated Security=True")
-    'Public conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-EUII0N8;User ID=sa;Password=sasa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
+    'Public conn As SqlConnection = New SqlConnection("Data Source=LAPTOP-6GF7OE4K;Initial Catalog=SIRP;Integrated Security=True")
+    Public conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-EUII0N8;User ID=sa;Password=sasa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
 
     'declaracion de variables para realizar consultas SQL
     Private cmb As SqlCommandBuilder
@@ -25,10 +25,8 @@ Public Class IngresoSector
         If txtDetalle.Text = "" Or txtSector.Text = "" Then
             MsgBox("Debe completar todos los campos!",, "Error")
         Else
-
-
             Dim id_institucion, insert As String
-            Dim op As Integer
+            'Dim op As Integer
 
 
             id_institucion = Login.id_int
@@ -39,18 +37,19 @@ Public Class IngresoSector
             'MsgBox(insert)
 
             If (Insertar(insert)) Then
-                MsgBox("Registro ingresado exitosamente!",, "Registro existoso")
-                op = MsgBox("¿Desea ingresar otro Sector?", MsgBoxStyle.YesNo, "Confirmación")
-                If (op = 6) Then
-                    txtSector.Clear()
-                    txtDetalle.Clear()
+                MsgBox("Sector agregado exitosamente!",, "Registro existoso")
+                'op = MsgBox("¿Desea ingresar otro Sector?", MsgBoxStyle.YesNo, "Confirmación")
+                'If (op = 6) Then
+                '    txtSector.Clear()
+                '    txtDetalle.Clear()
 
-                Else
-                    Principal.Show()
-                    Me.Close()
-                End If
+                'Else
+                '    Principal.Show()
+                '    Me.Close()
+                'End If
+                Me.Close()
             Else
-                MsgBox("Error al ingresar Sector",, "Error")
+                MsgBox("Error al ingresar Sector, por favor contacte al Administrador",, "Error")
             End If
         End If
 
@@ -58,11 +57,8 @@ Public Class IngresoSector
     End Sub
 
     Private Sub cmbZona_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbZona.SelectedIndexChanged
-
         id_zona = cmbZona.SelectedValue
-
         llenaComboComuna(id_zona)
-
     End Sub
 
     Private Sub cmbComuna_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbComuna.SelectedIndexChanged
@@ -106,7 +102,7 @@ Public Class IngresoSector
 
     Sub llenaComboComuna(id_zona As String)
 
-        comando = New SqlCommand("select * from l_comuna where id_zona = " + id_zona + "", conn)
+        comando = New SqlCommand("select * from l_comuna where l_id_zona = " + id_zona + "", conn)
         da = New SqlDataAdapter(comando)
         dt = New DataTable()
         da.Fill(dt)

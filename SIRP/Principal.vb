@@ -26,7 +26,7 @@ Public Class Principal
 
     'Menu
     Private Sub CrearInstituciónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CreaInstitucion.Click
-        MenuInstitucion.Show()
+        CambioInstitucion.Show()
     End Sub
 
     Private Sub CrearUsuarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CreaUser.Click
@@ -34,7 +34,7 @@ Public Class Principal
     End Sub
 
     Private Sub CreaZona_Click(sender As Object, e As EventArgs) Handles CreaZona.Click
-        IngresoZona.Show()
+        'IngresoZona.Show()
     End Sub
 
     Private Sub CreaSector_Click(sender As Object, e As EventArgs) Handles CreaSector.Click
@@ -67,7 +67,7 @@ Public Class Principal
     End Sub
 
     Private Sub RegistrarDelincuenteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CreaDelincuente.Click
-        IngresaDelincuente.Show()
+        frmDelincuente.Show()
     End Sub
 
     'Metodo para conectar
@@ -143,14 +143,14 @@ Public Class Principal
     Public Sub cierres()
         Me.Close()
         ActualizaDelincuente.Close()
-        MenuInstitucion.Close()
-        IngresaDelincuente.Close()
+        CambioInstitucion.Close()
+        frmDelincuente.Close()
         IngresoBanda.Close()
         IngresoControl.Close()
         IngresoDelito.Close()
         IngresoSector.Close()
         IngresoUsuario.Close()
-        IngresoZona.Close()
+        'IngresoZona.Close()
         ModuloReportes.Close()
     End Sub
 

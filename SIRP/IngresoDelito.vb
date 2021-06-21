@@ -282,7 +282,7 @@ Public Class IngresoDelito
             If (ExisteRut() = False) Then
 
                 MsgBox("Delincuente no se encuentra registrado")
-                IngresaDelincuente.Show()
+                frmDelincuente.Show()
                 Me.Close()
 
             Else
@@ -294,7 +294,7 @@ Public Class IngresoDelito
                         txtRut.Clear()
                         txtDetalle.Clear()
                     Else
-                        IngresaDelincuente.Show()
+                        frmDelincuente.Show()
                         Me.Close()
                     End If
                 Else

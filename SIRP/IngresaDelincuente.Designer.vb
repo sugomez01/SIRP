@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class IngresaDelincuente
+Partial Class frmDelincuente
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,25 +22,17 @@ Partial Class IngresaDelincuente
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.OpcionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.IngresarDelincuenteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ActualizarDatosDelincuenteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.IngresarDelitoCometidoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.IngresarUltimaVezVistoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.VolverToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.VolverAlMeúPrincipalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SalirDelSistemaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDelincuente))
         Me.lblNombre = New System.Windows.Forms.Label()
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.txtNombre = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.lblApellido = New System.Windows.Forms.Label()
+        Me.lblRUT = New System.Windows.Forms.Label()
+        Me.lblApodo = New System.Windows.Forms.Label()
+        Me.lblDomicilio = New System.Windows.Forms.Label()
+        Me.lblFono = New System.Windows.Forms.Label()
+        Me.lblNacimiento = New System.Windows.Forms.Label()
+        Me.lblEstado = New System.Windows.Forms.Label()
         Me.cmbEstado = New System.Windows.Forms.ComboBox()
         Me.dtpFechaNac = New System.Windows.Forms.DateTimePicker()
         Me.txtApellido = New System.Windows.Forms.TextBox()
@@ -49,355 +41,434 @@ Partial Class IngresaDelincuente
         Me.txtDomicilio = New System.Windows.Forms.TextBox()
         Me.txtTelefono = New System.Windows.Forms.TextBox()
         Me.btnRegistrar = New System.Windows.Forms.Button()
-        Me.Label8 = New System.Windows.Forms.Label()
+        Me.lblBanda = New System.Windows.Forms.Label()
         Me.cmbBanda = New System.Windows.Forms.ComboBox()
         Me.txtDigito = New System.Windows.Forms.TextBox()
+        Me.lblGuion = New System.Windows.Forms.Label()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.lblInfo = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.cmbComuna = New System.Windows.Forms.ComboBox()
         Me.lblComuna = New System.Windows.Forms.Label()
-        Me.MenuStrip1.SuspendLayout()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.lblDato2 = New System.Windows.Forms.Label()
+        Me.lblDato1 = New System.Windows.Forms.Label()
+        Me.Panel3.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        Me.Panel4.SuspendLayout()
+        Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpcionesToolStripMenuItem, Me.VolverToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(5, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(643, 28)
-        Me.MenuStrip1.TabIndex = 0
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'OpcionesToolStripMenuItem
-        '
-        Me.OpcionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IngresarDelincuenteToolStripMenuItem, Me.ActualizarDatosDelincuenteToolStripMenuItem, Me.IngresarDelitoCometidoToolStripMenuItem, Me.IngresarUltimaVezVistoToolStripMenuItem})
-        Me.OpcionesToolStripMenuItem.Name = "OpcionesToolStripMenuItem"
-        Me.OpcionesToolStripMenuItem.Size = New System.Drawing.Size(85, 24)
-        Me.OpcionesToolStripMenuItem.Text = "Opciones"
-        '
-        'IngresarDelincuenteToolStripMenuItem
-        '
-        Me.IngresarDelincuenteToolStripMenuItem.Name = "IngresarDelincuenteToolStripMenuItem"
-        Me.IngresarDelincuenteToolStripMenuItem.Size = New System.Drawing.Size(282, 26)
-        Me.IngresarDelincuenteToolStripMenuItem.Text = "Ingresar Delincuente"
-        '
-        'ActualizarDatosDelincuenteToolStripMenuItem
-        '
-        Me.ActualizarDatosDelincuenteToolStripMenuItem.Name = "ActualizarDatosDelincuenteToolStripMenuItem"
-        Me.ActualizarDatosDelincuenteToolStripMenuItem.Size = New System.Drawing.Size(282, 26)
-        Me.ActualizarDatosDelincuenteToolStripMenuItem.Text = "Actualizar datos Delincuente"
-        '
-        'IngresarDelitoCometidoToolStripMenuItem
-        '
-        Me.IngresarDelitoCometidoToolStripMenuItem.Name = "IngresarDelitoCometidoToolStripMenuItem"
-        Me.IngresarDelitoCometidoToolStripMenuItem.Size = New System.Drawing.Size(282, 26)
-        Me.IngresarDelitoCometidoToolStripMenuItem.Text = "Ingresar Delito cometido"
-        '
-        'IngresarUltimaVezVistoToolStripMenuItem
-        '
-        Me.IngresarUltimaVezVistoToolStripMenuItem.Name = "IngresarUltimaVezVistoToolStripMenuItem"
-        Me.IngresarUltimaVezVistoToolStripMenuItem.Size = New System.Drawing.Size(282, 26)
-        Me.IngresarUltimaVezVistoToolStripMenuItem.Text = "Ingresar ultima vez visto"
-        '
-        'VolverToolStripMenuItem
-        '
-        Me.VolverToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VolverAlMeúPrincipalToolStripMenuItem, Me.SalirDelSistemaToolStripMenuItem})
-        Me.VolverToolStripMenuItem.Name = "VolverToolStripMenuItem"
-        Me.VolverToolStripMenuItem.Size = New System.Drawing.Size(64, 24)
-        Me.VolverToolStripMenuItem.Text = "Volver"
-        '
-        'VolverAlMeúPrincipalToolStripMenuItem
-        '
-        Me.VolverAlMeúPrincipalToolStripMenuItem.Name = "VolverAlMeúPrincipalToolStripMenuItem"
-        Me.VolverAlMeúPrincipalToolStripMenuItem.Size = New System.Drawing.Size(244, 26)
-        Me.VolverAlMeúPrincipalToolStripMenuItem.Text = "Volver al meú principal"
-        '
-        'SalirDelSistemaToolStripMenuItem
-        '
-        Me.SalirDelSistemaToolStripMenuItem.Name = "SalirDelSistemaToolStripMenuItem"
-        Me.SalirDelSistemaToolStripMenuItem.Size = New System.Drawing.Size(244, 26)
-        Me.SalirDelSistemaToolStripMenuItem.Text = "Salir del sistema"
         '
         'lblNombre
         '
         Me.lblNombre.AutoSize = True
-        Me.lblNombre.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNombre.Location = New System.Drawing.Point(105, 119)
+        Me.lblNombre.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.lblNombre.ForeColor = System.Drawing.Color.White
+        Me.lblNombre.Location = New System.Drawing.Point(16, 29)
+        Me.lblNombre.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblNombre.Name = "lblNombre"
-        Me.lblNombre.Size = New System.Drawing.Size(81, 23)
+        Me.lblNombre.Size = New System.Drawing.Size(78, 20)
         Me.lblNombre.TabIndex = 1
-        Me.lblNombre.Text = "Nombres"
+        Me.lblNombre.Text = "NOMBRES"
         '
         'lblTitulo
         '
         Me.lblTitulo.AutoSize = True
-        Me.lblTitulo.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitulo.Location = New System.Drawing.Point(149, 44)
+        Me.lblTitulo.Font = New System.Drawing.Font("Segoe UI", 16.75!)
+        Me.lblTitulo.ForeColor = System.Drawing.Color.White
+        Me.lblTitulo.Location = New System.Drawing.Point(428, 9)
+        Me.lblTitulo.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblTitulo.Name = "lblTitulo"
-        Me.lblTitulo.Size = New System.Drawing.Size(336, 29)
+        Me.lblTitulo.Size = New System.Drawing.Size(268, 31)
         Me.lblTitulo.TabIndex = 2
-        Me.lblTitulo.Text = "Módulo Ingreso de Delincuentes"
+        Me.lblTitulo.Text = "Registro de Delincuentes"
         '
         'txtNombre
         '
-        Me.txtNombre.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNombre.Location = New System.Drawing.Point(340, 114)
-        Me.txtNombre.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtNombre.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.txtNombre.Location = New System.Drawing.Point(124, 29)
+        Me.txtNombre.Margin = New System.Windows.Forms.Padding(2)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(215, 29)
-        Me.txtNombre.TabIndex = 3
+        Me.txtNombre.Size = New System.Drawing.Size(227, 27)
+        Me.txtNombre.TabIndex = 0
         '
-        'Label1
+        'lblApellido
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(105, 158)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(80, 23)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = "Apellidos"
+        Me.lblApellido.AutoSize = True
+        Me.lblApellido.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.lblApellido.ForeColor = System.Drawing.Color.White
+        Me.lblApellido.Location = New System.Drawing.Point(16, 69)
+        Me.lblApellido.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblApellido.Name = "lblApellido"
+        Me.lblApellido.Size = New System.Drawing.Size(83, 20)
+        Me.lblApellido.TabIndex = 4
+        Me.lblApellido.Text = "APELLIDOS"
         '
-        'Label2
+        'lblRUT
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(105, 197)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(36, 23)
-        Me.Label2.TabIndex = 5
-        Me.Label2.Text = "Rut"
+        Me.lblRUT.AutoSize = True
+        Me.lblRUT.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.lblRUT.ForeColor = System.Drawing.Color.White
+        Me.lblRUT.Location = New System.Drawing.Point(16, 111)
+        Me.lblRUT.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblRUT.Name = "lblRUT"
+        Me.lblRUT.Size = New System.Drawing.Size(36, 20)
+        Me.lblRUT.TabIndex = 5
+        Me.lblRUT.Text = "RUT"
         '
-        'Label3
+        'lblApodo
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(105, 238)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(61, 23)
-        Me.Label3.TabIndex = 6
-        Me.Label3.Text = "Apodo"
+        Me.lblApodo.AutoSize = True
+        Me.lblApodo.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.lblApodo.ForeColor = System.Drawing.Color.White
+        Me.lblApodo.Location = New System.Drawing.Point(31, 52)
+        Me.lblApodo.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblApodo.Name = "lblApodo"
+        Me.lblApodo.Size = New System.Drawing.Size(60, 20)
+        Me.lblApodo.TabIndex = 6
+        Me.lblApodo.Text = "APODO"
         '
-        'Label4
+        'lblDomicilio
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(105, 315)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(81, 23)
-        Me.Label4.TabIndex = 7
-        Me.Label4.Text = "Domicilio"
+        Me.lblDomicilio.AutoSize = True
+        Me.lblDomicilio.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.lblDomicilio.ForeColor = System.Drawing.Color.White
+        Me.lblDomicilio.Location = New System.Drawing.Point(22, 69)
+        Me.lblDomicilio.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblDomicilio.Name = "lblDomicilio"
+        Me.lblDomicilio.Size = New System.Drawing.Size(83, 20)
+        Me.lblDomicilio.TabIndex = 7
+        Me.lblDomicilio.Text = "DOMICILIO"
         '
-        'Label5
+        'lblFono
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(105, 358)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(75, 23)
-        Me.Label5.TabIndex = 8
-        Me.Label5.Text = "Teléfono"
+        Me.lblFono.AutoSize = True
+        Me.lblFono.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.lblFono.ForeColor = System.Drawing.Color.White
+        Me.lblFono.Location = New System.Drawing.Point(16, 192)
+        Me.lblFono.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblFono.Name = "lblFono"
+        Me.lblFono.Size = New System.Drawing.Size(80, 20)
+        Me.lblFono.TabIndex = 8
+        Me.lblFono.Text = "TELÉFONO"
         '
-        'Label6
+        'lblNacimiento
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(105, 448)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(167, 23)
-        Me.Label6.TabIndex = 9
-        Me.Label6.Text = "Fecha de nacimiento"
+        Me.lblNacimiento.AutoSize = True
+        Me.lblNacimiento.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.lblNacimiento.ForeColor = System.Drawing.Color.White
+        Me.lblNacimiento.Location = New System.Drawing.Point(16, 155)
+        Me.lblNacimiento.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblNacimiento.Name = "lblNacimiento"
+        Me.lblNacimiento.Size = New System.Drawing.Size(169, 20)
+        Me.lblNacimiento.TabIndex = 9
+        Me.lblNacimiento.Text = "FECHA DE NACIMIENTO"
         '
-        'Label7
+        'lblEstado
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(105, 491)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(62, 23)
-        Me.Label7.TabIndex = 10
-        Me.Label7.Text = "Estado"
+        Me.lblEstado.AutoSize = True
+        Me.lblEstado.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.lblEstado.ForeColor = System.Drawing.Color.White
+        Me.lblEstado.Location = New System.Drawing.Point(31, 136)
+        Me.lblEstado.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblEstado.Name = "lblEstado"
+        Me.lblEstado.Size = New System.Drawing.Size(64, 20)
+        Me.lblEstado.TabIndex = 10
+        Me.lblEstado.Text = "ESTADO"
         '
         'cmbEstado
         '
-        Me.cmbEstado.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbEstado.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.cmbEstado.FormattingEnabled = True
         Me.cmbEstado.Items.AddRange(New Object() {"Libre", "Preso", "Orden de Arresto"})
-        Me.cmbEstado.Location = New System.Drawing.Point(340, 487)
-        Me.cmbEstado.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.cmbEstado.Location = New System.Drawing.Point(108, 134)
+        Me.cmbEstado.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbEstado.Name = "cmbEstado"
-        Me.cmbEstado.Size = New System.Drawing.Size(215, 30)
-        Me.cmbEstado.TabIndex = 11
+        Me.cmbEstado.Size = New System.Drawing.Size(199, 28)
+        Me.cmbEstado.TabIndex = 10
         '
         'dtpFechaNac
         '
-        Me.dtpFechaNac.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtpFechaNac.Location = New System.Drawing.Point(340, 443)
-        Me.dtpFechaNac.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.dtpFechaNac.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.dtpFechaNac.Location = New System.Drawing.Point(205, 150)
+        Me.dtpFechaNac.Margin = New System.Windows.Forms.Padding(2)
         Me.dtpFechaNac.Name = "dtpFechaNac"
-        Me.dtpFechaNac.Size = New System.Drawing.Size(215, 29)
-        Me.dtpFechaNac.TabIndex = 12
+        Me.dtpFechaNac.Size = New System.Drawing.Size(147, 27)
+        Me.dtpFechaNac.TabIndex = 4
         '
         'txtApellido
         '
-        Me.txtApellido.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtApellido.Location = New System.Drawing.Point(340, 155)
-        Me.txtApellido.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtApellido.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtApellido.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.txtApellido.Location = New System.Drawing.Point(124, 69)
+        Me.txtApellido.Margin = New System.Windows.Forms.Padding(2)
         Me.txtApellido.Name = "txtApellido"
-        Me.txtApellido.Size = New System.Drawing.Size(215, 29)
-        Me.txtApellido.TabIndex = 13
+        Me.txtApellido.Size = New System.Drawing.Size(227, 27)
+        Me.txtApellido.TabIndex = 1
         '
         'txtRut
         '
-        Me.txtRut.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRut.Location = New System.Drawing.Point(340, 194)
-        Me.txtRut.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtRut.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtRut.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.txtRut.Location = New System.Drawing.Point(124, 108)
+        Me.txtRut.Margin = New System.Windows.Forms.Padding(2)
         Me.txtRut.Name = "txtRut"
-        Me.txtRut.Size = New System.Drawing.Size(161, 29)
-        Me.txtRut.TabIndex = 14
+        Me.txtRut.Size = New System.Drawing.Size(169, 27)
+        Me.txtRut.TabIndex = 2
         '
         'txtApodo
         '
-        Me.txtApodo.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtApodo.Location = New System.Drawing.Point(340, 235)
-        Me.txtApodo.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtApodo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtApodo.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.txtApodo.Location = New System.Drawing.Point(108, 52)
+        Me.txtApodo.Margin = New System.Windows.Forms.Padding(2)
         Me.txtApodo.Name = "txtApodo"
-        Me.txtApodo.Size = New System.Drawing.Size(215, 29)
-        Me.txtApodo.TabIndex = 15
+        Me.txtApodo.Size = New System.Drawing.Size(199, 27)
+        Me.txtApodo.TabIndex = 8
         '
         'txtDomicilio
         '
-        Me.txtDomicilio.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDomicilio.Location = New System.Drawing.Point(340, 311)
-        Me.txtDomicilio.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtDomicilio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtDomicilio.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.txtDomicilio.Location = New System.Drawing.Point(130, 69)
+        Me.txtDomicilio.Margin = New System.Windows.Forms.Padding(2)
         Me.txtDomicilio.Name = "txtDomicilio"
-        Me.txtDomicilio.Size = New System.Drawing.Size(215, 29)
-        Me.txtDomicilio.TabIndex = 16
+        Me.txtDomicilio.Size = New System.Drawing.Size(229, 27)
+        Me.txtDomicilio.TabIndex = 6
         '
         'txtTelefono
         '
-        Me.txtTelefono.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTelefono.Location = New System.Drawing.Point(340, 355)
-        Me.txtTelefono.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtTelefono.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtTelefono.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.txtTelefono.Location = New System.Drawing.Point(122, 192)
+        Me.txtTelefono.Margin = New System.Windows.Forms.Padding(2)
         Me.txtTelefono.Name = "txtTelefono"
-        Me.txtTelefono.Size = New System.Drawing.Size(215, 29)
-        Me.txtTelefono.TabIndex = 17
+        Me.txtTelefono.Size = New System.Drawing.Size(229, 27)
+        Me.txtTelefono.TabIndex = 5
         '
         'btnRegistrar
         '
-        Me.btnRegistrar.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRegistrar.Location = New System.Drawing.Point(447, 521)
-        Me.btnRegistrar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnRegistrar.BackColor = System.Drawing.Color.Transparent
+        Me.btnRegistrar.BackgroundImage = Global.SIRP.My.Resources.Resources.boton
+        Me.btnRegistrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnRegistrar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.btnRegistrar.ForeColor = System.Drawing.Color.White
+        Me.btnRegistrar.Location = New System.Drawing.Point(482, 402)
+        Me.btnRegistrar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnRegistrar.Name = "btnRegistrar"
-        Me.btnRegistrar.Size = New System.Drawing.Size(108, 30)
-        Me.btnRegistrar.TabIndex = 18
-        Me.btnRegistrar.Text = "&Registrar"
-        Me.btnRegistrar.UseVisualStyleBackColor = True
+        Me.btnRegistrar.Size = New System.Drawing.Size(194, 33)
+        Me.btnRegistrar.TabIndex = 11
+        Me.btnRegistrar.Text = "REGISTRAR DELINCUENTE"
+        Me.btnRegistrar.UseVisualStyleBackColor = False
         '
-        'Label8
+        'lblBanda
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Calibri", 10.8!)
-        Me.Label8.Location = New System.Drawing.Point(105, 405)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(58, 23)
-        Me.Label8.TabIndex = 19
-        Me.Label8.Text = "Banda"
+        Me.lblBanda.AutoSize = True
+        Me.lblBanda.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.lblBanda.ForeColor = System.Drawing.Color.White
+        Me.lblBanda.Location = New System.Drawing.Point(31, 92)
+        Me.lblBanda.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblBanda.Name = "lblBanda"
+        Me.lblBanda.Size = New System.Drawing.Size(60, 20)
+        Me.lblBanda.TabIndex = 19
+        Me.lblBanda.Text = "BANDA"
         '
         'cmbBanda
         '
-        Me.cmbBanda.Font = New System.Drawing.Font("Calibri", 10.8!)
+        Me.cmbBanda.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.cmbBanda.FormattingEnabled = True
-        Me.cmbBanda.Location = New System.Drawing.Point(340, 399)
+        Me.cmbBanda.Location = New System.Drawing.Point(108, 92)
+        Me.cmbBanda.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbBanda.Name = "cmbBanda"
-        Me.cmbBanda.Size = New System.Drawing.Size(215, 30)
-        Me.cmbBanda.TabIndex = 20
+        Me.cmbBanda.Size = New System.Drawing.Size(199, 28)
+        Me.cmbBanda.TabIndex = 9
         '
         'txtDigito
         '
-        Me.txtDigito.Font = New System.Drawing.Font("Calibri", 10.8!)
-        Me.txtDigito.Location = New System.Drawing.Point(507, 194)
+        Me.txtDigito.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtDigito.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.txtDigito.Location = New System.Drawing.Point(316, 111)
+        Me.txtDigito.Margin = New System.Windows.Forms.Padding(2)
         Me.txtDigito.Name = "txtDigito"
-        Me.txtDigito.Size = New System.Drawing.Size(47, 29)
-        Me.txtDigito.TabIndex = 21
+        Me.txtDigito.Size = New System.Drawing.Size(36, 27)
+        Me.txtDigito.TabIndex = 3
+        '
+        'lblGuion
+        '
+        Me.lblGuion.AutoSize = True
+        Me.lblGuion.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.lblGuion.ForeColor = System.Drawing.Color.White
+        Me.lblGuion.Location = New System.Drawing.Point(297, 111)
+        Me.lblGuion.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblGuion.Name = "lblGuion"
+        Me.lblGuion.Size = New System.Drawing.Size(15, 20)
+        Me.lblGuion.TabIndex = 22
+        Me.lblGuion.Text = "-"
+        '
+        'Panel3
+        '
+        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel3.Controls.Add(Me.cmbBanda)
+        Me.Panel3.Controls.Add(Me.lblApodo)
+        Me.Panel3.Controls.Add(Me.lblEstado)
+        Me.Panel3.Controls.Add(Me.txtApodo)
+        Me.Panel3.Controls.Add(Me.lblBanda)
+        Me.Panel3.Controls.Add(Me.cmbEstado)
+        Me.Panel3.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.Panel3.Location = New System.Drawing.Point(782, 28)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(352, 248)
+        Me.Panel3.TabIndex = 2
+        '
+        'lblInfo
+        '
+        Me.lblInfo.AutoSize = True
+        Me.lblInfo.Font = New System.Drawing.Font("Segoe UI", 9.25!)
+        Me.lblInfo.ForeColor = System.Drawing.Color.Transparent
+        Me.lblInfo.Location = New System.Drawing.Point(782, 3)
+        Me.lblInfo.Name = "lblInfo"
+        Me.lblInfo.Size = New System.Drawing.Size(165, 17)
+        Me.lblInfo.TabIndex = 27
+        Me.lblInfo.Text = "INFORMACIÓN ADICIONAL"
+        '
+        'Panel2
+        '
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel2.Controls.Add(Me.cmbComuna)
+        Me.Panel2.Controls.Add(Me.lblComuna)
+        Me.Panel2.Controls.Add(Me.txtDomicilio)
+        Me.Panel2.Controls.Add(Me.lblDomicilio)
+        Me.Panel2.Location = New System.Drawing.Point(394, 28)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(379, 248)
+        Me.Panel2.TabIndex = 1
         '
         'cmbComuna
         '
-        Me.cmbComuna.Font = New System.Drawing.Font("Calibri", 10.8!)
+        Me.cmbComuna.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.cmbComuna.FormattingEnabled = True
-        Me.cmbComuna.Location = New System.Drawing.Point(340, 273)
+        Me.cmbComuna.Items.AddRange(New Object() {"Libre", "Preso", "Orden de Arresto"})
+        Me.cmbComuna.Location = New System.Drawing.Point(130, 112)
+        Me.cmbComuna.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbComuna.Name = "cmbComuna"
-        Me.cmbComuna.Size = New System.Drawing.Size(215, 30)
-        Me.cmbComuna.TabIndex = 23
+        Me.cmbComuna.Size = New System.Drawing.Size(227, 28)
+        Me.cmbComuna.TabIndex = 7
         '
         'lblComuna
         '
         Me.lblComuna.AutoSize = True
-        Me.lblComuna.Font = New System.Drawing.Font("Calibri", 10.8!)
-        Me.lblComuna.Location = New System.Drawing.Point(105, 279)
+        Me.lblComuna.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.lblComuna.ForeColor = System.Drawing.Color.White
+        Me.lblComuna.Location = New System.Drawing.Point(22, 115)
+        Me.lblComuna.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblComuna.Name = "lblComuna"
-        Me.lblComuna.Size = New System.Drawing.Size(74, 23)
-        Me.lblComuna.TabIndex = 22
-        Me.lblComuna.Text = "Comuna"
+        Me.lblComuna.Size = New System.Drawing.Size(73, 20)
+        Me.lblComuna.TabIndex = 8
+        Me.lblComuna.Text = "COMUNA"
         '
-        'IngresaDelincuente
+        'Panel4
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel4.Controls.Add(Me.lblNombre)
+        Me.Panel4.Controls.Add(Me.lblRUT)
+        Me.Panel4.Controls.Add(Me.lblGuion)
+        Me.Panel4.Controls.Add(Me.lblNacimiento)
+        Me.Panel4.Controls.Add(Me.txtRut)
+        Me.Panel4.Controls.Add(Me.txtApellido)
+        Me.Panel4.Controls.Add(Me.lblFono)
+        Me.Panel4.Controls.Add(Me.lblApellido)
+        Me.Panel4.Controls.Add(Me.txtNombre)
+        Me.Panel4.Controls.Add(Me.txtDigito)
+        Me.Panel4.Controls.Add(Me.dtpFechaNac)
+        Me.Panel4.Controls.Add(Me.txtTelefono)
+        Me.Panel4.Location = New System.Drawing.Point(6, 28)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(379, 248)
+        Me.Panel4.TabIndex = 0
+        '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetPartial
+        Me.TableLayoutPanel1.ColumnCount = 3
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 385.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 385.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 391.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.lblDato2, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.lblInfo, 2, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Panel4, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.Panel2, 1, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.Panel3, 2, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.lblDato1, 0, 0)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(12, 89)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 2
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 254.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1140, 282)
+        Me.TableLayoutPanel1.TabIndex = 0
+        '
+        'lblDato2
+        '
+        Me.lblDato2.AutoSize = True
+        Me.lblDato2.Font = New System.Drawing.Font("Segoe UI", 9.25!)
+        Me.lblDato2.ForeColor = System.Drawing.Color.Transparent
+        Me.lblDato2.Location = New System.Drawing.Point(394, 3)
+        Me.lblDato2.Name = "lblDato2"
+        Me.lblDato2.Size = New System.Drawing.Size(181, 17)
+        Me.lblDato2.TabIndex = 31
+        Me.lblDato2.Text = "INFORMACIÓN DOMICILIARIA"
+        '
+        'lblDato1
+        '
+        Me.lblDato1.AutoSize = True
+        Me.lblDato1.Font = New System.Drawing.Font("Segoe UI", 9.25!)
+        Me.lblDato1.ForeColor = System.Drawing.Color.Transparent
+        Me.lblDato1.Location = New System.Drawing.Point(6, 3)
+        Me.lblDato1.Name = "lblDato1"
+        Me.lblDato1.Size = New System.Drawing.Size(128, 17)
+        Me.lblDato1.TabIndex = 25
+        Me.lblDato1.Text = "DATOS PERSONALES"
+        '
+        'frmDelincuente
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(643, 569)
-        Me.Controls.Add(Me.cmbComuna)
-        Me.Controls.Add(Me.lblComuna)
-        Me.Controls.Add(Me.txtDigito)
-        Me.Controls.Add(Me.cmbBanda)
-        Me.Controls.Add(Me.Label8)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(1165, 457)
         Me.Controls.Add(Me.btnRegistrar)
-        Me.Controls.Add(Me.txtTelefono)
-        Me.Controls.Add(Me.txtDomicilio)
-        Me.Controls.Add(Me.txtApodo)
-        Me.Controls.Add(Me.txtRut)
-        Me.Controls.Add(Me.txtApellido)
-        Me.Controls.Add(Me.dtpFechaNac)
-        Me.Controls.Add(Me.cmbEstado)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.lblTitulo)
-        Me.Controls.Add(Me.lblNombre)
-        Me.Controls.Add(Me.MenuStrip1)
-        Me.MainMenuStrip = Me.MenuStrip1
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Name = "IngresaDelincuente"
+        Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Name = "frmDelincuente"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Ingreso de Delincuente"
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
+        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.TableLayoutPanel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents OpcionesToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents IngresarDelincuenteToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ActualizarDatosDelincuenteToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents IngresarDelitoCometidoToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents IngresarUltimaVezVistoToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents VolverToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents VolverAlMeúPrincipalToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents SalirDelSistemaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents lblNombre As Label
     Friend WithEvents lblTitulo As Label
     Friend WithEvents txtNombre As TextBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label7 As Label
+    Friend WithEvents lblApellido As Label
+    Friend WithEvents lblRUT As Label
+    Friend WithEvents lblApodo As Label
+    Friend WithEvents lblDomicilio As Label
+    Friend WithEvents lblFono As Label
+    Friend WithEvents lblNacimiento As Label
+    Friend WithEvents lblEstado As Label
     Friend WithEvents cmbEstado As ComboBox
     Friend WithEvents dtpFechaNac As DateTimePicker
     Friend WithEvents txtApellido As TextBox
@@ -406,9 +477,17 @@ Partial Class IngresaDelincuente
     Friend WithEvents txtDomicilio As TextBox
     Friend WithEvents txtTelefono As TextBox
     Friend WithEvents btnRegistrar As Button
-    Friend WithEvents Label8 As Label
+    Friend WithEvents lblBanda As Label
     Friend WithEvents cmbBanda As ComboBox
     Friend WithEvents txtDigito As TextBox
+    Friend WithEvents lblGuion As Label
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents lblInfo As Label
+    Friend WithEvents Panel2 As Panel
     Friend WithEvents cmbComuna As ComboBox
     Friend WithEvents lblComuna As Label
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents lblDato1 As Label
+    Friend WithEvents lblDato2 As Label
 End Class

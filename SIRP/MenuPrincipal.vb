@@ -9,8 +9,8 @@ Public Class MenuPrincipal
 
     'Ruta para conectar a la DB
     'descomentar segun pc
-    Public conn As SqlConnection = New SqlConnection("Data Source=LAPTOP-6GF7OE4K;Initial Catalog=SIRP;Integrated Security=True")
-    'Public conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-EUII0N8;User ID=sa;Password=sasa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
+    'Public conn As SqlConnection = New SqlConnection("Data Source=LAPTOP-6GF7OE4K;Initial Catalog=SIRP;Integrated Security=True")
+    Public conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-EUII0N8;User ID=sa;Password=sasa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
 
     'declaracion de variables para realizar consultas SQL
     Private cmb As SqlCommandBuilder
@@ -48,35 +48,64 @@ Public Class MenuPrincipal
     End Sub
 
     Private Sub btnIngresaInst_Click(sender As Object, e As EventArgs) Handles btnIngresaInst.Click
-        MenuInstitucion.Show()
-        MenuInstitucion.btnRegistra.Show()
-        MenuInstitucion.lblIngresa.Show()
-        MenuInstitucion.txtInst.Show()
-        MenuInstitucion.btnElimina.Hide()
-        MenuInstitucion.cmbInstituciones.Hide()
-        MenuInstitucion.lblElimina.Hide()
+        CambioInstitucion.Show()
+        CambioInstitucion.btnRegistra.Show()
+        CambioInstitucion.lblIngresa.Show()
+        CambioInstitucion.txtInst.Show()
+        CambioInstitucion.btnElimina.Hide()
+        CambioInstitucion.cmbInstituciones.Hide()
+        CambioInstitucion.lblElimina.Hide()
 
     End Sub
 
     Private Sub btnEliminaInst_Click(sender As Object, e As EventArgs) Handles btnEliminaInst.Click
-        MenuInstitucion.Show()
-        MenuInstitucion.btnRegistra.Hide()
-        MenuInstitucion.lblIngresa.Hide()
-        MenuInstitucion.txtInst.Hide()
-        MenuInstitucion.btnElimina.Show()
-        MenuInstitucion.cmbInstituciones.Show()
-        MenuInstitucion.lblElimina.Show()
+        CambioInstitucion.Show()
+        CambioInstitucion.btnRegistra.Hide()
+        CambioInstitucion.lblIngresa.Hide()
+        CambioInstitucion.txtInst.Hide()
+        CambioInstitucion.btnElimina.Show()
+        CambioInstitucion.cmbInstituciones.Show()
+        CambioInstitucion.lblElimina.Show()
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         IngresoUsuario.Show()
     End Sub
 
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles btnSector.Click
+        IngresoSector.Show()
+    End Sub
+
+    Private Sub btnReporte_Click(sender As Object, e As EventArgs) Handles btnReporte.Click
+        ModuloReportes.Show()
+    End Sub
+
+    Private Sub btnControl_Click(sender As Object, e As EventArgs) Handles btnControl.Click
+        IngresoControl.Show()
+    End Sub
+
+    Private Sub btnDelito_Click(sender As Object, e As EventArgs) Handles btnDelito.Click
+        IngresoDelito.Show()
+    End Sub
+
+    Private Sub btnBanda_Click(sender As Object, e As EventArgs) Handles btnBanda.Click
+        IngresoBanda.Show()
+    End Sub
+
+    Private Sub btnDelincuente_Click(sender As Object, e As EventArgs) Handles btnDelincuente.Click
+        frmDelincuente.Show()
+    End Sub
+
     Public Sub validaUser(ByVal id As Integer)
         If id = 1 Then
             PanelAdmin.Visible = True
+            PanelJefe.Visible = False
+        ElseIf id = 3 Then
+            PanelAdmin.Visible = False
+            PanelJefe.Visible = True
         Else
             PanelAdmin.Visible = False
+            PanelJefe.Visible = False
         End If
         '    CreaUser.Visible = True
         '    CreaInstitucion.Visible = True
@@ -146,12 +175,15 @@ Public Class MenuPrincipal
         End If
 
         If id = 1 Then
-            picPrincipal.BackgroundImage = Image.FromFile("C:\Users\shifl\OneDrive\Escritorio\Proyecto de titulo\SIRP\SIRP\Resources\carabineros.png")
+            'picPrincipal.BackgroundImage = Image.FromFile("C:\Users\shifl\OneDrive\Escritorio\Proyecto de titulo\SIRP\SIRP\Resources\carabineros.png")
+            picPrincipal.BackgroundImage = Image.FromFile("C:\Users\sgome\Desktop\SIRP\SIRP\Resources\carabineros.png")
         ElseIf id = 2 Then
-            picPrincipal.BackgroundImage = Image.FromFile("C:\Users\shifl\OneDrive\Escritorio\Proyecto de titulo\SIRP\SIRP\Resources\os10.png")
+            'picPrincipal.BackgroundImage = Image.FromFile("C:\Users\shifl\OneDrive\Escritorio\Proyecto de titulo\SIRP\SIRP\Resources\os10.png")
+            picPrincipal.BackgroundImage = Image.FromFile("C:\Users\sgome\Desktop\SIRP\SIRP\Resources\os10.png")
         ElseIf id = 3 Then
             picPrincipal.BackColor = Color.White
-            picPrincipal.BackgroundImage = Image.FromFile("C:\Users\shifl\OneDrive\Escritorio\Proyecto de titulo\SIRP\SIRP\Resources\pdi.png")
+            'picPrincipal.BackgroundImage = Image.FromFile("C:\Users\shifl\OneDrive\Escritorio\Proyecto de titulo\SIRP\SIRP\Resources\pdi.png")
+            picPrincipal.BackgroundImage = Image.FromFile("C:\Users\sgome\Desktop\SIRP\SIRP\Resources\pdi.png")
         Else
             picPrincipal.Visible = False
         End If
@@ -160,14 +192,13 @@ Public Class MenuPrincipal
     Public Sub cierres()
         Me.Close()
         ActualizaDelincuente.Close()
-        MenuInstitucion.Close()
-        IngresaDelincuente.Close()
+        CambioInstitucion.Close()
+        frmDelincuente.Close()
         IngresoBanda.Close()
         IngresoControl.Close()
         IngresoDelito.Close()
         IngresoSector.Close()
         IngresoUsuario.Close()
-        IngresoZona.Close()
         ModuloReportes.Close()
     End Sub
 
