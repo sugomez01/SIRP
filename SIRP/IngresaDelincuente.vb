@@ -3,14 +3,14 @@
 Public Class IngresaDelincuente
 
     Dim id_user, id_int, id_tip_user, op, banda As Integer
-    Dim estado, fechaNac As String
+    Dim estado, fechaNac, id_comuna As String
 
 
 
     'Ruta para conectar a la DB
     'descomentar segun pc
-    'Public conn As SqlConnection = New SqlConnection("Data Source=LAPTOP-6GF7OE4K;Initial Catalog=SIRP;Integrated Security=True")
-    Public conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-EUII0N8;User ID=sa;Password=sasa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
+    Public conn As SqlConnection = New SqlConnection("Data Source=LAPTOP-6GF7OE4K;Initial Catalog=SIRP;Integrated Security=True")
+    'Public conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-EUII0N8;User ID=sa;Password=sasa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
 
     'declaracion de variables para realizar consultas SQL
     Private cmb As SqlCommandBuilder
@@ -37,7 +37,7 @@ Public Class IngresaDelincuente
 
                 rut = txtRut.Text + "-" + txtDigito.Text
                 consulta = "select rut_delincuente from l_delincuente where rut_delincuente='" + rut + "'"
-                insert = "insert into l_delincuente values ('" + rut + "','" + nombre + "','" + apellido + "','" + txtApodo.Text.ToString + "'," + txtTelefono.Text.ToString + " ," + banda.ToString + "," + "'" + fechaNac + "'," + estado.ToString + "," + id_int.ToString + "," + id_tip_user.ToString + ",getDate())"
+                insert = "insert into l_delincuente values ('" + rut + "','" + nombre + "','" + apellido + "','" + txtApodo.Text.ToString + "', " + id_comuna + ",'" + txtDomicilio.Text.ToString + "'," + txtTelefono.Text.ToString + "," + "'" + fechaNac + "'," + estado.ToString + "," + banda.ToString + "," + id_tip_user.ToString + ",getDate())"
 
                 MsgBox(insert)
 
@@ -129,6 +129,10 @@ Public Class IngresaDelincuente
 
     End Function
 
+    Private Sub cmbComuna_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbComuna.SelectedIndexChanged
+        id_comuna = cmbComuna.SelectedValue.ToString
+    End Sub
+
     Sub llenaCombo()
 
         id_int = Login.id_int
@@ -148,6 +152,15 @@ Public Class IngresaDelincuente
         cmbBanda.DisplayMember = "desc_banda"
         cmbBanda.ValueMember = "id_banda"
         cmbBanda.DataSource = dt
+
+
+        comando = New SqlCommand("select * from l_comuna", conn)
+        da = New SqlDataAdapter(comando)
+        dt = New DataTable()
+        da.Fill(dt)
+        cmbComuna.DisplayMember = "desc_comuna"
+        cmbComuna.ValueMember = "id_comuna"
+        cmbComuna.DataSource = dt
 
 
     End Sub

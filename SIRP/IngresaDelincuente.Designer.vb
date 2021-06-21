@@ -52,6 +52,8 @@ Partial Class IngresaDelincuente
         Me.Label8 = New System.Windows.Forms.Label()
         Me.cmbBanda = New System.Windows.Forms.ComboBox()
         Me.txtDigito = New System.Windows.Forms.TextBox()
+        Me.cmbComuna = New System.Windows.Forms.ComboBox()
+        Me.lblComuna = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -62,7 +64,7 @@ Partial Class IngresaDelincuente
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(5, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(648, 30)
+        Me.MenuStrip1.Size = New System.Drawing.Size(643, 28)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -70,7 +72,7 @@ Partial Class IngresaDelincuente
         '
         Me.OpcionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IngresarDelincuenteToolStripMenuItem, Me.ActualizarDatosDelincuenteToolStripMenuItem, Me.IngresarDelitoCometidoToolStripMenuItem, Me.IngresarUltimaVezVistoToolStripMenuItem})
         Me.OpcionesToolStripMenuItem.Name = "OpcionesToolStripMenuItem"
-        Me.OpcionesToolStripMenuItem.Size = New System.Drawing.Size(85, 26)
+        Me.OpcionesToolStripMenuItem.Size = New System.Drawing.Size(85, 24)
         Me.OpcionesToolStripMenuItem.Text = "Opciones"
         '
         'IngresarDelincuenteToolStripMenuItem
@@ -101,7 +103,7 @@ Partial Class IngresaDelincuente
         '
         Me.VolverToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VolverAlMeúPrincipalToolStripMenuItem, Me.SalirDelSistemaToolStripMenuItem})
         Me.VolverToolStripMenuItem.Name = "VolverToolStripMenuItem"
-        Me.VolverToolStripMenuItem.Size = New System.Drawing.Size(64, 26)
+        Me.VolverToolStripMenuItem.Size = New System.Drawing.Size(64, 24)
         Me.VolverToolStripMenuItem.Text = "Volver"
         '
         'VolverAlMeúPrincipalToolStripMenuItem
@@ -179,7 +181,7 @@ Partial Class IngresaDelincuente
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(105, 286)
+        Me.Label4.Location = New System.Drawing.Point(105, 315)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(81, 23)
         Me.Label4.TabIndex = 7
@@ -189,7 +191,7 @@ Partial Class IngresaDelincuente
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(105, 329)
+        Me.Label5.Location = New System.Drawing.Point(105, 358)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(75, 23)
         Me.Label5.TabIndex = 8
@@ -199,7 +201,7 @@ Partial Class IngresaDelincuente
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(105, 419)
+        Me.Label6.Location = New System.Drawing.Point(105, 448)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(167, 23)
         Me.Label6.TabIndex = 9
@@ -209,7 +211,7 @@ Partial Class IngresaDelincuente
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(105, 462)
+        Me.Label7.Location = New System.Drawing.Point(105, 491)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(62, 23)
         Me.Label7.TabIndex = 10
@@ -220,7 +222,7 @@ Partial Class IngresaDelincuente
         Me.cmbEstado.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbEstado.FormattingEnabled = True
         Me.cmbEstado.Items.AddRange(New Object() {"Libre", "Preso", "Orden de Arresto"})
-        Me.cmbEstado.Location = New System.Drawing.Point(340, 458)
+        Me.cmbEstado.Location = New System.Drawing.Point(340, 487)
         Me.cmbEstado.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cmbEstado.Name = "cmbEstado"
         Me.cmbEstado.Size = New System.Drawing.Size(215, 30)
@@ -229,7 +231,7 @@ Partial Class IngresaDelincuente
         'dtpFechaNac
         '
         Me.dtpFechaNac.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtpFechaNac.Location = New System.Drawing.Point(340, 414)
+        Me.dtpFechaNac.Location = New System.Drawing.Point(340, 443)
         Me.dtpFechaNac.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.dtpFechaNac.Name = "dtpFechaNac"
         Me.dtpFechaNac.Size = New System.Drawing.Size(215, 29)
@@ -265,7 +267,7 @@ Partial Class IngresaDelincuente
         'txtDomicilio
         '
         Me.txtDomicilio.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDomicilio.Location = New System.Drawing.Point(340, 282)
+        Me.txtDomicilio.Location = New System.Drawing.Point(340, 311)
         Me.txtDomicilio.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtDomicilio.Name = "txtDomicilio"
         Me.txtDomicilio.Size = New System.Drawing.Size(215, 29)
@@ -274,7 +276,7 @@ Partial Class IngresaDelincuente
         'txtTelefono
         '
         Me.txtTelefono.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTelefono.Location = New System.Drawing.Point(340, 326)
+        Me.txtTelefono.Location = New System.Drawing.Point(340, 355)
         Me.txtTelefono.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(215, 29)
@@ -283,7 +285,7 @@ Partial Class IngresaDelincuente
         'btnRegistrar
         '
         Me.btnRegistrar.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRegistrar.Location = New System.Drawing.Point(447, 492)
+        Me.btnRegistrar.Location = New System.Drawing.Point(447, 521)
         Me.btnRegistrar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnRegistrar.Name = "btnRegistrar"
         Me.btnRegistrar.Size = New System.Drawing.Size(108, 30)
@@ -295,7 +297,7 @@ Partial Class IngresaDelincuente
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Calibri", 10.8!)
-        Me.Label8.Location = New System.Drawing.Point(105, 376)
+        Me.Label8.Location = New System.Drawing.Point(105, 405)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(58, 23)
         Me.Label8.TabIndex = 19
@@ -305,7 +307,7 @@ Partial Class IngresaDelincuente
         '
         Me.cmbBanda.Font = New System.Drawing.Font("Calibri", 10.8!)
         Me.cmbBanda.FormattingEnabled = True
-        Me.cmbBanda.Location = New System.Drawing.Point(340, 370)
+        Me.cmbBanda.Location = New System.Drawing.Point(340, 399)
         Me.cmbBanda.Name = "cmbBanda"
         Me.cmbBanda.Size = New System.Drawing.Size(215, 30)
         Me.cmbBanda.TabIndex = 20
@@ -318,11 +320,32 @@ Partial Class IngresaDelincuente
         Me.txtDigito.Size = New System.Drawing.Size(47, 29)
         Me.txtDigito.TabIndex = 21
         '
+        'cmbComuna
+        '
+        Me.cmbComuna.Font = New System.Drawing.Font("Calibri", 10.8!)
+        Me.cmbComuna.FormattingEnabled = True
+        Me.cmbComuna.Location = New System.Drawing.Point(340, 273)
+        Me.cmbComuna.Name = "cmbComuna"
+        Me.cmbComuna.Size = New System.Drawing.Size(215, 30)
+        Me.cmbComuna.TabIndex = 23
+        '
+        'lblComuna
+        '
+        Me.lblComuna.AutoSize = True
+        Me.lblComuna.Font = New System.Drawing.Font("Calibri", 10.8!)
+        Me.lblComuna.Location = New System.Drawing.Point(105, 279)
+        Me.lblComuna.Name = "lblComuna"
+        Me.lblComuna.Size = New System.Drawing.Size(74, 23)
+        Me.lblComuna.TabIndex = 22
+        Me.lblComuna.Text = "Comuna"
+        '
         'IngresaDelincuente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(648, 533)
+        Me.ClientSize = New System.Drawing.Size(643, 569)
+        Me.Controls.Add(Me.cmbComuna)
+        Me.Controls.Add(Me.lblComuna)
         Me.Controls.Add(Me.txtDigito)
         Me.Controls.Add(Me.cmbBanda)
         Me.Controls.Add(Me.Label8)
@@ -386,4 +409,6 @@ Partial Class IngresaDelincuente
     Friend WithEvents Label8 As Label
     Friend WithEvents cmbBanda As ComboBox
     Friend WithEvents txtDigito As TextBox
+    Friend WithEvents cmbComuna As ComboBox
+    Friend WithEvents lblComuna As Label
 End Class

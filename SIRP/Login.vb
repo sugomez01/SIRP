@@ -112,7 +112,7 @@ Public Class Login
                         actualizaConexion(id_user)
                         If id_tip_user = 1 Then
                             Me.Hide()
-                            MenuPrincipal.Show()
+                            ModuloReportes.Show()
                         ElseIf id_tip_user = 2 Then
                             Me.Hide()
                             MenuPrincipal.Show()

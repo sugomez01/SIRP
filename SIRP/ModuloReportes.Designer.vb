@@ -32,11 +32,13 @@ Partial Class ModuloReportes
         Me.SIRPDataSet = New SIRP.SIRPDataSet()
         Me.L_delincuenteTableAdapter = New SIRP.SIRPDataSetTableAdapters.l_delincuenteTableAdapter()
         Me.lblTitulo = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgvReporte = New System.Windows.Forms.DataGridView()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.LdelincuenteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SIRPDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvReporte, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -98,22 +100,42 @@ Partial Class ModuloReportes
         Me.lblTitulo.TabIndex = 2
         Me.lblTitulo.Text = "Reporte"
         '
-        'DataGridView1
+        'dgvReporte
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(244, 87)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(916, 311)
-        Me.DataGridView1.TabIndex = 3
+        Me.dgvReporte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvReporte.Location = New System.Drawing.Point(241, 113)
+        Me.dgvReporte.Name = "dgvReporte"
+        Me.dgvReporte.RowHeadersWidth = 51
+        Me.dgvReporte.RowTemplate.Height = 24
+        Me.dgvReporte.Size = New System.Drawing.Size(916, 311)
+        Me.dgvReporte.TabIndex = 3
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(32, 126)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 4
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(32, 191)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 5
+        Me.Button2.Text = "Button2"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'ModuloReportes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1184, 476)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.dgvReporte)
         Me.Controls.Add(Me.lblTitulo)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
@@ -123,7 +145,7 @@ Partial Class ModuloReportes
         Me.MenuStrip1.PerformLayout()
         CType(Me.LdelincuenteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SIRPDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvReporte, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -138,5 +160,7 @@ Partial Class ModuloReportes
     Friend WithEvents LdelincuenteBindingSource As BindingSource
     Friend WithEvents L_delincuenteTableAdapter As SIRPDataSetTableAdapters.l_delincuenteTableAdapter
     Friend WithEvents lblTitulo As Label
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgvReporte As DataGridView
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
 End Class
