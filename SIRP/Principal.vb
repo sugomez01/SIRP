@@ -129,12 +129,12 @@ Public Class Principal
         End If
 
         If id = 1 Then
-            picPrincipal.Image = Image.FromFile("C:\Users\sgome\source\repos\sugomez01\SIRP\SIRP\Resources\carabineros.png")
+            picPrincipal.Image = Image.FromFile("C:\Users\shifl\OneDrive\Escritorio\Proyecto de titulo\SIRP\SIRP\Resources\carabineros.png")
             Me.BackColor = System.Drawing.ColorTranslator.FromHtml("#91D599")
         ElseIf id = 2 Then
-            picPrincipal.Image = Image.FromFile("C:\Users\sgome\source\repos\sugomez01\SIRP\SIRP\Resources\os10.png")
+            picPrincipal.Image = Image.FromFile("C:\Users\shifl\OneDrive\Escritorio\Proyecto de titulo\SIRP\SIRP\Resources\os10.png")
         ElseIf id = 3 Then
-            picPrincipal.Image = Image.FromFile("C:\Users\sgome\source\repos\sugomez01\SIRP\SIRP\Resources\pdi.png")
+            picPrincipal.Image = Image.FromFile("C:\Users\shifl\OneDrive\Escritorio\Proyecto de titulo\SIRP\SIRP\Resources\pdi.png")
         Else
             picPrincipal.Visible = False
         End If
