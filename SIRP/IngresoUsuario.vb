@@ -76,22 +76,6 @@ Public Class IngresoUsuario
                             If (Insertar(insert)) Then
                             MsgBox("Usuario ingresado exitosamente!",, "Registro existoso")
                             Me.Close()
-                            'op = MsgBox("¿Desea ingresar otro usuario?", MsgBoxStyle.YesNo, "Confirmación")
-                            '    If (op = 6) Then
-                            '        txtNomb.Clear()
-                            '        txtApe.Clear()
-                            '        txtPass.Clear()
-                            '        txtRut.Clear()
-                            '        txtDV.Clear()
-                            '        txtUser.Clear()
-                            '        cmbIns.SelectedIndex = 0
-                            '        cmbTipo.SelectedIndex = 0
-                            '        txtRut.Enabled = True
-                            '        txtDV.Enabled = True
-                            '    Else
-                            '        Principal.Show()
-                            '        Me.Close()
-                            '    End If
                         Else
                                 MsgBox("Error al ingresar usuario",, "Error")
                             End If
@@ -154,7 +138,6 @@ Public Class IngresoUsuario
         cmbIns.ValueMember = "id_institucion"
         cmbIns.DataSource = dt
 
-
         comando = New SqlCommand("select * from l_tipo_usuario", conn)
         da = New SqlDataAdapter(comando)
         dt = New DataTable()
@@ -178,8 +161,6 @@ Public Class IngresoUsuario
             MsgBox("Solo puede ingresar letras")
         End If
     End Sub
-
-
 
     Private Sub txtApe_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtApe.KeyPress
         If Char.IsLetter(e.KeyChar) Then
@@ -221,7 +202,6 @@ Public Class IngresoUsuario
         End If
     End Sub
 
-
     'valida insert que los datos no existan en la db
     Function validaRegistro(ByVal sql)
         conn.Close()
@@ -240,7 +220,6 @@ Public Class IngresoUsuario
         End Try
 
         Return resultado
-
     End Function
 
     Private Sub txtRut_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtRut.KeyPress
@@ -293,8 +272,6 @@ Public Class IngresoUsuario
             txtRut.Clear()
             txtDV.Clear()
         End If
-
-
         Return retorno
     End Function
 

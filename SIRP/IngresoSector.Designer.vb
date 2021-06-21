@@ -150,7 +150,7 @@ Partial Class IngresoSector
         Me.btnIngresar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnIngresar.Name = "btnIngresar"
         Me.btnIngresar.Size = New System.Drawing.Size(132, 29)
-        Me.btnIngresar.TabIndex = 9
+        Me.btnIngresar.TabIndex = 4
         Me.btnIngresar.Text = "REGISTRAR SECTOR"
         Me.btnIngresar.UseVisualStyleBackColor = False
         '

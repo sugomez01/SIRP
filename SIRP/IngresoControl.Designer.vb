@@ -75,17 +75,20 @@ Partial Class IngresoControl
         '
         Me.txtRut.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.txtRut.Location = New System.Drawing.Point(171, 37)
+        Me.txtRut.MaxLength = 8
         Me.txtRut.Name = "txtRut"
         Me.txtRut.Size = New System.Drawing.Size(171, 27)
-        Me.txtRut.TabIndex = 7
+        Me.txtRut.TabIndex = 0
         '
         'txtDigito
         '
+        Me.txtDigito.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtDigito.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.txtDigito.Location = New System.Drawing.Point(368, 37)
+        Me.txtDigito.MaxLength = 1
         Me.txtDigito.Name = "txtDigito"
         Me.txtDigito.Size = New System.Drawing.Size(41, 27)
-        Me.txtDigito.TabIndex = 8
+        Me.txtDigito.TabIndex = 1
         '
         'lblNombre
         '
@@ -144,28 +147,36 @@ Partial Class IngresoControl
         '
         'txtObservaciones
         '
+        Me.txtObservaciones.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtObservaciones.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.txtObservaciones.Location = New System.Drawing.Point(171, 124)
+        Me.txtObservaciones.MaxLength = 500
         Me.txtObservaciones.Multiline = True
         Me.txtObservaciones.Name = "txtObservaciones"
         Me.txtObservaciones.Size = New System.Drawing.Size(311, 127)
-        Me.txtObservaciones.TabIndex = 14
+        Me.txtObservaciones.TabIndex = 3
         '
         'txtUbicacion
         '
+        Me.txtUbicacion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtUbicacion.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.txtUbicacion.Location = New System.Drawing.Point(141, 61)
+        Me.txtUbicacion.MaxLength = 500
         Me.txtUbicacion.Name = "txtUbicacion"
         Me.txtUbicacion.Size = New System.Drawing.Size(221, 27)
-        Me.txtUbicacion.TabIndex = 16
+        Me.txtUbicacion.TabIndex = 4
         '
         'dtpFecha
         '
         Me.dtpFecha.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpFecha.Location = New System.Drawing.Point(171, 80)
+        Me.dtpFecha.MaxDate = New Date(2021, 6, 21, 0, 0, 0, 0)
+        Me.dtpFecha.MinDate = New Date(1900, 1, 1, 0, 0, 0, 0)
         Me.dtpFecha.Name = "dtpFecha"
         Me.dtpFecha.Size = New System.Drawing.Size(171, 27)
-        Me.dtpFecha.TabIndex = 19
+        Me.dtpFecha.TabIndex = 2
+        Me.dtpFecha.Value = New Date(2021, 6, 21, 0, 0, 0, 0)
         '
         'lblSector
         '
@@ -185,7 +196,7 @@ Partial Class IngresoControl
         Me.cmbZona.Location = New System.Drawing.Point(141, 105)
         Me.cmbZona.Name = "cmbZona"
         Me.cmbZona.Size = New System.Drawing.Size(221, 28)
-        Me.cmbZona.TabIndex = 21
+        Me.cmbZona.TabIndex = 5
         '
         'cmbComuna
         '
@@ -194,7 +205,7 @@ Partial Class IngresoControl
         Me.cmbComuna.Location = New System.Drawing.Point(141, 152)
         Me.cmbComuna.Name = "cmbComuna"
         Me.cmbComuna.Size = New System.Drawing.Size(221, 28)
-        Me.cmbComuna.TabIndex = 22
+        Me.cmbComuna.TabIndex = 6
         '
         'cmbSector
         '
@@ -203,7 +214,7 @@ Partial Class IngresoControl
         Me.cmbSector.Location = New System.Drawing.Point(141, 199)
         Me.cmbSector.Name = "cmbSector"
         Me.cmbSector.Size = New System.Drawing.Size(221, 28)
-        Me.cmbSector.TabIndex = 23
+        Me.cmbSector.TabIndex = 7
         '
         'btnRegistrar
         '

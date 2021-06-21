@@ -92,7 +92,21 @@ Public Class Login
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'ControlBox = False
         txtUser.Focus()
-        'txtPass.PasswordChar = "*"
+    End Sub
+
+    Private Sub chkPass_CheckedChanged(sender As Object, e As EventArgs) Handles chkPass.CheckedChanged
+        If chkPass.Checked = True Then
+            txtPass.UseSystemPasswordChar = False
+        Else
+            txtPass.UseSystemPasswordChar = True
+        End If
+    End Sub
+    Private Sub txtPass_TextChanged(sender As Object, e As EventArgs) Handles txtPass.TextChanged
+        If chkPass.Checked = True Then
+            txtPass.UseSystemPasswordChar = False
+        Else
+            txtPass.UseSystemPasswordChar = True
+        End If
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
