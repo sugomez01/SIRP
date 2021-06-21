@@ -9,8 +9,8 @@ Public Class IngresoControl
 
     'CONEXION A SQL
 
-    Public conn As SqlConnection = New SqlConnection("Data Source=LAPTOP-6GF7OE4K;Initial Catalog=SIRP;Integrated Security=True")
-    'Public conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-EUII0N8;User ID=sa;Password=sasa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
+    'Public conn As SqlConnection = New SqlConnection("Data Source=LAPTOP-6GF7OE4K;Initial Catalog=SIRP;Integrated Security=True")
+    Public conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-EUII0N8;User ID=sa;Password=sasa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
 
     'declaracion de variables para realizar consultas SQL
     Private cmb As SqlCommandBuilder
@@ -21,9 +21,7 @@ Public Class IngresoControl
     Public dt As DataTable
 
     Private Sub IngresoControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         llenaCombo()
-
     End Sub
 
 
@@ -62,7 +60,7 @@ Public Class IngresoControl
 
     Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
 
-        If txtNombre.Text = "" Or txtUbicacion.Text = "" Then
+        If txtObservaciones.Text = "" Or txtUbicacion.Text = "" Then
             MsgBox("Debe completar todos los campos!",, "Error")
         Else
 
@@ -77,7 +75,7 @@ Public Class IngresoControl
                 comuna = cmbComuna.SelectedValue
                 sector = cmbSector.SelectedValue
 
-                nombre = txtNombre.Text.ToString()
+                nombre = txtObservaciones.Text.ToString()
 
                 rut = txtRut.Text + "-" + txtDigito.Text
                 consulta = "select rut_delincuente from l_delincuente where rut_delincuente='" + rut + "'"
@@ -86,30 +84,22 @@ Public Class IngresoControl
                 MsgBox(insert)
 
                 If (Insertar(insert)) Then
-                        MsgBox("Registro ingresado exitosamente!",, "Registro existoso")
-                        op = MsgBox("¿Desea ingresar otro delincuente?", MsgBoxStyle.YesNo, "Confirmación")
-                        If (op = 6) Then
-                        txtNombre.Clear()
-                        txtRut.Clear()
-
-                    Else
-                        Principal.Show()
-                            Me.Close()
-                        End If
-                    Else
-                        MsgBox("Error al ingresar usuario",, "Error")
-                    End If
+                    MsgBox("Registro ingresado exitosamente!",, "Registro existoso")
+                    Me.Close()
                 Else
+                    MsgBox("Error al ingresar registro, por favor contacte al Administrador",, "Error")
+                End If
+            Else
                 MsgBox("Rut o nombre de usuario ya existe",, "Error")
 
                 txtRut.Enabled = True
                 txtDigito.Enabled = True
-                txtNombre.Clear()
+                txtObservaciones.Clear()
                 txtRut.Clear()
                 txtDigito.Clear()
             End If
 
-            End If
+        End If
 
 
 
@@ -181,7 +171,7 @@ Public Class IngresoControl
     End Function
 
 
-    Private Sub txtNombre_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNombre.KeyPress
+    Private Sub txtNombre_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtObservaciones.KeyPress
         If Char.IsLetter(e.KeyChar) Then
             e.Handled = False
         ElseIf Char.IsControl(e.KeyChar) Then

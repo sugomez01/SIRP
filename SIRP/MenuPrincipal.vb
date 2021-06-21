@@ -199,7 +199,6 @@ Public Class MenuPrincipal
         IngresoDelito.Close()
         IngresoSector.Close()
         IngresoUsuario.Close()
-        IngresoZona.Close()
         ModuloReportes.Close()
     End Sub
 

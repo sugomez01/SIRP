@@ -34,7 +34,7 @@ Public Class Principal
     End Sub
 
     Private Sub CreaZona_Click(sender As Object, e As EventArgs) Handles CreaZona.Click
-        IngresoZona.Show()
+        'IngresoZona.Show()
     End Sub
 
     Private Sub CreaSector_Click(sender As Object, e As EventArgs) Handles CreaSector.Click
@@ -150,7 +150,7 @@ Public Class Principal
         IngresoDelito.Close()
         IngresoSector.Close()
         IngresoUsuario.Close()
-        IngresoZona.Close()
+        'IngresoZona.Close()
         ModuloReportes.Close()
     End Sub
 

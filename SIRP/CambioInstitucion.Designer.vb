@@ -100,7 +100,7 @@ Partial Class CambioInstitucion
         Me.btnElimina.Name = "btnElimina"
         Me.btnElimina.Size = New System.Drawing.Size(118, 25)
         Me.btnElimina.TabIndex = 5
-        Me.btnElimina.Text = "&ELIMINAR"
+        Me.btnElimina.Text = "ELIMINAR"
         Me.btnElimina.UseVisualStyleBackColor = False
         '
         'btnRegistra
@@ -119,7 +119,7 @@ Partial Class CambioInstitucion
         Me.btnRegistra.Text = "&REGISTRAR"
         Me.btnRegistra.UseVisualStyleBackColor = False
         '
-        'MenuInstitucion
+        'CambioInstitucion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -135,7 +135,7 @@ Partial Class CambioInstitucion
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
-        Me.Name = "MenuInstitucion"
+        Me.Name = "CambioInstitucion"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Ingresa Institucion"
         Me.ResumeLayout(False)

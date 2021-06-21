@@ -42,218 +42,281 @@ Partial Class IngresoDelito
         Me.cmbBanda = New System.Windows.Forms.ComboBox()
         Me.dtpFechaDelito = New System.Windows.Forms.DateTimePicker()
         Me.txtDigito = New System.Windows.Forms.TextBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.Panel2.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        Me.FlowLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(239, 43)
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 16.25!)
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(328, 26)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(251, 27)
+        Me.Label1.Size = New System.Drawing.Size(245, 30)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Módulo Ingreso de delitos"
+        Me.Label1.Text = "Ingreso delito cometido"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(26, 123)
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(24, 28)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(29, 18)
+        Me.Label2.Size = New System.Drawing.Size(36, 20)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Rut"
+        Me.Label2.Text = "RUT"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(26, 190)
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(24, 79)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(46, 18)
+        Me.Label3.Size = New System.Drawing.Size(57, 20)
         Me.Label3.TabIndex = 3
-        Me.Label3.Text = "Delito"
+        Me.Label3.Text = "DELITO"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(26, 254)
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(24, 124)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(103, 18)
+        Me.Label4.Size = New System.Drawing.Size(106, 20)
         Me.Label4.TabIndex = 4
-        Me.Label4.Text = "Fecha de delito"
+        Me.Label4.Text = "FECHA DELITO"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(436, 227)
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.Location = New System.Drawing.Point(46, 58)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(38, 18)
+        Me.Label5.Size = New System.Drawing.Size(50, 20)
         Me.Label5.TabIndex = 5
-        Me.Label5.Text = "Zona"
+        Me.Label5.Text = "ZONA"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(436, 297)
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Location = New System.Drawing.Point(46, 89)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(59, 18)
+        Me.Label6.Size = New System.Drawing.Size(73, 20)
         Me.Label6.TabIndex = 6
-        Me.Label6.Text = "Comuna"
+        Me.Label6.Text = "COMUNA"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(436, 154)
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.Label7.ForeColor = System.Drawing.Color.White
+        Me.Label7.Location = New System.Drawing.Point(35, 30)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(47, 18)
+        Me.Label7.Size = New System.Drawing.Size(61, 20)
         Me.Label7.TabIndex = 7
-        Me.Label7.Text = "Sector"
+        Me.Label7.Text = "SECTOR"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(26, 320)
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.Label8.ForeColor = System.Drawing.Color.White
+        Me.Label8.Location = New System.Drawing.Point(35, 124)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(46, 18)
+        Me.Label8.Size = New System.Drawing.Size(60, 20)
         Me.Label8.TabIndex = 8
-        Me.Label8.Text = "Banda"
+        Me.Label8.Text = "BANDA"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(26, 389)
+        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.Label9.ForeColor = System.Drawing.Color.White
+        Me.Label9.Location = New System.Drawing.Point(24, 169)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(122, 18)
+        Me.Label9.Size = New System.Drawing.Size(157, 20)
         Me.Label9.TabIndex = 9
-        Me.Label9.Text = "Detalles del delito"
+        Me.Label9.Text = "DETALLES DEL DELITO"
         '
         'txtRut
         '
-        Me.txtRut.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRut.Location = New System.Drawing.Point(179, 120)
-        Me.txtRut.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtRut.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.txtRut.Location = New System.Drawing.Point(98, 25)
+        Me.txtRut.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.txtRut.Name = "txtRut"
-        Me.txtRut.Size = New System.Drawing.Size(140, 25)
+        Me.txtRut.Size = New System.Drawing.Size(159, 27)
         Me.txtRut.TabIndex = 10
         '
         'txtDetalle
         '
-        Me.txtDetalle.Location = New System.Drawing.Point(179, 389)
-        Me.txtDetalle.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtDetalle.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.txtDetalle.Location = New System.Drawing.Point(28, 204)
+        Me.txtDetalle.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.txtDetalle.Multiline = True
         Me.txtDetalle.Name = "txtDetalle"
-        Me.txtDetalle.Size = New System.Drawing.Size(542, 108)
+        Me.txtDetalle.Size = New System.Drawing.Size(479, 126)
         Me.txtDetalle.TabIndex = 11
         '
         'btnRegistrar
         '
-        Me.btnRegistrar.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRegistrar.Location = New System.Drawing.Point(621, 521)
-        Me.btnRegistrar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnRegistrar.BackgroundImage = Global.SIRP.My.Resources.Resources.boton
+        Me.btnRegistrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnRegistrar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.btnRegistrar.Location = New System.Drawing.Point(1020, 782)
+        Me.btnRegistrar.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.btnRegistrar.Name = "btnRegistrar"
-        Me.btnRegistrar.Size = New System.Drawing.Size(100, 32)
+        Me.btnRegistrar.Size = New System.Drawing.Size(146, 30)
         Me.btnRegistrar.TabIndex = 12
-        Me.btnRegistrar.Text = "Registrar"
+        Me.btnRegistrar.Text = "REGISTRAR DELITO"
         Me.btnRegistrar.UseVisualStyleBackColor = True
         '
         'ComboBox1
         '
-        Me.ComboBox1.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox1.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(179, 187)
-        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.ComboBox1.Location = New System.Drawing.Point(142, 76)
+        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(176, 25)
+        Me.ComboBox1.Size = New System.Drawing.Size(201, 28)
         Me.ComboBox1.TabIndex = 13
         '
         'cmbSector
         '
-        Me.cmbSector.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbSector.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.cmbSector.FormattingEnabled = True
-        Me.cmbSector.Location = New System.Drawing.Point(545, 151)
-        Me.cmbSector.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.cmbSector.Location = New System.Drawing.Point(173, 12)
+        Me.cmbSector.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.cmbSector.Name = "cmbSector"
-        Me.cmbSector.Size = New System.Drawing.Size(176, 25)
+        Me.cmbSector.Size = New System.Drawing.Size(201, 28)
         Me.cmbSector.TabIndex = 15
         '
         'cmbZona
         '
-        Me.cmbZona.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbZona.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.cmbZona.FormattingEnabled = True
-        Me.cmbZona.Location = New System.Drawing.Point(545, 224)
-        Me.cmbZona.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.cmbZona.Location = New System.Drawing.Point(173, 50)
+        Me.cmbZona.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.cmbZona.Name = "cmbZona"
-        Me.cmbZona.Size = New System.Drawing.Size(176, 25)
+        Me.cmbZona.Size = New System.Drawing.Size(201, 28)
         Me.cmbZona.TabIndex = 16
         '
         'cmbComuna
         '
-        Me.cmbComuna.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbComuna.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.cmbComuna.FormattingEnabled = True
-        Me.cmbComuna.Location = New System.Drawing.Point(545, 294)
-        Me.cmbComuna.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.cmbComuna.Location = New System.Drawing.Point(171, 86)
+        Me.cmbComuna.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.cmbComuna.Name = "cmbComuna"
-        Me.cmbComuna.Size = New System.Drawing.Size(176, 25)
+        Me.cmbComuna.Size = New System.Drawing.Size(201, 28)
         Me.cmbComuna.TabIndex = 17
         '
         'cmbBanda
         '
+        Me.cmbBanda.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.cmbBanda.FormattingEnabled = True
-        Me.cmbBanda.Location = New System.Drawing.Point(179, 317)
+        Me.cmbBanda.Location = New System.Drawing.Point(141, 116)
+        Me.cmbBanda.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.cmbBanda.Name = "cmbBanda"
-        Me.cmbBanda.Size = New System.Drawing.Size(176, 25)
+        Me.cmbBanda.Size = New System.Drawing.Size(201, 28)
         Me.cmbBanda.TabIndex = 18
         '
         'dtpFechaDelito
         '
-        Me.dtpFechaDelito.Location = New System.Drawing.Point(179, 249)
+        Me.dtpFechaDelito.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.dtpFechaDelito.Location = New System.Drawing.Point(142, 119)
+        Me.dtpFechaDelito.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.dtpFechaDelito.Name = "dtpFechaDelito"
-        Me.dtpFechaDelito.Size = New System.Drawing.Size(176, 25)
+        Me.dtpFechaDelito.Size = New System.Drawing.Size(201, 27)
         Me.dtpFechaDelito.TabIndex = 19
         '
         'txtDigito
         '
-        Me.txtDigito.Location = New System.Drawing.Point(325, 120)
+        Me.txtDigito.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.txtDigito.Location = New System.Drawing.Point(264, 25)
+        Me.txtDigito.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtDigito.Name = "txtDigito"
-        Me.txtDigito.Size = New System.Drawing.Size(30, 25)
+        Me.txtDigito.Size = New System.Drawing.Size(34, 27)
         Me.txtDigito.TabIndex = 20
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel2.Controls.Add(Me.Label2)
+        Me.Panel2.Controls.Add(Me.dtpFechaDelito)
+        Me.Panel2.Controls.Add(Me.txtDigito)
+        Me.Panel2.Controls.Add(Me.txtDetalle)
+        Me.Panel2.Controls.Add(Me.txtRut)
+        Me.Panel2.Controls.Add(Me.Label9)
+        Me.Panel2.Controls.Add(Me.Label3)
+        Me.Panel2.Controls.Add(Me.ComboBox1)
+        Me.Panel2.Controls.Add(Me.Label4)
+        Me.Panel2.Location = New System.Drawing.Point(3, 3)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(540, 353)
+        Me.Panel2.TabIndex = 0
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel3.Controls.Add(Me.Label7)
+        Me.Panel3.Controls.Add(Me.cmbSector)
+        Me.Panel3.Controls.Add(Me.cmbBanda)
+        Me.Panel3.Controls.Add(Me.cmbZona)
+        Me.Panel3.Controls.Add(Me.cmbComuna)
+        Me.Panel3.Controls.Add(Me.Label6)
+        Me.Panel3.Controls.Add(Me.Label5)
+        Me.Panel3.Controls.Add(Me.Label8)
+        Me.Panel3.Location = New System.Drawing.Point(549, 3)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(418, 353)
+        Me.Panel3.TabIndex = 1
+        '
+        'FlowLayoutPanel1
+        '
+        Me.FlowLayoutPanel1.BackColor = System.Drawing.Color.Gainsboro
+        Me.FlowLayoutPanel1.Controls.Add(Me.Panel2)
+        Me.FlowLayoutPanel1.Controls.Add(Me.Panel3)
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(79, 144)
+        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(980, 483)
+        Me.FlowLayoutPanel1.TabIndex = 22
         '
         'IngresoDelito
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(795, 591)
-        Me.Controls.Add(Me.txtDigito)
-        Me.Controls.Add(Me.dtpFechaDelito)
-        Me.Controls.Add(Me.cmbBanda)
-        Me.Controls.Add(Me.cmbComuna)
-        Me.Controls.Add(Me.cmbZona)
-        Me.Controls.Add(Me.cmbSector)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(1230, 838)
+        Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.btnRegistrar)
-        Me.Controls.Add(Me.txtDetalle)
-        Me.Controls.Add(Me.txtRut)
-        Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.ForeColor = System.Drawing.Color.White
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.Name = "IngresoDelito"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "IngresoDelito"
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
+        Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -278,4 +341,7 @@ Partial Class IngresoDelito
     Friend WithEvents cmbBanda As ComboBox
     Friend WithEvents dtpFechaDelito As DateTimePicker
     Friend WithEvents txtDigito As TextBox
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
 End Class
