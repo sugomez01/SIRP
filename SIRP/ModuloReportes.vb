@@ -6,8 +6,8 @@ Public Class ModuloReportes
 
     Dim fecha_ini, fecha_fin, reporte1 As String
 
-    Public conn As SqlConnection = New SqlConnection("Data Source=LAPTOP-6GF7OE4K;Initial Catalog=SIRP;Integrated Security=True")
-    'Public conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-EUII0N8;User ID=sa;Password=sasa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
+    'Public conn As SqlConnection = New SqlConnection("Data Source=LAPTOP-6GF7OE4K;Initial Catalog=SIRP;Integrated Security=True")
+    Public conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-EUII0N8;User ID=sa;Password=sasa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
 
     'declaracion de variables para realizar consultas SQL
     Private cmb As SqlCommandBuilder
@@ -29,7 +29,7 @@ Public Class ModuloReportes
         ds.Tables.Clear()
 
         If rbtnReporte1.Checked = True Then
-            comando = New SqlCommand("select * from l_delincuente order by desc_apellido,desc_nombre", conn)
+            comando = New SqlCommand("select * from tb_rep_delincuente order by APELLIDO,NOMBRE", conn)
             da = New SqlDataAdapter(comando)
             dt = New DataTable()
             da.Fill(ds)
@@ -122,6 +122,10 @@ Public Class ModuloReportes
         lblFechaIni.Visible = False
     End Sub
 
+    Private Sub ModuloReportes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
     Private Sub rbtnReporte6_CheckedChanged(sender As Object, e As EventArgs) Handles rbtnReporte6.CheckedChanged
 
         DateTimePicker1.Visible = True
@@ -136,12 +140,12 @@ Public Class ModuloReportes
         ds.Tables.Clear()
 
         If rbtnReporte1.Checked = True Then
-            comando = New SqlCommand("select * from l_delincuente order by desc_apellido,desc_nombre", conn)
+            comando = New SqlCommand("select * from tb_rep_delincuente order by APELLIDO,NOMBRE", conn)
             da = New SqlDataAdapter(comando)
             dt = New DataTable()
             da.Fill(ds)
 
-            '  dgvReporte.DataSource = ds.Tables(0).DefaultView
+            dgvReporte.DataSource = ds.Tables(0).DefaultView
 
         ElseIf rbtnReporte2.Checked = True Then
 
@@ -150,7 +154,7 @@ Public Class ModuloReportes
             dt = New DataTable()
             da.Fill(ds)
 
-            ' dgvReporte.DataSource = ds.Tables(0).DefaultView
+            dgvReporte.DataSource = ds.Tables(0).DefaultView
 
         ElseIf rbtnReporte3.Checked = True Then
 
@@ -159,7 +163,7 @@ Public Class ModuloReportes
             dt = New DataTable()
             da.Fill(ds)
 
-            ' dgvReporte.DataSource = ds.Tables(0).DefaultView
+            dgvReporte.DataSource = ds.Tables(0).DefaultView
 
         ElseIf rbtnReporte4.Checked = True Then
 
@@ -168,7 +172,7 @@ Public Class ModuloReportes
             dt = New DataTable()
             da.Fill(ds)
 
-            ' dgvReporte.DataSource = ds.Tables(0).DefaultView
+            dgvReporte.DataSource = ds.Tables(0).DefaultView
 
         ElseIf rbtnReporte5.Checked = True Then
 
@@ -177,7 +181,7 @@ Public Class ModuloReportes
             dt = New DataTable()
             da.Fill(ds)
 
-            ' dgvReporte.DataSource = ds.Tables(0).DefaultView
+            dgvReporte.DataSource = ds.Tables(0).DefaultView
 
         ElseIf rbtnReporte6.Checked = True Then
 
@@ -188,7 +192,7 @@ Public Class ModuloReportes
             dt = New DataTable()
             da.Fill(ds)
 
-            ' dgvReporte.DataSource = ds.Tables(0).DefaultView
+            dgvReporte.DataSource = ds.Tables(0).DefaultView
 
         End If
 

@@ -220,7 +220,7 @@ Public Class IngresoDelito
         Else
             rut = txtRut.Text + "-" + txtDigito.Text
             InsertDel = "insert into b_detalle_delito values('" + rut + "'," + id_delito.ToString + ",'" + detalle + "','" + fechaingreso + "'," + id_zona.ToString + "," + id_comuna.ToString + "," + id_sector.ToString + "," + id_banda.ToString + "," + Login.id_user.ToString + "," + Login.id_int.ToString + ",getdate())"
-            MsgBox(InsertDel)
+            '  MsgBox(InsertDel)
             If validaRut() = True Then
                 If (ExisteRut() = False) Then
                     MsgBox("Delincuente no se encuentra registrado, se direccionará al menú de registro de delincuente")

@@ -194,7 +194,7 @@ Partial Class IngresoDelito
         Me.ComboBox1.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(365, 28)
-        Me.ComboBox1.TabIndex = 2
+        Me.ComboBox1.TabIndex = 3
         '
         'cmbSector
         '
@@ -247,7 +247,7 @@ Partial Class IngresoDelito
         Me.dtpFechaDelito.MinDate = New Date(1900, 1, 1, 0, 0, 0, 0)
         Me.dtpFechaDelito.Name = "dtpFechaDelito"
         Me.dtpFechaDelito.Size = New System.Drawing.Size(159, 27)
-        Me.dtpFechaDelito.TabIndex = 3
+        Me.dtpFechaDelito.TabIndex = 2
         Me.dtpFechaDelito.Value = New Date(2021, 6, 21, 0, 0, 0, 0)
         '
         'txtDigito

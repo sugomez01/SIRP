@@ -72,10 +72,10 @@ Public Class IngresoControl
                     MsgBox("Error al ingresar registro, por favor contacte al Administrador",, "Error")
                 End If
             Else
-                MsgBox("Rut o nombre de usuario ya existe",, "Error")
+                '  MsgBox("Rut o nombre de usuario ya existe",, "Error")
                 txtRut.Enabled = True
                 txtDigito.Enabled = True
-                txtObservaciones.Clear()
+                ' txtObservaciones.Clear()
                 txtRut.Clear()
                 txtDigito.Clear()
             End If

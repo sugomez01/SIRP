@@ -171,7 +171,7 @@ Partial Class IngresoControl
         Me.dtpFecha.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpFecha.Location = New System.Drawing.Point(171, 80)
-        Me.dtpFecha.MaxDate = New Date(2021, 6, 21, 0, 0, 0, 0)
+        Me.dtpFecha.MaxDate = New Date(2025, 12, 31, 0, 0, 0, 0)
         Me.dtpFecha.MinDate = New Date(1900, 1, 1, 0, 0, 0, 0)
         Me.dtpFecha.Name = "dtpFecha"
         Me.dtpFecha.Size = New System.Drawing.Size(171, 27)

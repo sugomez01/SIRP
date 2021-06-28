@@ -175,7 +175,7 @@ Partial Class MenuPrincipal
         Me.btnEliminaInst.DialogResult = System.Windows.Forms.DialogResult.OK
         Me.btnEliminaInst.FlatAppearance.BorderColor = System.Drawing.Color.Maroon
         Me.btnEliminaInst.FlatAppearance.BorderSize = 3
-        Me.btnEliminaInst.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black
+        Me.btnEliminaInst.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
         Me.btnEliminaInst.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEliminaInst.ForeColor = System.Drawing.Color.Transparent
         Me.btnEliminaInst.Location = New System.Drawing.Point(77, 78)
@@ -219,7 +219,7 @@ Partial Class MenuPrincipal
         Me.btnIngresaInst.DialogResult = System.Windows.Forms.DialogResult.OK
         Me.btnIngresaInst.FlatAppearance.BorderColor = System.Drawing.Color.Green
         Me.btnIngresaInst.FlatAppearance.BorderSize = 3
-        Me.btnIngresaInst.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black
+        Me.btnIngresaInst.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
         Me.btnIngresaInst.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnIngresaInst.ForeColor = System.Drawing.Color.Transparent
         Me.btnIngresaInst.Location = New System.Drawing.Point(73, 78)
@@ -277,7 +277,7 @@ Partial Class MenuPrincipal
         Me.Button3.DialogResult = System.Windows.Forms.DialogResult.OK
         Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.Green
         Me.Button3.FlatAppearance.BorderSize = 3
-        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black
+        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.ForeColor = System.Drawing.Color.Transparent
         Me.Button3.Location = New System.Drawing.Point(76, 80)
@@ -321,7 +321,7 @@ Partial Class MenuPrincipal
         Me.Button2.DialogResult = System.Windows.Forms.DialogResult.OK
         Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.Maroon
         Me.Button2.FlatAppearance.BorderSize = 3
-        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black
+        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.ForeColor = System.Drawing.Color.Transparent
         Me.Button2.Location = New System.Drawing.Point(71, 80)
@@ -364,7 +364,7 @@ Partial Class MenuPrincipal
         Me.PanelJefe.Controls.Add(Me.Panel10)
         Me.PanelJefe.Controls.Add(Me.Panel11)
         Me.PanelJefe.Controls.Add(Me.Panel12)
-        Me.PanelJefe.Location = New System.Drawing.Point(450, 121)
+        Me.PanelJefe.Location = New System.Drawing.Point(451, 121)
         Me.PanelJefe.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelJefe.Name = "PanelJefe"
         Me.PanelJefe.Size = New System.Drawing.Size(601, 544)
