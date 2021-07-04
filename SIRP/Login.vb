@@ -118,7 +118,7 @@ Public Class Login
                             MenuPrincipal.Show()
                         ElseIf id_tip_user = 3 Then
                             Me.Hide()
-                            MenuPrincipal.Show()
+                            ModuloReportes.Show()
                         Else
                             Me.Hide()
                             MenuPrincipal.Show()

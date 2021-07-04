@@ -150,7 +150,7 @@ Public Class ModuloReportes
             dt = New DataTable()
             da.Fill(ds)
 
-            ' dgvReporte.DataSource = ds.Tables(0).DefaultView
+            'dgvReporte.DataSource = ds.Tables(0).DefaultView
 
         ElseIf rbtnReporte3.Checked = True Then
 
@@ -168,7 +168,7 @@ Public Class ModuloReportes
             dt = New DataTable()
             da.Fill(ds)
 
-            ' dgvReporte.DataSource = ds.Tables(0).DefaultView
+            dgvReporte.DataSource = ds.Tables(0).DefaultView
 
         ElseIf rbtnReporte5.Checked = True Then
 
@@ -177,7 +177,7 @@ Public Class ModuloReportes
             dt = New DataTable()
             da.Fill(ds)
 
-            ' dgvReporte.DataSource = ds.Tables(0).DefaultView
+            'dgvReporte.DataSource = ds.Tables(0).DefaultView
 
         ElseIf rbtnReporte6.Checked = True Then
 
@@ -188,9 +188,11 @@ Public Class ModuloReportes
             dt = New DataTable()
             da.Fill(ds)
 
-            ' dgvReporte.DataSource = ds.Tables(0).DefaultView
+            'dgvReporte.DataSource = ds.Tables(0).DefaultView
 
         End If
+
+        dgvReporte.DataSource = ds.Tables(0).DefaultView
 
         Dim save As New SaveFileDialog
         save.Filter = "Archivo XML (*.xml) | *.xml"
