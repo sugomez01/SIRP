@@ -96,6 +96,7 @@ Public Class MenuPrincipal
         frmDelincuente.Show()
     End Sub
 
+
     Public Sub validaUser(ByVal id As Integer)
         If id = 1 Then
             PanelAdmin.Visible = True

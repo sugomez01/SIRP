@@ -96,9 +96,9 @@ Partial Class MenuPrincipal
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.lblBienvenido)
         Me.Panel1.Location = New System.Drawing.Point(1, 1)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1262, 82)
+        Me.Panel1.Size = New System.Drawing.Size(1683, 101)
         Me.Panel1.TabIndex = 0
         '
         'lblFechaActual
@@ -106,10 +106,9 @@ Partial Class MenuPrincipal
         Me.lblFechaActual.AutoSize = True
         Me.lblFechaActual.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFechaActual.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.lblFechaActual.Location = New System.Drawing.Point(25, 53)
-        Me.lblFechaActual.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblFechaActual.Location = New System.Drawing.Point(33, 65)
         Me.lblFechaActual.Name = "lblFechaActual"
-        Me.lblFechaActual.Size = New System.Drawing.Size(74, 15)
+        Me.lblFechaActual.Size = New System.Drawing.Size(92, 20)
         Me.lblFechaActual.TabIndex = 2
         Me.lblFechaActual.Text = "Fecha y hora"
         '
@@ -122,10 +121,10 @@ Partial Class MenuPrincipal
         Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Button1.Location = New System.Drawing.Point(1189, 10)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button1.Location = New System.Drawing.Point(1585, 12)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(62, 60)
+        Me.Button1.Size = New System.Drawing.Size(83, 74)
         Me.Button1.TabIndex = 6
         Me.Button1.UseVisualStyleBackColor = False
         '
@@ -134,10 +133,9 @@ Partial Class MenuPrincipal
         Me.lblBienvenido.AutoSize = True
         Me.lblBienvenido.Font = New System.Drawing.Font("Segoe UI Light", 20.0!)
         Me.lblBienvenido.ForeColor = System.Drawing.SystemColors.WindowFrame
-        Me.lblBienvenido.Location = New System.Drawing.Point(22, 6)
-        Me.lblBienvenido.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblBienvenido.Location = New System.Drawing.Point(29, 7)
         Me.lblBienvenido.Name = "lblBienvenido"
-        Me.lblBienvenido.Size = New System.Drawing.Size(122, 37)
+        Me.lblBienvenido.Size = New System.Drawing.Size(154, 46)
         Me.lblBienvenido.TabIndex = 0
         Me.lblBienvenido.Text = "USUARIO"
         '
@@ -147,10 +145,10 @@ Partial Class MenuPrincipal
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel3.Controls.Add(Me.lblEliminaInstucion)
         Me.Panel3.Controls.Add(Me.btnEliminaInst)
-        Me.Panel3.Location = New System.Drawing.Point(280, 2)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel3.Location = New System.Drawing.Point(373, 2)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(262, 269)
+        Me.Panel3.Size = New System.Drawing.Size(348, 330)
         Me.Panel3.TabIndex = 2
         '
         'lblEliminaInstucion
@@ -159,10 +157,9 @@ Partial Class MenuPrincipal
         Me.lblEliminaInstucion.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.lblEliminaInstucion.Font = New System.Drawing.Font("Segoe UI Light", 10.0!)
         Me.lblEliminaInstucion.ForeColor = System.Drawing.Color.White
-        Me.lblEliminaInstucion.Location = New System.Drawing.Point(81, 47)
-        Me.lblEliminaInstucion.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblEliminaInstucion.Location = New System.Drawing.Point(108, 58)
         Me.lblEliminaInstucion.Name = "lblEliminaInstucion"
-        Me.lblEliminaInstucion.Size = New System.Drawing.Size(112, 19)
+        Me.lblEliminaInstucion.Size = New System.Drawing.Size(136, 23)
         Me.lblEliminaInstucion.TabIndex = 2
         Me.lblEliminaInstucion.Text = "Elimina Institución"
         '
@@ -178,10 +175,10 @@ Partial Class MenuPrincipal
         Me.btnEliminaInst.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
         Me.btnEliminaInst.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEliminaInst.ForeColor = System.Drawing.Color.Transparent
-        Me.btnEliminaInst.Location = New System.Drawing.Point(77, 78)
-        Me.btnEliminaInst.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnEliminaInst.Location = New System.Drawing.Point(103, 96)
+        Me.btnEliminaInst.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnEliminaInst.Name = "btnEliminaInst"
-        Me.btnEliminaInst.Size = New System.Drawing.Size(121, 121)
+        Me.btnEliminaInst.Size = New System.Drawing.Size(161, 149)
         Me.btnEliminaInst.TabIndex = 1
         Me.btnEliminaInst.UseVisualStyleBackColor = False
         '
@@ -191,10 +188,10 @@ Partial Class MenuPrincipal
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel4.Controls.Add(Me.lblAgregaInst)
         Me.Panel4.Controls.Add(Me.btnIngresaInst)
-        Me.Panel4.Location = New System.Drawing.Point(2, 2)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel4.Location = New System.Drawing.Point(3, 2)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(274, 269)
+        Me.Panel4.Size = New System.Drawing.Size(364, 330)
         Me.Panel4.TabIndex = 3
         '
         'lblAgregaInst
@@ -203,10 +200,9 @@ Partial Class MenuPrincipal
         Me.lblAgregaInst.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.lblAgregaInst.Font = New System.Drawing.Font("Segoe UI Light", 10.0!)
         Me.lblAgregaInst.ForeColor = System.Drawing.Color.White
-        Me.lblAgregaInst.Location = New System.Drawing.Point(76, 47)
-        Me.lblAgregaInst.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblAgregaInst.Location = New System.Drawing.Point(101, 58)
         Me.lblAgregaInst.Name = "lblAgregaInst"
-        Me.lblAgregaInst.Size = New System.Drawing.Size(119, 19)
+        Me.lblAgregaInst.Size = New System.Drawing.Size(147, 23)
         Me.lblAgregaInst.TabIndex = 1
         Me.lblAgregaInst.Text = "Agregar Institución"
         '
@@ -222,10 +218,10 @@ Partial Class MenuPrincipal
         Me.btnIngresaInst.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
         Me.btnIngresaInst.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnIngresaInst.ForeColor = System.Drawing.Color.Transparent
-        Me.btnIngresaInst.Location = New System.Drawing.Point(73, 78)
-        Me.btnIngresaInst.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnIngresaInst.Location = New System.Drawing.Point(97, 96)
+        Me.btnIngresaInst.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnIngresaInst.Name = "btnIngresaInst"
-        Me.btnIngresaInst.Size = New System.Drawing.Size(121, 121)
+        Me.btnIngresaInst.Size = New System.Drawing.Size(161, 149)
         Me.btnIngresaInst.TabIndex = 0
         Me.btnIngresaInst.UseVisualStyleBackColor = False
         '
@@ -237,10 +233,10 @@ Partial Class MenuPrincipal
         Me.PanelAdmin.Controls.Add(Me.Panel3)
         Me.PanelAdmin.Controls.Add(Me.Panel6)
         Me.PanelAdmin.Controls.Add(Me.Panel7)
-        Me.PanelAdmin.Location = New System.Drawing.Point(461, 124)
-        Me.PanelAdmin.Margin = New System.Windows.Forms.Padding(2)
+        Me.PanelAdmin.Location = New System.Drawing.Point(615, 153)
+        Me.PanelAdmin.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PanelAdmin.Name = "PanelAdmin"
-        Me.PanelAdmin.Size = New System.Drawing.Size(546, 544)
+        Me.PanelAdmin.Size = New System.Drawing.Size(727, 669)
         Me.PanelAdmin.TabIndex = 4
         '
         'Panel6
@@ -249,10 +245,10 @@ Partial Class MenuPrincipal
         Me.Panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel6.Controls.Add(Me.Label2)
         Me.Panel6.Controls.Add(Me.Button3)
-        Me.Panel6.Location = New System.Drawing.Point(2, 275)
-        Me.Panel6.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel6.Location = New System.Drawing.Point(3, 336)
+        Me.Panel6.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(274, 269)
+        Me.Panel6.Size = New System.Drawing.Size(364, 330)
         Me.Panel6.TabIndex = 5
         '
         'Label2
@@ -261,10 +257,9 @@ Partial Class MenuPrincipal
         Me.Label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Light", 10.0!)
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(79, 49)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Location = New System.Drawing.Point(105, 60)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(106, 19)
+        Me.Label2.Size = New System.Drawing.Size(129, 23)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Agregar Usuario"
         '
@@ -280,10 +275,10 @@ Partial Class MenuPrincipal
         Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.ForeColor = System.Drawing.Color.Transparent
-        Me.Button3.Location = New System.Drawing.Point(76, 80)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button3.Location = New System.Drawing.Point(101, 98)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(121, 121)
+        Me.Button3.Size = New System.Drawing.Size(161, 149)
         Me.Button3.TabIndex = 2
         Me.Button3.UseVisualStyleBackColor = False
         '
@@ -293,10 +288,10 @@ Partial Class MenuPrincipal
         Me.Panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel7.Controls.Add(Me.Label1)
         Me.Panel7.Controls.Add(Me.Button2)
-        Me.Panel7.Location = New System.Drawing.Point(280, 275)
-        Me.Panel7.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel7.Location = New System.Drawing.Point(373, 336)
+        Me.Panel7.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(262, 269)
+        Me.Panel7.Size = New System.Drawing.Size(348, 330)
         Me.Panel7.TabIndex = 6
         '
         'Label1
@@ -305,10 +300,9 @@ Partial Class MenuPrincipal
         Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Light", 10.0!)
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(75, 49)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(100, 60)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(99, 19)
+        Me.Label1.Size = New System.Drawing.Size(118, 23)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Elimina Usuario"
         '
@@ -324,10 +318,10 @@ Partial Class MenuPrincipal
         Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.ForeColor = System.Drawing.Color.Transparent
-        Me.Button2.Location = New System.Drawing.Point(71, 80)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button2.Location = New System.Drawing.Point(95, 98)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(121, 121)
+        Me.Button2.Size = New System.Drawing.Size(161, 149)
         Me.Button2.TabIndex = 3
         Me.Button2.UseVisualStyleBackColor = False
         '
@@ -336,16 +330,16 @@ Partial Class MenuPrincipal
         Me.StatusStrip1.BackColor = System.Drawing.Color.White
         Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 694)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 855)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Padding = New System.Windows.Forms.Padding(1, 0, 10, 0)
-        Me.StatusStrip1.Size = New System.Drawing.Size(1263, 22)
+        Me.StatusStrip1.Padding = New System.Windows.Forms.Padding(1, 0, 13, 0)
+        Me.StatusStrip1.Size = New System.Drawing.Size(1684, 26)
         Me.StatusStrip1.TabIndex = 6
         '
         'ToolStripStatusLabel1
         '
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(53, 17)
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(66, 20)
         Me.ToolStripStatusLabel1.Text = "SIRP S.A."
         Me.ToolStripStatusLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
@@ -364,10 +358,10 @@ Partial Class MenuPrincipal
         Me.PanelJefe.Controls.Add(Me.Panel10)
         Me.PanelJefe.Controls.Add(Me.Panel11)
         Me.PanelJefe.Controls.Add(Me.Panel12)
-        Me.PanelJefe.Location = New System.Drawing.Point(451, 121)
-        Me.PanelJefe.Margin = New System.Windows.Forms.Padding(2)
+        Me.PanelJefe.Location = New System.Drawing.Point(601, 149)
+        Me.PanelJefe.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PanelJefe.Name = "PanelJefe"
-        Me.PanelJefe.Size = New System.Drawing.Size(601, 544)
+        Me.PanelJefe.Size = New System.Drawing.Size(801, 669)
         Me.PanelJefe.TabIndex = 8
         '
         'Panel5
@@ -376,10 +370,10 @@ Partial Class MenuPrincipal
         Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel5.Controls.Add(Me.Label3)
         Me.Panel5.Controls.Add(Me.btnSector)
-        Me.Panel5.Location = New System.Drawing.Point(2, 2)
-        Me.Panel5.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel5.Location = New System.Drawing.Point(3, 2)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(196, 265)
+        Me.Panel5.Size = New System.Drawing.Size(260, 325)
         Me.Panel5.TabIndex = 3
         '
         'Label3
@@ -388,10 +382,9 @@ Partial Class MenuPrincipal
         Me.Label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(53, 47)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Location = New System.Drawing.Point(71, 58)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(98, 17)
+        Me.Label3.Size = New System.Drawing.Size(129, 23)
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "Agregar sector"
         '
@@ -407,10 +400,10 @@ Partial Class MenuPrincipal
         Me.btnSector.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
         Me.btnSector.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSector.ForeColor = System.Drawing.Color.Transparent
-        Me.btnSector.Location = New System.Drawing.Point(42, 100)
-        Me.btnSector.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnSector.Location = New System.Drawing.Point(56, 123)
+        Me.btnSector.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnSector.Name = "btnSector"
-        Me.btnSector.Size = New System.Drawing.Size(121, 121)
+        Me.btnSector.Size = New System.Drawing.Size(161, 149)
         Me.btnSector.TabIndex = 0
         Me.btnSector.UseVisualStyleBackColor = False
         '
@@ -420,10 +413,10 @@ Partial Class MenuPrincipal
         Me.Panel8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel8.Controls.Add(Me.Label4)
         Me.Panel8.Controls.Add(Me.btnBanda)
-        Me.Panel8.Location = New System.Drawing.Point(202, 2)
-        Me.Panel8.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel8.Location = New System.Drawing.Point(269, 2)
+        Me.Panel8.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(193, 265)
+        Me.Panel8.Size = New System.Drawing.Size(256, 325)
         Me.Panel8.TabIndex = 2
         '
         'Label4
@@ -432,10 +425,9 @@ Partial Class MenuPrincipal
         Me.Label4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(42, 49)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label4.Location = New System.Drawing.Point(56, 60)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(105, 17)
+        Me.Label4.Size = New System.Drawing.Size(138, 23)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Registrar banda"
         '
@@ -451,10 +443,10 @@ Partial Class MenuPrincipal
         Me.btnBanda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
         Me.btnBanda.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBanda.ForeColor = System.Drawing.Color.Transparent
-        Me.btnBanda.Location = New System.Drawing.Point(35, 102)
-        Me.btnBanda.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnBanda.Location = New System.Drawing.Point(47, 126)
+        Me.btnBanda.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnBanda.Name = "btnBanda"
-        Me.btnBanda.Size = New System.Drawing.Size(121, 121)
+        Me.btnBanda.Size = New System.Drawing.Size(161, 149)
         Me.btnBanda.TabIndex = 1
         Me.btnBanda.UseVisualStyleBackColor = False
         '
@@ -464,10 +456,10 @@ Partial Class MenuPrincipal
         Me.Panel9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel9.Controls.Add(Me.Label5)
         Me.Panel9.Controls.Add(Me.btnDelincuente)
-        Me.Panel9.Location = New System.Drawing.Point(399, 2)
-        Me.Panel9.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel9.Location = New System.Drawing.Point(531, 2)
+        Me.Panel9.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(196, 265)
+        Me.Panel9.Size = New System.Drawing.Size(260, 325)
         Me.Panel9.TabIndex = 4
         '
         'Label5
@@ -476,10 +468,9 @@ Partial Class MenuPrincipal
         Me.Label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(31, 47)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label5.Location = New System.Drawing.Point(41, 58)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(139, 17)
+        Me.Label5.Size = New System.Drawing.Size(181, 23)
         Me.Label5.TabIndex = 3
         Me.Label5.Text = "Registrar delincuente"
         '
@@ -495,10 +486,10 @@ Partial Class MenuPrincipal
         Me.btnDelincuente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
         Me.btnDelincuente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDelincuente.ForeColor = System.Drawing.Color.Transparent
-        Me.btnDelincuente.Location = New System.Drawing.Point(41, 100)
-        Me.btnDelincuente.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnDelincuente.Location = New System.Drawing.Point(55, 123)
+        Me.btnDelincuente.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnDelincuente.Name = "btnDelincuente"
-        Me.btnDelincuente.Size = New System.Drawing.Size(121, 121)
+        Me.btnDelincuente.Size = New System.Drawing.Size(161, 149)
         Me.btnDelincuente.TabIndex = 2
         Me.btnDelincuente.UseVisualStyleBackColor = False
         '
@@ -508,10 +499,10 @@ Partial Class MenuPrincipal
         Me.Panel10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel10.Controls.Add(Me.Label6)
         Me.Panel10.Controls.Add(Me.btnDelito)
-        Me.Panel10.Location = New System.Drawing.Point(2, 271)
-        Me.Panel10.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel10.Location = New System.Drawing.Point(3, 331)
+        Me.Panel10.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(196, 269)
+        Me.Panel10.Size = New System.Drawing.Size(260, 330)
         Me.Panel10.TabIndex = 7
         '
         'Label6
@@ -520,10 +511,9 @@ Partial Class MenuPrincipal
         Me.Label6.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(18, 45)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label6.Location = New System.Drawing.Point(24, 55)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(165, 17)
+        Me.Label6.Size = New System.Drawing.Size(216, 23)
         Me.Label6.TabIndex = 2
         Me.Label6.Text = "Registrar delito cometido"
         '
@@ -539,10 +529,10 @@ Partial Class MenuPrincipal
         Me.btnDelito.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
         Me.btnDelito.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDelito.ForeColor = System.Drawing.Color.Transparent
-        Me.btnDelito.Location = New System.Drawing.Point(42, 89)
-        Me.btnDelito.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnDelito.Location = New System.Drawing.Point(56, 110)
+        Me.btnDelito.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnDelito.Name = "btnDelito"
-        Me.btnDelito.Size = New System.Drawing.Size(121, 121)
+        Me.btnDelito.Size = New System.Drawing.Size(161, 149)
         Me.btnDelito.TabIndex = 3
         Me.btnDelito.UseVisualStyleBackColor = False
         '
@@ -552,10 +542,10 @@ Partial Class MenuPrincipal
         Me.Panel11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel11.Controls.Add(Me.Label7)
         Me.Panel11.Controls.Add(Me.btnControl)
-        Me.Panel11.Location = New System.Drawing.Point(202, 271)
-        Me.Panel11.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel11.Location = New System.Drawing.Point(269, 331)
+        Me.Panel11.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(193, 269)
+        Me.Panel11.Size = New System.Drawing.Size(256, 330)
         Me.Panel11.TabIndex = 6
         '
         'Label7
@@ -564,10 +554,9 @@ Partial Class MenuPrincipal
         Me.Label7.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Label7.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Black
-        Me.Label7.Location = New System.Drawing.Point(40, 45)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label7.Location = New System.Drawing.Point(53, 55)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(111, 17)
+        Me.Label7.Size = New System.Drawing.Size(145, 23)
         Me.Label7.TabIndex = 1
         Me.Label7.Text = "Registrar control"
         '
@@ -583,10 +572,10 @@ Partial Class MenuPrincipal
         Me.btnControl.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
         Me.btnControl.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnControl.ForeColor = System.Drawing.Color.Transparent
-        Me.btnControl.Location = New System.Drawing.Point(33, 89)
-        Me.btnControl.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnControl.Location = New System.Drawing.Point(44, 110)
+        Me.btnControl.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnControl.Name = "btnControl"
-        Me.btnControl.Size = New System.Drawing.Size(121, 121)
+        Me.btnControl.Size = New System.Drawing.Size(161, 149)
         Me.btnControl.TabIndex = 4
         Me.btnControl.UseVisualStyleBackColor = False
         '
@@ -596,10 +585,10 @@ Partial Class MenuPrincipal
         Me.Panel12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel12.Controls.Add(Me.Label8)
         Me.Panel12.Controls.Add(Me.btnReporte)
-        Me.Panel12.Location = New System.Drawing.Point(399, 271)
-        Me.Panel12.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel12.Location = New System.Drawing.Point(531, 331)
+        Me.Panel12.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel12.Name = "Panel12"
-        Me.Panel12.Size = New System.Drawing.Size(196, 269)
+        Me.Panel12.Size = New System.Drawing.Size(260, 330)
         Me.Panel12.TabIndex = 7
         '
         'Label8
@@ -608,10 +597,9 @@ Partial Class MenuPrincipal
         Me.Label8.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Label8.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(65, 45)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label8.Location = New System.Drawing.Point(87, 55)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(62, 17)
+        Me.Label8.Size = New System.Drawing.Size(81, 23)
         Me.Label8.TabIndex = 3
         Me.Label8.Text = "Reportes"
         '
@@ -627,10 +615,10 @@ Partial Class MenuPrincipal
         Me.btnReporte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
         Me.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnReporte.ForeColor = System.Drawing.Color.Transparent
-        Me.btnReporte.Location = New System.Drawing.Point(41, 89)
-        Me.btnReporte.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnReporte.Location = New System.Drawing.Point(55, 110)
+        Me.btnReporte.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnReporte.Name = "btnReporte"
-        Me.btnReporte.Size = New System.Drawing.Size(121, 121)
+        Me.btnReporte.Size = New System.Drawing.Size(161, 149)
         Me.btnReporte.TabIndex = 5
         Me.btnReporte.UseVisualStyleBackColor = False
         '
@@ -638,10 +626,10 @@ Partial Class MenuPrincipal
         '
         Me.picPrincipal.BackColor = System.Drawing.Color.Transparent
         Me.picPrincipal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.picPrincipal.Location = New System.Drawing.Point(1070, 127)
-        Me.picPrincipal.Margin = New System.Windows.Forms.Padding(2)
+        Me.picPrincipal.Location = New System.Drawing.Point(1427, 156)
+        Me.picPrincipal.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.picPrincipal.Name = "picPrincipal"
-        Me.picPrincipal.Size = New System.Drawing.Size(180, 180)
+        Me.picPrincipal.Size = New System.Drawing.Size(240, 222)
         Me.picPrincipal.TabIndex = 5
         Me.picPrincipal.TabStop = False
         '
@@ -656,10 +644,10 @@ Partial Class MenuPrincipal
         Me.Panel2.Controls.Add(Me.lblConexion)
         Me.Panel2.Controls.Add(Me.lblCargo)
         Me.Panel2.Controls.Add(Me.lblTitulo)
-        Me.Panel2.Location = New System.Drawing.Point(28, 124)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel2.Location = New System.Drawing.Point(37, 153)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(396, 544)
+        Me.Panel2.Size = New System.Drawing.Size(527, 669)
         Me.Panel2.TabIndex = 1
         '
         'picChile
@@ -667,10 +655,10 @@ Partial Class MenuPrincipal
         Me.picChile.BackColor = System.Drawing.Color.Black
         Me.picChile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.picChile.Image = Global.SIRP.My.Resources.Resources.chile
-        Me.picChile.Location = New System.Drawing.Point(49, 235)
-        Me.picChile.Margin = New System.Windows.Forms.Padding(2)
+        Me.picChile.Location = New System.Drawing.Point(65, 289)
+        Me.picChile.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.picChile.Name = "picChile"
-        Me.picChile.Size = New System.Drawing.Size(280, 284)
+        Me.picChile.Size = New System.Drawing.Size(373, 350)
         Me.picChile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.picChile.TabIndex = 5
         Me.picChile.TabStop = False
@@ -681,10 +669,9 @@ Partial Class MenuPrincipal
         Me.lblInst.BackColor = System.Drawing.Color.Transparent
         Me.lblInst.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblInst.ForeColor = System.Drawing.Color.White
-        Me.lblInst.Location = New System.Drawing.Point(37, 104)
-        Me.lblInst.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblInst.Location = New System.Drawing.Point(49, 128)
         Me.lblInst.Name = "lblInst"
-        Me.lblInst.Size = New System.Drawing.Size(82, 21)
+        Me.lblInst.Size = New System.Drawing.Size(103, 28)
         Me.lblInst.TabIndex = 4
         Me.lblInst.Text = "Institución"
         '
@@ -694,10 +681,9 @@ Partial Class MenuPrincipal
         Me.lblConexion.BackColor = System.Drawing.Color.Transparent
         Me.lblConexion.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblConexion.ForeColor = System.Drawing.Color.White
-        Me.lblConexion.Location = New System.Drawing.Point(37, 179)
-        Me.lblConexion.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblConexion.Location = New System.Drawing.Point(49, 220)
         Me.lblConexion.Name = "lblConexion"
-        Me.lblConexion.Size = New System.Drawing.Size(122, 21)
+        Me.lblConexion.Size = New System.Drawing.Size(154, 28)
         Me.lblConexion.TabIndex = 3
         Me.lblConexion.Text = "Ultima conexión"
         '
@@ -707,10 +693,9 @@ Partial Class MenuPrincipal
         Me.lblCargo.BackColor = System.Drawing.Color.Transparent
         Me.lblCargo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCargo.ForeColor = System.Drawing.Color.White
-        Me.lblCargo.Location = New System.Drawing.Point(37, 139)
-        Me.lblCargo.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblCargo.Location = New System.Drawing.Point(49, 171)
         Me.lblCargo.Name = "lblCargo"
-        Me.lblCargo.Size = New System.Drawing.Size(52, 21)
+        Me.lblCargo.Size = New System.Drawing.Size(65, 28)
         Me.lblCargo.TabIndex = 2
         Me.lblCargo.Text = "Cargo"
         '
@@ -720,19 +705,18 @@ Partial Class MenuPrincipal
         Me.lblTitulo.BackColor = System.Drawing.Color.Transparent
         Me.lblTitulo.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitulo.ForeColor = System.Drawing.Color.White
-        Me.lblTitulo.Location = New System.Drawing.Point(24, 40)
-        Me.lblTitulo.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblTitulo.Location = New System.Drawing.Point(32, 49)
         Me.lblTitulo.Name = "lblTitulo"
-        Me.lblTitulo.Size = New System.Drawing.Size(132, 37)
+        Me.lblTitulo.Size = New System.Drawing.Size(165, 46)
         Me.lblTitulo.TabIndex = 1
         Me.lblTitulo.Text = "Mis datos"
         '
         'MenuPrincipal
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1263, 716)
+        Me.ClientSize = New System.Drawing.Size(1684, 881)
         Me.ControlBox = False
         Me.Controls.Add(Me.PanelJefe)
         Me.Controls.Add(Me.StatusStrip1)
@@ -742,7 +726,7 @@ Partial Class MenuPrincipal
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "MenuPrincipal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Menu"
