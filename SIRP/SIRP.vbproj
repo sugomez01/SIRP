@@ -193,6 +193,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ActualizaDelincuente.resx">
+      <DependentUpon>ActualizaDelincuente.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CambioInstitucion.resx">
       <DependentUpon>CambioInstitucion.vb</DependentUpon>
     </EmbeddedResource>
