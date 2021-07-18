@@ -65,7 +65,7 @@ Public Class ModuloReportes
 
         ElseIf rbtnReporte5.Checked = True Then
 
-            comando = New SqlCommand("select * from tb_rep_delincuente_parentesco order by desc_banda", conn)
+            comando = New SqlCommand("select * from tb_rep_delincuente_parentesco order by BANDA", conn)
             da = New SqlDataAdapter(comando)
             dt = New DataTable()
             da.Fill(ds)
@@ -75,8 +75,8 @@ Public Class ModuloReportes
         ElseIf rbtnReporte6.Checked = True Then
 
             Dim query
-            query = "select * from tb_rep_delito_ubicacion where fecha_delito between '" + fecha_ini + "' and '" + fecha_fin + "' order by desc_delito"
-            comando = New SqlCommand("select * from tb_rep_delito_ubicacion where fecha_delito between '" + fecha_ini + "' and '" + fecha_fin + "' order by desc_delito", conn)
+            query = "select * from tb_rep_delito_ubicacion where [FECHA DELITO] between '" + fecha_ini + "' and '" + fecha_fin + "' order by COMUNA,DELITO"
+            comando = New SqlCommand("select * from tb_rep_delito_ubicacion where [FECHA DELITO] between '" + fecha_ini + "' and '" + fecha_fin + "' order by COMUNA,DELITO", conn)
             da = New SqlDataAdapter(comando)
             dt = New DataTable()
             da.Fill(ds)
@@ -122,9 +122,6 @@ Public Class ModuloReportes
         lblFechaIni.Visible = False
     End Sub
 
-    Private Sub ModuloReportes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 
     Private Sub rbtnReporte6_CheckedChanged(sender As Object, e As EventArgs) Handles rbtnReporte6.CheckedChanged
 
@@ -176,7 +173,7 @@ Public Class ModuloReportes
 
         ElseIf rbtnReporte5.Checked = True Then
 
-            comando = New SqlCommand("select * from tb_rep_delincuente_parentesco order by desc_banda", conn)
+            comando = New SqlCommand("select * from tb_rep_delincuente_parentesco order by BANDA", conn)
             da = New SqlDataAdapter(comando)
             dt = New DataTable()
             da.Fill(ds)
@@ -186,8 +183,8 @@ Public Class ModuloReportes
         ElseIf rbtnReporte6.Checked = True Then
 
             Dim query
-            query = "select * from tb_rep_delito_ubicacion where fecha_delito between '" + fecha_ini + "' and '" + fecha_fin + "' order by desc_delito"
-            comando = New SqlCommand("select * from tb_rep_delito_ubicacion where fecha_delito between '" + fecha_ini + "' and '" + fecha_fin + "' order by desc_delito", conn)
+            query = "select * from tb_rep_delito_ubicacion where [FECHA DELITO] between '" + fecha_ini + "' and '" + fecha_fin + "' order by COMUNA,DELITO"
+            comando = New SqlCommand("select * from tb_rep_delito_ubicacion where [FECHA DELITO] between '" + fecha_ini + "' and '" + fecha_fin + "' order by COMUNA,DELITO", conn)
             da = New SqlDataAdapter(comando)
             dt = New DataTable()
             da.Fill(ds)
@@ -198,7 +195,7 @@ Public Class ModuloReportes
 
         Dim save As New SaveFileDialog
         save.Filter = "Archivo XML (*.xml) | *.xml"
-        save.FileName = "nombre_de_archivo_generado.xml"
+        save.FileName = "reporte_generado.xml"
         If save.ShowDialog = Windows.Forms.DialogResult.OK Then
 
             Dim fs As System.IO.FileStream
