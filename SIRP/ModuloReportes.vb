@@ -4,13 +4,12 @@
 
 Public Class ModuloReportes
 
-    Dim fecha_ini, fecha_fin, reporte1 As String
+    Dim fecha_ini, fecha_fin As String
 
     'Public conn As SqlConnection = New SqlConnection("Data Source=LAPTOP-6GF7OE4K;Initial Catalog=SIRP;Integrated Security=True")
     Public conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-EUII0N8;User ID=sa;Password=sasa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
 
     'declaracion de variables para realizar consultas SQL
-    Private cmb As SqlCommandBuilder
     Public ds As DataSet = New DataSet
     Public da As SqlDataAdapter
     Public comando As SqlCommand
@@ -124,16 +123,13 @@ Public Class ModuloReportes
 
 
     Private Sub rbtnReporte6_CheckedChanged(sender As Object, e As EventArgs) Handles rbtnReporte6.CheckedChanged
-
         DateTimePicker1.Visible = True
         DateTimePicker2.Visible = True
         lblFechaFin.Visible = True
         lblFechaIni.Visible = True
-
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-
         ds.Tables.Clear()
 
         If rbtnReporte1.Checked = True Then
@@ -141,54 +137,43 @@ Public Class ModuloReportes
             da = New SqlDataAdapter(comando)
             dt = New DataTable()
             da.Fill(ds)
-
             dgvReporte.DataSource = ds.Tables(0).DefaultView
 
         ElseIf rbtnReporte2.Checked = True Then
-
             comando = New SqlCommand("select * from tb_rep_delito_cometido", conn)
             da = New SqlDataAdapter(comando)
             dt = New DataTable()
             da.Fill(ds)
-
             dgvReporte.DataSource = ds.Tables(0).DefaultView
 
         ElseIf rbtnReporte3.Checked = True Then
-
             comando = New SqlCommand("select * from tb_rep_delincuente_comuna", conn)
             da = New SqlDataAdapter(comando)
             dt = New DataTable()
             da.Fill(ds)
-
             dgvReporte.DataSource = ds.Tables(0).DefaultView
 
         ElseIf rbtnReporte4.Checked = True Then
-
             comando = New SqlCommand("select * from tb_rep_delincuente_ultima_vez", conn)
             da = New SqlDataAdapter(comando)
             dt = New DataTable()
             da.Fill(ds)
-
             dgvReporte.DataSource = ds.Tables(0).DefaultView
 
         ElseIf rbtnReporte5.Checked = True Then
-
             comando = New SqlCommand("select * from tb_rep_delincuente_parentesco order by BANDA", conn)
             da = New SqlDataAdapter(comando)
             dt = New DataTable()
             da.Fill(ds)
-
             dgvReporte.DataSource = ds.Tables(0).DefaultView
 
         ElseIf rbtnReporte6.Checked = True Then
-
             Dim query
             query = "select * from tb_rep_delito_ubicacion where [FECHA DELITO] between '" + fecha_ini + "' and '" + fecha_fin + "' order by COMUNA,DELITO"
             comando = New SqlCommand("select * from tb_rep_delito_ubicacion where [FECHA DELITO] between '" + fecha_ini + "' and '" + fecha_fin + "' order by COMUNA,DELITO", conn)
             da = New SqlDataAdapter(comando)
             dt = New DataTable()
             da.Fill(ds)
-
             dgvReporte.DataSource = ds.Tables(0).DefaultView
 
         End If
@@ -196,8 +181,8 @@ Public Class ModuloReportes
         Dim save As New SaveFileDialog
         save.Filter = "Archivo XML (*.xml) | *.xml"
         save.FileName = "reporte_generado.xml"
-        If save.ShowDialog = Windows.Forms.DialogResult.OK Then
 
+        If save.ShowDialog = Windows.Forms.DialogResult.OK Then
             Dim fs As System.IO.FileStream
             Dim xtw As System.Xml.XmlTextWriter
             dt.TableName = "items"
@@ -207,10 +192,7 @@ Public Class ModuloReportes
             xtw.WriteProcessingInstruction("mso-application", "progid='Excel.Sheet'")
             ds.WriteXml(xtw)
             xtw.Close()
-
-
         End If
-
     End Sub
 
 

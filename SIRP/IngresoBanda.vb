@@ -9,7 +9,6 @@ Public Class IngresoBanda
     Public conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-EUII0N8;User ID=sa;Password=sasa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
 
     'declaracion de variables para realizar consultas SQL
-    Private cmb As SqlCommandBuilder
     Public ds As DataSet = New DataSet
     Public da As SqlDataAdapter
     Public comando As SqlCommand
@@ -51,5 +50,7 @@ Public Class IngresoBanda
 
     End Function
 
+    Private Sub IngresoBanda_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
 End Class
