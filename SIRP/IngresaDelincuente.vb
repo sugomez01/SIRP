@@ -137,9 +137,9 @@ Public Class IngresaDelincuente
         da = New SqlDataAdapter(comando)
         dt = New DataTable()
         da.Fill(dt)
-        'cmbBanda.DisplayMember = "desc_banda"
-        'cmbBanda.ValueMember = "id_banda"
-        'cmbBanda.DataSource = dt
+        cmbBanda.DisplayMember = "desc_banda"
+        cmbBanda.ValueMember = "id_banda"
+        cmbBanda.DataSource = dt
 
         comando = New SqlCommand("select * from l_comuna", conn)
         da = New SqlDataAdapter(comando)

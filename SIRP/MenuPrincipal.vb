@@ -98,6 +98,9 @@ Public Class MenuPrincipal
         EliminaUsuario.Show()
     End Sub
 
+    Private Sub btnActualizaDelincuente_Click(sender As Object, e As EventArgs) Handles btnActualizaDelincuente.Click
+        ActualizaDelincuente.Show()
+    End Sub
 
     Public Sub validaUser(ByVal id As Integer)
         If id = 1 Then

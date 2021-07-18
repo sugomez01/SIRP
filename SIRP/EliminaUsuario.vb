@@ -1,8 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class EliminaUsuario
 
-    Dim user As String
-
     'Public conn As SqlConnection = New SqlConnection("Data Source=LAPTOP-6GF7OE4K;Initial Catalog=SIRP;Integrated Security=True")
     Public conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-EUII0N8;User ID=sa;Password=sasa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
 
@@ -21,14 +19,17 @@ Public Class EliminaUsuario
         usuario = txtUser.Text
 
         If usuario = "" Then
-            MsgBox("Debe ingresar Usuario!",, "Error")
+            MsgBox("Debe ingresar nombre Usuario!",, "Error")
         Else
             'AGREGAR VALIDACION (EXISTE INSTITUCION)
             elimina = "delete from l_usuario where username ='" + usuario.ToString + "'"
-            Eliminar(elimina)
-            'Me.Close()
+            If Eliminar(elimina) Then
+                MsgBox("Usuario eliminado exitosamente")
+            Else
+                MsgBox("Usuario no existe")
+            End If
+
         End If
-        ' MenuPrincipal.Show()
         Me.Close()
     End Sub
 
@@ -39,10 +40,10 @@ Public Class EliminaUsuario
         comando = New SqlCommand(sql, conn)
         Dim i As Integer = comando.ExecuteNonQuery()
         If i > 0 Then
-            MsgBox("Institución Eliminada exitosamente")
+
             Return True
         Else
-            MsgBox("Error al eliminar Institución")
+            MsgBox("Error al eliminar usuario, favor contactar al Administrador")
             Return False
         End If
 

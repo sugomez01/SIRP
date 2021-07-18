@@ -39,6 +39,7 @@ Partial Class MenuPrincipal
         Me.lblAddUser = New System.Windows.Forms.Label()
         Me.btnAddUser = New System.Windows.Forms.Button()
         Me.PanelDelUser = New System.Windows.Forms.Panel()
+        Me.lblDelUser = New System.Windows.Forms.Label()
         Me.btnDelUser = New System.Windows.Forms.Button()
         Me.MenuBar = New System.Windows.Forms.StatusStrip()
         Me.MenuBarDetail = New System.Windows.Forms.ToolStripStatusLabel()
@@ -73,7 +74,6 @@ Partial Class MenuPrincipal
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.PanelJefeZona = New System.Windows.Forms.FlowLayoutPanel()
         Me.PanelReporte = New System.Windows.Forms.Panel()
-        Me.lblDelUser = New System.Windows.Forms.Label()
         Me.PanelBarra.SuspendLayout()
         Me.PanelDelIns.SuspendLayout()
         Me.PanelAddIns.SuspendLayout()
@@ -304,6 +304,19 @@ Partial Class MenuPrincipal
         Me.PanelDelUser.Name = "PanelDelUser"
         Me.PanelDelUser.Size = New System.Drawing.Size(262, 269)
         Me.PanelDelUser.TabIndex = 6
+        '
+        'lblDelUser
+        '
+        Me.lblDelUser.AutoSize = True
+        Me.lblDelUser.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.lblDelUser.Font = New System.Drawing.Font("Segoe UI Light", 10.0!)
+        Me.lblDelUser.ForeColor = System.Drawing.Color.White
+        Me.lblDelUser.Location = New System.Drawing.Point(75, 49)
+        Me.lblDelUser.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblDelUser.Name = "lblDelUser"
+        Me.lblDelUser.Size = New System.Drawing.Size(99, 19)
+        Me.lblDelUser.TabIndex = 3
+        Me.lblDelUser.Text = "Elimina Usuario"
         '
         'btnDelUser
         '
@@ -768,19 +781,6 @@ Partial Class MenuPrincipal
         Me.PanelReporte.Name = "PanelReporte"
         Me.PanelReporte.Size = New System.Drawing.Size(200, 283)
         Me.PanelReporte.TabIndex = 12
-        '
-        'lblDelUser
-        '
-        Me.lblDelUser.AutoSize = True
-        Me.lblDelUser.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.lblDelUser.Font = New System.Drawing.Font("Segoe UI Light", 10.0!)
-        Me.lblDelUser.ForeColor = System.Drawing.Color.White
-        Me.lblDelUser.Location = New System.Drawing.Point(75, 49)
-        Me.lblDelUser.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.lblDelUser.Name = "lblDelUser"
-        Me.lblDelUser.Size = New System.Drawing.Size(99, 19)
-        Me.lblDelUser.TabIndex = 3
-        Me.lblDelUser.Text = "Elimina Usuario"
         '
         'MenuPrincipal
         '
