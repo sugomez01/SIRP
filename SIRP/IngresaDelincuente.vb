@@ -41,37 +41,17 @@ Public Class frmDelincuente
 
                 rut = txtRut.Text + "-" + txtDigito.Text
                 consulta = "select rut_delincuente from l_delincuente where rut_delincuente='" + rut + "'"
-                'insert = "insert into l_delincuente values ('" + rut + "','" + nombre + "','" + apellido + "','" + txtApodo.Text.ToString + "'," + txtTelefono.Text.ToString + " ," + banda.ToString + "," + "'" + fechaNac + "'," + estado.ToString + "," + id_int.ToString + "," + id_tip_user.ToString + ",getDate())"
                 insert = "insert into l_delincuente values ('" + rut + "','" + nombre + "','" + apellido + "','" + txtApodo.Text.ToString + "', " + id_comuna + ",'" + txtDomicilio.Text.ToString + "'," + fono + "," + "'" + fechaNac + "'," + estado.ToString + "," + banda.ToString + "," + id_user.ToString + ",getDate())"
                 If validaRegistro(consulta) = False Then
                     If (Insertar(insert)) Then
                         MsgBox("Registro ingresado exitosamente!",, "Registro existoso")
-                        'op = MsgBox("¿Desea ingresar otro delincuente?", MsgBoxStyle.YesNo, "Confirmación")
-                        'If (op = 6) Then
-                        '    txtNombre.Clear()
-                        '    txtApellido.Clear()
-                        '    txtApodo.Clear()
-                        '    txtRut.Clear()
-                        '    txtTelefono.Clear()
-                        '    cmbEstado.SelectedIndex = 0
-                        'Else
-                        '    Principal.Show()
-                        '    Me.Close()
-                        'End If
                         Me.Close()
                     Else
                         MsgBox("Error al ingresar registro de delincuente, por favor contacte al Administrador",, "Error")
                     End If
                 Else
                     MsgBox("Delincuente ya existe",, "Error")
-                    txtRut.Enabled = True
-                    txtDigito.Enabled = True
-                    txtNombre.Clear()
-                    txtApellido.Clear()
-                    txtApodo.Clear()
-                    txtRut.Clear()
-                    txtDigito.Clear()
-                    txtTelefono.Clear()
+                    Me.Close()
                 End If
 
             End If
@@ -174,6 +154,10 @@ Public Class frmDelincuente
 
     End Sub
 
+    Private Sub txtRut_TextChanged(sender As Object, e As EventArgs) Handles txtRut.TextChanged
+
+    End Sub
+
     Function validaRegistro(ByVal sql)
         conn.Close()
         conn.Open()
@@ -265,4 +249,29 @@ Public Class frmDelincuente
         id_comuna = cmbComuna.SelectedValue.ToString
     End Sub
 
+    Private Sub txtRut_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtRut.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+            MsgBox("Solo puede ingresar números")
+        End If
+    End Sub
+
+    Private Sub txtTelefono_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtTelefono.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+            MsgBox("Solo puede ingresar números")
+        End If
+    End Sub
 End Class

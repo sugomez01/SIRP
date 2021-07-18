@@ -31,6 +31,7 @@ Partial Class Login
         Me.picLogo = New System.Windows.Forms.PictureBox()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.SirpDataSet1 = New SIRP.SIRPDataSet()
+        Me.chkPass = New System.Windows.Forms.CheckBox()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picLogo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -41,22 +42,22 @@ Partial Class Login
         '
         Me.txtUser.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtUser.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUser.Location = New System.Drawing.Point(217, 323)
-        Me.txtUser.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtUser.Location = New System.Drawing.Point(185, 321)
+        Me.txtUser.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtUser.MaxLength = 50
         Me.txtUser.Name = "txtUser"
         Me.txtUser.Size = New System.Drawing.Size(168, 27)
-        Me.txtUser.TabIndex = 3
+        Me.txtUser.TabIndex = 0
         '
         'txtPass
         '
         Me.txtPass.Font = New System.Drawing.Font("Segoe UI", 11.25!)
-        Me.txtPass.Location = New System.Drawing.Point(217, 375)
-        Me.txtPass.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtPass.Location = New System.Drawing.Point(185, 365)
+        Me.txtPass.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtPass.MaxLength = 50
         Me.txtPass.Name = "txtPass"
-        Me.txtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPass.Size = New System.Drawing.Size(168, 27)
-        Me.txtPass.TabIndex = 4
-        Me.txtPass.UseSystemPasswordChar = True
+        Me.txtPass.TabIndex = 1
         '
         'btnIngresar
         '
@@ -69,11 +70,11 @@ Partial Class Login
         Me.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnIngresar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.btnIngresar.ForeColor = System.Drawing.Color.Transparent
-        Me.btnIngresar.Location = New System.Drawing.Point(169, 418)
-        Me.btnIngresar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnIngresar.Location = New System.Drawing.Point(159, 438)
+        Me.btnIngresar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnIngresar.Name = "btnIngresar"
         Me.btnIngresar.Size = New System.Drawing.Size(92, 25)
-        Me.btnIngresar.TabIndex = 5
+        Me.btnIngresar.TabIndex = 3
         Me.btnIngresar.Text = "INGRESAR"
         Me.btnIngresar.UseVisualStyleBackColor = False
         '
@@ -82,8 +83,8 @@ Partial Class Login
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox2.BackgroundImage = Global.SIRP.My.Resources.Resources.pass1
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox2.Location = New System.Drawing.Point(169, 367)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox2.Location = New System.Drawing.Point(138, 362)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(30, 30)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -95,8 +96,8 @@ Partial Class Login
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.BackgroundImage = Global.SIRP.My.Resources.Resources.user2
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(169, 315)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox1.Location = New System.Drawing.Point(137, 313)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(30, 30)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -109,7 +110,7 @@ Partial Class Login
         Me.picLogo.BackgroundImage = Global.SIRP.My.Resources.Resources.LOGO
         Me.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.picLogo.Location = New System.Drawing.Point(104, 109)
-        Me.picLogo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.picLogo.Margin = New System.Windows.Forms.Padding(2)
         Me.picLogo.Name = "picLogo"
         Me.picLogo.Size = New System.Drawing.Size(332, 194)
         Me.picLogo.TabIndex = 0
@@ -126,10 +127,10 @@ Partial Class Login
         Me.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnSalir.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSalir.ForeColor = System.Drawing.Color.Transparent
-        Me.btnSalir.Location = New System.Drawing.Point(292, 419)
+        Me.btnSalir.Location = New System.Drawing.Point(292, 438)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(92, 24)
-        Me.btnSalir.TabIndex = 8
+        Me.btnSalir.TabIndex = 4
         Me.btnSalir.Text = "SALIR"
         Me.btnSalir.UseVisualStyleBackColor = False
         '
@@ -137,6 +138,18 @@ Partial Class Login
         '
         Me.SirpDataSet1.DataSetName = "SIRPDataSet"
         Me.SirpDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'chkPass
+        '
+        Me.chkPass.AutoSize = True
+        Me.chkPass.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.chkPass.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkPass.Location = New System.Drawing.Point(358, 371)
+        Me.chkPass.Name = "chkPass"
+        Me.chkPass.Size = New System.Drawing.Size(132, 18)
+        Me.chkPass.TabIndex = 2
+        Me.chkPass.Text = "&Mostrar contraseña"
+        Me.chkPass.UseVisualStyleBackColor = True
         '
         'Login
         '
@@ -146,6 +159,7 @@ Partial Class Login
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.BackgroundImage = Global.SIRP.My.Resources.Resources.login_21
         Me.ClientSize = New System.Drawing.Size(550, 550)
+        Me.Controls.Add(Me.chkPass)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnIngresar)
         Me.Controls.Add(Me.PictureBox2)
@@ -155,7 +169,7 @@ Partial Class Login
         Me.Controls.Add(Me.txtUser)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Login"
@@ -179,4 +193,5 @@ Partial Class Login
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents btnSalir As Button
     Friend WithEvents SirpDataSet1 As SIRPDataSet
+    Friend WithEvents chkPass As CheckBox
 End Class

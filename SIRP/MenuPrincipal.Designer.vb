@@ -26,50 +26,50 @@ Partial Class MenuPrincipal
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MenuPrincipal))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblFechaActual = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.lblBienvenido = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.lblEliminaInstucion = New System.Windows.Forms.Label()
+        Me.btnEliminaInst = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.lblAgregaInst = New System.Windows.Forms.Label()
+        Me.btnIngresaInst = New System.Windows.Forms.Button()
         Me.PanelAdmin = New System.Windows.Forms.FlowLayoutPanel()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.PanelJefe = New System.Windows.Forms.FlowLayoutPanel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.btnSector = New System.Windows.Forms.Button()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.btnBanda = New System.Windows.Forms.Button()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.btnDelincuente = New System.Windows.Forms.Button()
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.btnDelito = New System.Windows.Forms.Button()
         Me.Panel11 = New System.Windows.Forms.Panel()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.btnControl = New System.Windows.Forms.Button()
         Me.Panel12 = New System.Windows.Forms.Panel()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.btnSector = New System.Windows.Forms.Button()
-        Me.btnBanda = New System.Windows.Forms.Button()
-        Me.btnDelincuente = New System.Windows.Forms.Button()
-        Me.btnDelito = New System.Windows.Forms.Button()
-        Me.btnControl = New System.Windows.Forms.Button()
         Me.btnReporte = New System.Windows.Forms.Button()
         Me.picPrincipal = New System.Windows.Forms.PictureBox()
-        Me.btnIngresaInst = New System.Windows.Forms.Button()
-        Me.btnEliminaInst = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.picChile = New System.Windows.Forms.PictureBox()
         Me.lblInst = New System.Windows.Forms.Label()
         Me.lblConexion = New System.Windows.Forms.Label()
         Me.lblCargo = New System.Windows.Forms.Label()
         Me.lblTitulo = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
@@ -113,6 +113,22 @@ Partial Class MenuPrincipal
         Me.lblFechaActual.TabIndex = 2
         Me.lblFechaActual.Text = "Fecha y hora"
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Button1.BackgroundImage = Global.SIRP.My.Resources.Resources.cerrarSesion
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Button1.Location = New System.Drawing.Point(1189, 10)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(62, 60)
+        Me.Button1.TabIndex = 6
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'lblBienvenido
         '
         Me.lblBienvenido.AutoSize = True
@@ -150,6 +166,25 @@ Partial Class MenuPrincipal
         Me.lblEliminaInstucion.TabIndex = 2
         Me.lblEliminaInstucion.Text = "Elimina Institución"
         '
+        'btnEliminaInst
+        '
+        Me.btnEliminaInst.BackColor = System.Drawing.Color.Transparent
+        Me.btnEliminaInst.BackgroundImage = Global.SIRP.My.Resources.Resources.eliminaInstitucion1
+        Me.btnEliminaInst.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnEliminaInst.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnEliminaInst.DialogResult = System.Windows.Forms.DialogResult.OK
+        Me.btnEliminaInst.FlatAppearance.BorderColor = System.Drawing.Color.Maroon
+        Me.btnEliminaInst.FlatAppearance.BorderSize = 3
+        Me.btnEliminaInst.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.btnEliminaInst.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEliminaInst.ForeColor = System.Drawing.Color.Transparent
+        Me.btnEliminaInst.Location = New System.Drawing.Point(77, 78)
+        Me.btnEliminaInst.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnEliminaInst.Name = "btnEliminaInst"
+        Me.btnEliminaInst.Size = New System.Drawing.Size(121, 121)
+        Me.btnEliminaInst.TabIndex = 1
+        Me.btnEliminaInst.UseVisualStyleBackColor = False
+        '
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(88, Byte), Integer))
@@ -174,6 +209,25 @@ Partial Class MenuPrincipal
         Me.lblAgregaInst.Size = New System.Drawing.Size(119, 19)
         Me.lblAgregaInst.TabIndex = 1
         Me.lblAgregaInst.Text = "Agregar Institución"
+        '
+        'btnIngresaInst
+        '
+        Me.btnIngresaInst.BackColor = System.Drawing.Color.Transparent
+        Me.btnIngresaInst.BackgroundImage = Global.SIRP.My.Resources.Resources.agregaInstitucion2
+        Me.btnIngresaInst.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnIngresaInst.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnIngresaInst.DialogResult = System.Windows.Forms.DialogResult.OK
+        Me.btnIngresaInst.FlatAppearance.BorderColor = System.Drawing.Color.Green
+        Me.btnIngresaInst.FlatAppearance.BorderSize = 3
+        Me.btnIngresaInst.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.btnIngresaInst.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnIngresaInst.ForeColor = System.Drawing.Color.Transparent
+        Me.btnIngresaInst.Location = New System.Drawing.Point(73, 78)
+        Me.btnIngresaInst.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnIngresaInst.Name = "btnIngresaInst"
+        Me.btnIngresaInst.Size = New System.Drawing.Size(121, 121)
+        Me.btnIngresaInst.TabIndex = 0
+        Me.btnIngresaInst.UseVisualStyleBackColor = False
         '
         'PanelAdmin
         '
@@ -214,6 +268,25 @@ Partial Class MenuPrincipal
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Agregar Usuario"
         '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.Transparent
+        Me.Button3.BackgroundImage = Global.SIRP.My.Resources.Resources.agregaUser
+        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button3.DialogResult = System.Windows.Forms.DialogResult.OK
+        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.Green
+        Me.Button3.FlatAppearance.BorderSize = 3
+        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.ForeColor = System.Drawing.Color.Transparent
+        Me.Button3.Location = New System.Drawing.Point(76, 80)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(121, 121)
+        Me.Button3.TabIndex = 2
+        Me.Button3.UseVisualStyleBackColor = False
+        '
         'Panel7
         '
         Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(88, Byte), Integer))
@@ -238,6 +311,25 @@ Partial Class MenuPrincipal
         Me.Label1.Size = New System.Drawing.Size(99, 19)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Elimina Usuario"
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.Transparent
+        Me.Button2.BackgroundImage = Global.SIRP.My.Resources.Resources.eliminaUser
+        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button2.DialogResult = System.Windows.Forms.DialogResult.OK
+        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.Maroon
+        Me.Button2.FlatAppearance.BorderSize = 3
+        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.ForeColor = System.Drawing.Color.Transparent
+        Me.Button2.Location = New System.Drawing.Point(71, 80)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(121, 121)
+        Me.Button2.TabIndex = 3
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'StatusStrip1
         '
@@ -272,7 +364,7 @@ Partial Class MenuPrincipal
         Me.PanelJefe.Controls.Add(Me.Panel10)
         Me.PanelJefe.Controls.Add(Me.Panel11)
         Me.PanelJefe.Controls.Add(Me.Panel12)
-        Me.PanelJefe.Location = New System.Drawing.Point(447, 124)
+        Me.PanelJefe.Location = New System.Drawing.Point(451, 121)
         Me.PanelJefe.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelJefe.Name = "PanelJefe"
         Me.PanelJefe.Size = New System.Drawing.Size(601, 544)
@@ -303,6 +395,25 @@ Partial Class MenuPrincipal
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "Agregar sector"
         '
+        'btnSector
+        '
+        Me.btnSector.BackColor = System.Drawing.Color.Transparent
+        Me.btnSector.BackgroundImage = Global.SIRP.My.Resources.Resources.sector
+        Me.btnSector.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnSector.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSector.DialogResult = System.Windows.Forms.DialogResult.OK
+        Me.btnSector.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.btnSector.FlatAppearance.BorderSize = 3
+        Me.btnSector.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.btnSector.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSector.ForeColor = System.Drawing.Color.Transparent
+        Me.btnSector.Location = New System.Drawing.Point(42, 100)
+        Me.btnSector.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnSector.Name = "btnSector"
+        Me.btnSector.Size = New System.Drawing.Size(121, 121)
+        Me.btnSector.TabIndex = 0
+        Me.btnSector.UseVisualStyleBackColor = False
+        '
         'Panel8
         '
         Me.Panel8.BackColor = System.Drawing.Color.Silver
@@ -327,6 +438,25 @@ Partial Class MenuPrincipal
         Me.Label4.Size = New System.Drawing.Size(105, 17)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Registrar banda"
+        '
+        'btnBanda
+        '
+        Me.btnBanda.BackColor = System.Drawing.Color.Transparent
+        Me.btnBanda.BackgroundImage = Global.SIRP.My.Resources.Resources.banda
+        Me.btnBanda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnBanda.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnBanda.DialogResult = System.Windows.Forms.DialogResult.OK
+        Me.btnBanda.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.btnBanda.FlatAppearance.BorderSize = 3
+        Me.btnBanda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.btnBanda.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBanda.ForeColor = System.Drawing.Color.Transparent
+        Me.btnBanda.Location = New System.Drawing.Point(35, 102)
+        Me.btnBanda.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnBanda.Name = "btnBanda"
+        Me.btnBanda.Size = New System.Drawing.Size(121, 121)
+        Me.btnBanda.TabIndex = 1
+        Me.btnBanda.UseVisualStyleBackColor = False
         '
         'Panel9
         '
@@ -353,6 +483,25 @@ Partial Class MenuPrincipal
         Me.Label5.TabIndex = 3
         Me.Label5.Text = "Registrar delincuente"
         '
+        'btnDelincuente
+        '
+        Me.btnDelincuente.BackColor = System.Drawing.Color.Transparent
+        Me.btnDelincuente.BackgroundImage = Global.SIRP.My.Resources.Resources.delincuente
+        Me.btnDelincuente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnDelincuente.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnDelincuente.DialogResult = System.Windows.Forms.DialogResult.OK
+        Me.btnDelincuente.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.btnDelincuente.FlatAppearance.BorderSize = 3
+        Me.btnDelincuente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.btnDelincuente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnDelincuente.ForeColor = System.Drawing.Color.Transparent
+        Me.btnDelincuente.Location = New System.Drawing.Point(41, 100)
+        Me.btnDelincuente.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnDelincuente.Name = "btnDelincuente"
+        Me.btnDelincuente.Size = New System.Drawing.Size(121, 121)
+        Me.btnDelincuente.TabIndex = 2
+        Me.btnDelincuente.UseVisualStyleBackColor = False
+        '
         'Panel10
         '
         Me.Panel10.BackColor = System.Drawing.Color.Silver
@@ -371,12 +520,31 @@ Partial Class MenuPrincipal
         Me.Label6.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(28, 45)
+        Me.Label6.Location = New System.Drawing.Point(18, 45)
         Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(165, 17)
         Me.Label6.TabIndex = 2
         Me.Label6.Text = "Registrar delito cometido"
+        '
+        'btnDelito
+        '
+        Me.btnDelito.BackColor = System.Drawing.Color.Transparent
+        Me.btnDelito.BackgroundImage = Global.SIRP.My.Resources.Resources.delito
+        Me.btnDelito.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnDelito.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnDelito.DialogResult = System.Windows.Forms.DialogResult.OK
+        Me.btnDelito.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.btnDelito.FlatAppearance.BorderSize = 3
+        Me.btnDelito.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.btnDelito.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnDelito.ForeColor = System.Drawing.Color.Transparent
+        Me.btnDelito.Location = New System.Drawing.Point(42, 89)
+        Me.btnDelito.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnDelito.Name = "btnDelito"
+        Me.btnDelito.Size = New System.Drawing.Size(121, 121)
+        Me.btnDelito.TabIndex = 3
+        Me.btnDelito.UseVisualStyleBackColor = False
         '
         'Panel11
         '
@@ -403,6 +571,25 @@ Partial Class MenuPrincipal
         Me.Label7.TabIndex = 1
         Me.Label7.Text = "Registrar control"
         '
+        'btnControl
+        '
+        Me.btnControl.BackColor = System.Drawing.Color.Transparent
+        Me.btnControl.BackgroundImage = Global.SIRP.My.Resources.Resources.control
+        Me.btnControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnControl.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnControl.DialogResult = System.Windows.Forms.DialogResult.OK
+        Me.btnControl.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.btnControl.FlatAppearance.BorderSize = 3
+        Me.btnControl.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.btnControl.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnControl.ForeColor = System.Drawing.Color.Transparent
+        Me.btnControl.Location = New System.Drawing.Point(33, 89)
+        Me.btnControl.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnControl.Name = "btnControl"
+        Me.btnControl.Size = New System.Drawing.Size(121, 121)
+        Me.btnControl.TabIndex = 4
+        Me.btnControl.UseVisualStyleBackColor = False
+        '
         'Panel12
         '
         Me.Panel12.BackColor = System.Drawing.Color.Silver
@@ -427,101 +614,6 @@ Partial Class MenuPrincipal
         Me.Label8.Size = New System.Drawing.Size(62, 17)
         Me.Label8.TabIndex = 3
         Me.Label8.Text = "Reportes"
-        '
-        'btnSector
-        '
-        Me.btnSector.BackColor = System.Drawing.Color.Transparent
-        Me.btnSector.BackgroundImage = Global.SIRP.My.Resources.Resources.sector
-        Me.btnSector.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnSector.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnSector.DialogResult = System.Windows.Forms.DialogResult.OK
-        Me.btnSector.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.btnSector.FlatAppearance.BorderSize = 3
-        Me.btnSector.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
-        Me.btnSector.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSector.ForeColor = System.Drawing.Color.Transparent
-        Me.btnSector.Location = New System.Drawing.Point(42, 100)
-        Me.btnSector.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnSector.Name = "btnSector"
-        Me.btnSector.Size = New System.Drawing.Size(121, 121)
-        Me.btnSector.TabIndex = 0
-        Me.btnSector.UseVisualStyleBackColor = False
-        '
-        'btnBanda
-        '
-        Me.btnBanda.BackColor = System.Drawing.Color.Transparent
-        Me.btnBanda.BackgroundImage = Global.SIRP.My.Resources.Resources.banda
-        Me.btnBanda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnBanda.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnBanda.DialogResult = System.Windows.Forms.DialogResult.OK
-        Me.btnBanda.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.btnBanda.FlatAppearance.BorderSize = 3
-        Me.btnBanda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
-        Me.btnBanda.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBanda.ForeColor = System.Drawing.Color.Transparent
-        Me.btnBanda.Location = New System.Drawing.Point(35, 102)
-        Me.btnBanda.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnBanda.Name = "btnBanda"
-        Me.btnBanda.Size = New System.Drawing.Size(121, 121)
-        Me.btnBanda.TabIndex = 1
-        Me.btnBanda.UseVisualStyleBackColor = False
-        '
-        'btnDelincuente
-        '
-        Me.btnDelincuente.BackColor = System.Drawing.Color.Transparent
-        Me.btnDelincuente.BackgroundImage = Global.SIRP.My.Resources.Resources.delincuente
-        Me.btnDelincuente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnDelincuente.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnDelincuente.DialogResult = System.Windows.Forms.DialogResult.OK
-        Me.btnDelincuente.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.btnDelincuente.FlatAppearance.BorderSize = 3
-        Me.btnDelincuente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
-        Me.btnDelincuente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnDelincuente.ForeColor = System.Drawing.Color.Transparent
-        Me.btnDelincuente.Location = New System.Drawing.Point(41, 100)
-        Me.btnDelincuente.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnDelincuente.Name = "btnDelincuente"
-        Me.btnDelincuente.Size = New System.Drawing.Size(121, 121)
-        Me.btnDelincuente.TabIndex = 2
-        Me.btnDelincuente.UseVisualStyleBackColor = False
-        '
-        'btnDelito
-        '
-        Me.btnDelito.BackColor = System.Drawing.Color.Transparent
-        Me.btnDelito.BackgroundImage = Global.SIRP.My.Resources.Resources.delito
-        Me.btnDelito.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnDelito.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnDelito.DialogResult = System.Windows.Forms.DialogResult.OK
-        Me.btnDelito.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.btnDelito.FlatAppearance.BorderSize = 3
-        Me.btnDelito.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
-        Me.btnDelito.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnDelito.ForeColor = System.Drawing.Color.Transparent
-        Me.btnDelito.Location = New System.Drawing.Point(42, 89)
-        Me.btnDelito.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnDelito.Name = "btnDelito"
-        Me.btnDelito.Size = New System.Drawing.Size(121, 121)
-        Me.btnDelito.TabIndex = 3
-        Me.btnDelito.UseVisualStyleBackColor = False
-        '
-        'btnControl
-        '
-        Me.btnControl.BackColor = System.Drawing.Color.Transparent
-        Me.btnControl.BackgroundImage = Global.SIRP.My.Resources.Resources.control
-        Me.btnControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnControl.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnControl.DialogResult = System.Windows.Forms.DialogResult.OK
-        Me.btnControl.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.btnControl.FlatAppearance.BorderSize = 3
-        Me.btnControl.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
-        Me.btnControl.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnControl.ForeColor = System.Drawing.Color.Transparent
-        Me.btnControl.Location = New System.Drawing.Point(33, 89)
-        Me.btnControl.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnControl.Name = "btnControl"
-        Me.btnControl.Size = New System.Drawing.Size(121, 121)
-        Me.btnControl.TabIndex = 4
-        Me.btnControl.UseVisualStyleBackColor = False
         '
         'btnReporte
         '
@@ -552,82 +644,6 @@ Partial Class MenuPrincipal
         Me.picPrincipal.Size = New System.Drawing.Size(180, 180)
         Me.picPrincipal.TabIndex = 5
         Me.picPrincipal.TabStop = False
-        '
-        'btnIngresaInst
-        '
-        Me.btnIngresaInst.BackColor = System.Drawing.Color.Transparent
-        Me.btnIngresaInst.BackgroundImage = Global.SIRP.My.Resources.Resources.agregaInstitucion2
-        Me.btnIngresaInst.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnIngresaInst.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnIngresaInst.DialogResult = System.Windows.Forms.DialogResult.OK
-        Me.btnIngresaInst.FlatAppearance.BorderColor = System.Drawing.Color.Green
-        Me.btnIngresaInst.FlatAppearance.BorderSize = 3
-        Me.btnIngresaInst.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black
-        Me.btnIngresaInst.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnIngresaInst.ForeColor = System.Drawing.Color.Transparent
-        Me.btnIngresaInst.Location = New System.Drawing.Point(73, 78)
-        Me.btnIngresaInst.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnIngresaInst.Name = "btnIngresaInst"
-        Me.btnIngresaInst.Size = New System.Drawing.Size(121, 121)
-        Me.btnIngresaInst.TabIndex = 0
-        Me.btnIngresaInst.UseVisualStyleBackColor = False
-        '
-        'btnEliminaInst
-        '
-        Me.btnEliminaInst.BackColor = System.Drawing.Color.Transparent
-        Me.btnEliminaInst.BackgroundImage = Global.SIRP.My.Resources.Resources.eliminaInstitucion1
-        Me.btnEliminaInst.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnEliminaInst.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnEliminaInst.DialogResult = System.Windows.Forms.DialogResult.OK
-        Me.btnEliminaInst.FlatAppearance.BorderColor = System.Drawing.Color.Maroon
-        Me.btnEliminaInst.FlatAppearance.BorderSize = 3
-        Me.btnEliminaInst.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black
-        Me.btnEliminaInst.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEliminaInst.ForeColor = System.Drawing.Color.Transparent
-        Me.btnEliminaInst.Location = New System.Drawing.Point(77, 78)
-        Me.btnEliminaInst.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnEliminaInst.Name = "btnEliminaInst"
-        Me.btnEliminaInst.Size = New System.Drawing.Size(121, 121)
-        Me.btnEliminaInst.TabIndex = 2
-        Me.btnEliminaInst.UseVisualStyleBackColor = False
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.Transparent
-        Me.Button3.BackgroundImage = Global.SIRP.My.Resources.Resources.agregaUser
-        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button3.DialogResult = System.Windows.Forms.DialogResult.OK
-        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.Green
-        Me.Button3.FlatAppearance.BorderSize = 3
-        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.ForeColor = System.Drawing.Color.Transparent
-        Me.Button3.Location = New System.Drawing.Point(76, 80)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(121, 121)
-        Me.Button3.TabIndex = 2
-        Me.Button3.UseVisualStyleBackColor = False
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.Transparent
-        Me.Button2.BackgroundImage = Global.SIRP.My.Resources.Resources.eliminaUser
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button2.DialogResult = System.Windows.Forms.DialogResult.OK
-        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.Maroon
-        Me.Button2.FlatAppearance.BorderSize = 3
-        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.ForeColor = System.Drawing.Color.Transparent
-        Me.Button2.Location = New System.Drawing.Point(71, 80)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(121, 121)
-        Me.Button2.TabIndex = 4
-        Me.Button2.UseVisualStyleBackColor = False
         '
         'Panel2
         '
@@ -710,22 +726,6 @@ Partial Class MenuPrincipal
         Me.lblTitulo.Size = New System.Drawing.Size(132, 37)
         Me.lblTitulo.TabIndex = 1
         Me.lblTitulo.Text = "Mis datos"
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.BackgroundImage = Global.SIRP.My.Resources.Resources.cerrarSesion
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Button1.Location = New System.Drawing.Point(1189, 10)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(62, 60)
-        Me.Button1.TabIndex = 6
-        Me.Button1.UseVisualStyleBackColor = False
         '
         'MenuPrincipal
         '

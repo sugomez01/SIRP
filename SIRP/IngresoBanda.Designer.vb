@@ -61,7 +61,7 @@ Partial Class IngresoBanda
         Me.txtBanda.Margin = New System.Windows.Forms.Padding(2)
         Me.txtBanda.Name = "txtBanda"
         Me.txtBanda.Size = New System.Drawing.Size(212, 27)
-        Me.txtBanda.TabIndex = 2
+        Me.txtBanda.TabIndex = 0
         '
         'btnIngresar
         '
@@ -75,7 +75,7 @@ Partial Class IngresoBanda
         Me.btnIngresar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnIngresar.Name = "btnIngresar"
         Me.btnIngresar.Size = New System.Drawing.Size(128, 26)
-        Me.btnIngresar.TabIndex = 3
+        Me.btnIngresar.TabIndex = 1
         Me.btnIngresar.Text = "REGISTRAR BANDA"
         Me.btnIngresar.UseVisualStyleBackColor = False
         '

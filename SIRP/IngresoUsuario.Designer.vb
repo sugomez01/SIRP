@@ -150,10 +150,10 @@ Partial Class IngresoUsuario
         Me.btnIngresa.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnIngresa.ForeColor = System.Drawing.Color.Transparent
         Me.btnIngresa.Location = New System.Drawing.Point(303, 493)
-        Me.btnIngresa.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnIngresa.Margin = New System.Windows.Forms.Padding(2)
         Me.btnIngresa.Name = "btnIngresa"
         Me.btnIngresa.Size = New System.Drawing.Size(163, 25)
-        Me.btnIngresa.TabIndex = 16
+        Me.btnIngresa.TabIndex = 9
         Me.btnIngresa.Text = "REGISTRAR USUARIO"
         Me.btnIngresa.UseVisualStyleBackColor = True
         '
@@ -173,78 +173,84 @@ Partial Class IngresoUsuario
         Me.txtNomb.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtNomb.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNomb.Location = New System.Drawing.Point(227, 100)
-        Me.txtNomb.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtNomb.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtNomb.MaxLength = 50
         Me.txtNomb.Name = "txtNomb"
         Me.txtNomb.Size = New System.Drawing.Size(239, 27)
-        Me.txtNomb.TabIndex = 19
+        Me.txtNomb.TabIndex = 0
         '
         'txtApe
         '
         Me.txtApe.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtApe.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtApe.Location = New System.Drawing.Point(227, 146)
-        Me.txtApe.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtApe.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtApe.MaxLength = 50
         Me.txtApe.Name = "txtApe"
         Me.txtApe.Size = New System.Drawing.Size(239, 27)
-        Me.txtApe.TabIndex = 20
+        Me.txtApe.TabIndex = 1
         '
         'txtRut
         '
         Me.txtRut.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRut.Location = New System.Drawing.Point(227, 192)
-        Me.txtRut.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtRut.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtRut.MaxLength = 8
         Me.txtRut.Name = "txtRut"
         Me.txtRut.Size = New System.Drawing.Size(168, 27)
-        Me.txtRut.TabIndex = 21
+        Me.txtRut.TabIndex = 2
         '
         'txtDV
         '
         Me.txtDV.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtDV.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDV.Location = New System.Drawing.Point(428, 192)
-        Me.txtDV.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtDV.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtDV.MaxLength = 1
         Me.txtDV.Name = "txtDV"
         Me.txtDV.Size = New System.Drawing.Size(38, 27)
-        Me.txtDV.TabIndex = 22
+        Me.txtDV.TabIndex = 3
         '
         'txtUser
         '
         Me.txtUser.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtUser.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtUser.Location = New System.Drawing.Point(227, 240)
-        Me.txtUser.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtUser.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtUser.MaxLength = 50
         Me.txtUser.Name = "txtUser"
         Me.txtUser.Size = New System.Drawing.Size(239, 27)
-        Me.txtUser.TabIndex = 23
+        Me.txtUser.TabIndex = 4
         '
         'txtPass
         '
         Me.txtPass.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPass.Location = New System.Drawing.Point(227, 284)
-        Me.txtPass.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtPass.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtPass.MaxLength = 50
         Me.txtPass.Name = "txtPass"
         Me.txtPass.Size = New System.Drawing.Size(239, 27)
-        Me.txtPass.TabIndex = 24
+        Me.txtPass.TabIndex = 5
         '
         'cmbIns
         '
         Me.cmbIns.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbIns.FormattingEnabled = True
         Me.cmbIns.Location = New System.Drawing.Point(227, 327)
-        Me.cmbIns.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmbIns.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbIns.Name = "cmbIns"
         Me.cmbIns.Size = New System.Drawing.Size(239, 28)
-        Me.cmbIns.TabIndex = 25
+        Me.cmbIns.TabIndex = 6
         '
         'cmbTipo
         '
         Me.cmbTipo.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbTipo.FormattingEnabled = True
         Me.cmbTipo.Location = New System.Drawing.Point(227, 378)
-        Me.cmbTipo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmbTipo.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbTipo.Name = "cmbTipo"
         Me.cmbTipo.Size = New System.Drawing.Size(239, 28)
-        Me.cmbTipo.TabIndex = 26
+        Me.cmbTipo.TabIndex = 7
         '
         'lblSexo
         '
@@ -264,10 +270,10 @@ Partial Class IngresoUsuario
         Me.cmbSexo.FormattingEnabled = True
         Me.cmbSexo.Items.AddRange(New Object() {"FEMENINO", "MASCULINO", "OTRO"})
         Me.cmbSexo.Location = New System.Drawing.Point(227, 427)
-        Me.cmbSexo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmbSexo.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbSexo.Name = "cmbSexo"
         Me.cmbSexo.Size = New System.Drawing.Size(239, 28)
-        Me.cmbSexo.TabIndex = 29
+        Me.cmbSexo.TabIndex = 8
         '
         'Label1
         '
@@ -311,7 +317,7 @@ Partial Class IngresoUsuario
         Me.Controls.Add(Me.lblTitulo)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "IngresoUsuario"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Ingreso Usuario"

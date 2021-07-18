@@ -90,6 +90,7 @@ Partial Class frmDelincuente
         Me.txtNombre.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.txtNombre.Location = New System.Drawing.Point(124, 29)
         Me.txtNombre.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtNombre.MaxLength = 50
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(227, 27)
         Me.txtNombre.TabIndex = 0
@@ -191,12 +192,19 @@ Partial Class frmDelincuente
         '
         'dtpFechaNac
         '
+        Me.dtpFechaNac.AllowDrop = True
+        Me.dtpFechaNac.CustomFormat = "dd-MM-yyyy"
         Me.dtpFechaNac.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.dtpFechaNac.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtpFechaNac.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.dtpFechaNac.Location = New System.Drawing.Point(205, 150)
         Me.dtpFechaNac.Margin = New System.Windows.Forms.Padding(2)
+        Me.dtpFechaNac.MaxDate = New Date(2012, 12, 31, 0, 0, 0, 0)
+        Me.dtpFechaNac.MinDate = New Date(1871, 1, 1, 0, 0, 0, 0)
         Me.dtpFechaNac.Name = "dtpFechaNac"
         Me.dtpFechaNac.Size = New System.Drawing.Size(147, 27)
         Me.dtpFechaNac.TabIndex = 4
+        Me.dtpFechaNac.Value = New Date(2011, 1, 1, 0, 0, 0, 0)
         '
         'txtApellido
         '
@@ -204,6 +212,7 @@ Partial Class frmDelincuente
         Me.txtApellido.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.txtApellido.Location = New System.Drawing.Point(124, 69)
         Me.txtApellido.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtApellido.MaxLength = 50
         Me.txtApellido.Name = "txtApellido"
         Me.txtApellido.Size = New System.Drawing.Size(227, 27)
         Me.txtApellido.TabIndex = 1
@@ -214,6 +223,7 @@ Partial Class frmDelincuente
         Me.txtRut.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.txtRut.Location = New System.Drawing.Point(124, 108)
         Me.txtRut.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtRut.MaxLength = 8
         Me.txtRut.Name = "txtRut"
         Me.txtRut.Size = New System.Drawing.Size(169, 27)
         Me.txtRut.TabIndex = 2
@@ -224,6 +234,7 @@ Partial Class frmDelincuente
         Me.txtApodo.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.txtApodo.Location = New System.Drawing.Point(108, 52)
         Me.txtApodo.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtApodo.MaxLength = 50
         Me.txtApodo.Name = "txtApodo"
         Me.txtApodo.Size = New System.Drawing.Size(199, 27)
         Me.txtApodo.TabIndex = 8
@@ -234,16 +245,19 @@ Partial Class frmDelincuente
         Me.txtDomicilio.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.txtDomicilio.Location = New System.Drawing.Point(130, 69)
         Me.txtDomicilio.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtDomicilio.MaxLength = 100
         Me.txtDomicilio.Name = "txtDomicilio"
         Me.txtDomicilio.Size = New System.Drawing.Size(229, 27)
         Me.txtDomicilio.TabIndex = 6
         '
         'txtTelefono
         '
+        Me.txtTelefono.AccessibleRole = System.Windows.Forms.AccessibleRole.Grip
         Me.txtTelefono.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtTelefono.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.txtTelefono.Location = New System.Drawing.Point(122, 192)
         Me.txtTelefono.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtTelefono.MaxLength = 9
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(229, 27)
         Me.txtTelefono.TabIndex = 5
@@ -292,6 +306,7 @@ Partial Class frmDelincuente
         Me.txtDigito.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.txtDigito.Location = New System.Drawing.Point(316, 111)
         Me.txtDigito.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtDigito.MaxLength = 1
         Me.txtDigito.Name = "txtDigito"
         Me.txtDigito.Size = New System.Drawing.Size(36, 27)
         Me.txtDigito.TabIndex = 3
@@ -395,7 +410,7 @@ Partial Class frmDelincuente
         Me.TableLayoutPanel1.ColumnCount = 3
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 385.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 385.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 391.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 394.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.lblDato2, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.lblInfo, 2, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Panel4, 0, 1)

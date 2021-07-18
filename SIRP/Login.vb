@@ -11,8 +11,8 @@ Public Class Login
 
     'Ruta para conectar a la DB
     'descomentar segun pc
-    Public conn As SqlConnection = New SqlConnection("Data Source=LAPTOP-6GF7OE4K;Initial Catalog=SIRP;Integrated Security=True")
-    'Public conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-EUII0N8;User ID=sa;Password=sasa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
+    'Public conn As SqlConnection = New SqlConnection("Data Source=LAPTOP-6GF7OE4K;Initial Catalog=SIRP;Integrated Security=True")
+    Public conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-EUII0N8;User ID=sa;Password=sasa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
 
     'declaracion de variables para realizar consultas SQL
     Private cmb As SqlCommandBuilder
@@ -92,7 +92,21 @@ Public Class Login
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'ControlBox = False
         txtUser.Focus()
-        'txtPass.PasswordChar = "*"
+    End Sub
+
+    Private Sub chkPass_CheckedChanged(sender As Object, e As EventArgs) Handles chkPass.CheckedChanged
+        If chkPass.Checked = True Then
+            txtPass.UseSystemPasswordChar = False
+        Else
+            txtPass.UseSystemPasswordChar = True
+        End If
+    End Sub
+    Private Sub txtPass_TextChanged(sender As Object, e As EventArgs) Handles txtPass.TextChanged
+        If chkPass.Checked = True Then
+            txtPass.UseSystemPasswordChar = False
+        Else
+            txtPass.UseSystemPasswordChar = True
+        End If
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
@@ -112,7 +126,7 @@ Public Class Login
                         actualizaConexion(id_user)
                         If id_tip_user = 1 Then
                             Me.Hide()
-                            ModuloReportes.Show()
+                            MenuPrincipal.Show()
                         ElseIf id_tip_user = 2 Then
                             Me.Hide()
                             MenuPrincipal.Show()
