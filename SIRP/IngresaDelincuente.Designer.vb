@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmDelincuente
+Partial Class IngresaDelincuente
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,7 +22,7 @@ Partial Class frmDelincuente
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDelincuente))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(IngresaDelincuente))
         Me.lblNombre = New System.Windows.Forms.Label()
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.txtNombre = New System.Windows.Forms.TextBox()
@@ -40,24 +40,24 @@ Partial Class frmDelincuente
         Me.txtApodo = New System.Windows.Forms.TextBox()
         Me.txtDomicilio = New System.Windows.Forms.TextBox()
         Me.txtTelefono = New System.Windows.Forms.TextBox()
-        Me.btnRegistrar = New System.Windows.Forms.Button()
-        Me.lblBanda = New System.Windows.Forms.Label()
-        Me.cmbBanda = New System.Windows.Forms.ComboBox()
         Me.txtDigito = New System.Windows.Forms.TextBox()
         Me.lblGuion = New System.Windows.Forms.Label()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.lblInfo = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.cmbComuna = New System.Windows.Forms.ComboBox()
         Me.lblComuna = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.lblDato2 = New System.Windows.Forms.Label()
+        Me.lblInfo = New System.Windows.Forms.Label()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.cmbBanda = New System.Windows.Forms.ComboBox()
+        Me.lblBanda = New System.Windows.Forms.Label()
         Me.lblDato1 = New System.Windows.Forms.Label()
-        Me.Panel3.SuspendLayout()
+        Me.btnRegistrar = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
+        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'lblNombre
@@ -124,7 +124,7 @@ Partial Class frmDelincuente
         Me.lblApodo.AutoSize = True
         Me.lblApodo.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.lblApodo.ForeColor = System.Drawing.Color.White
-        Me.lblApodo.Location = New System.Drawing.Point(31, 52)
+        Me.lblApodo.Location = New System.Drawing.Point(31, 54)
         Me.lblApodo.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblApodo.Name = "lblApodo"
         Me.lblApodo.Size = New System.Drawing.Size(60, 20)
@@ -148,7 +148,7 @@ Partial Class frmDelincuente
         Me.lblFono.AutoSize = True
         Me.lblFono.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.lblFono.ForeColor = System.Drawing.Color.White
-        Me.lblFono.Location = New System.Drawing.Point(16, 192)
+        Me.lblFono.Location = New System.Drawing.Point(19, 194)
         Me.lblFono.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblFono.Name = "lblFono"
         Me.lblFono.Size = New System.Drawing.Size(80, 20)
@@ -232,7 +232,7 @@ Partial Class frmDelincuente
         '
         Me.txtApodo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtApodo.Font = New System.Drawing.Font("Segoe UI", 11.25!)
-        Me.txtApodo.Location = New System.Drawing.Point(108, 52)
+        Me.txtApodo.Location = New System.Drawing.Point(108, 51)
         Me.txtApodo.Margin = New System.Windows.Forms.Padding(2)
         Me.txtApodo.MaxLength = 50
         Me.txtApodo.Name = "txtApodo"
@@ -255,56 +255,18 @@ Partial Class frmDelincuente
         Me.txtTelefono.AccessibleRole = System.Windows.Forms.AccessibleRole.Grip
         Me.txtTelefono.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtTelefono.Font = New System.Drawing.Font("Segoe UI", 11.25!)
-        Me.txtTelefono.Location = New System.Drawing.Point(122, 192)
+        Me.txtTelefono.Location = New System.Drawing.Point(125, 194)
         Me.txtTelefono.Margin = New System.Windows.Forms.Padding(2)
         Me.txtTelefono.MaxLength = 9
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(229, 27)
         Me.txtTelefono.TabIndex = 5
         '
-        'btnRegistrar
-        '
-        Me.btnRegistrar.BackColor = System.Drawing.Color.Transparent
-        Me.btnRegistrar.BackgroundImage = Global.SIRP.My.Resources.Resources.boton
-        Me.btnRegistrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnRegistrar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.btnRegistrar.ForeColor = System.Drawing.Color.White
-        Me.btnRegistrar.Location = New System.Drawing.Point(482, 402)
-        Me.btnRegistrar.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnRegistrar.Name = "btnRegistrar"
-        Me.btnRegistrar.Size = New System.Drawing.Size(194, 33)
-        Me.btnRegistrar.TabIndex = 11
-        Me.btnRegistrar.Text = "REGISTRAR DELINCUENTE"
-        Me.btnRegistrar.UseVisualStyleBackColor = False
-        '
-        'lblBanda
-        '
-        Me.lblBanda.AutoSize = True
-        Me.lblBanda.Font = New System.Drawing.Font("Segoe UI", 11.25!)
-        Me.lblBanda.ForeColor = System.Drawing.Color.White
-        Me.lblBanda.Location = New System.Drawing.Point(31, 92)
-        Me.lblBanda.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.lblBanda.Name = "lblBanda"
-        Me.lblBanda.Size = New System.Drawing.Size(60, 20)
-        Me.lblBanda.TabIndex = 19
-        Me.lblBanda.Text = "BANDA"
-        '
-        'cmbBanda
-        '
-        Me.cmbBanda.Font = New System.Drawing.Font("Segoe UI", 11.25!)
-        Me.cmbBanda.FormattingEnabled = True
-        Me.cmbBanda.Location = New System.Drawing.Point(108, 92)
-        Me.cmbBanda.Margin = New System.Windows.Forms.Padding(2)
-        Me.cmbBanda.Name = "cmbBanda"
-        Me.cmbBanda.Size = New System.Drawing.Size(199, 28)
-        Me.cmbBanda.TabIndex = 9
-        '
         'txtDigito
         '
         Me.txtDigito.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtDigito.Font = New System.Drawing.Font("Segoe UI", 11.25!)
-        Me.txtDigito.Location = New System.Drawing.Point(316, 111)
+        Me.txtDigito.Location = New System.Drawing.Point(315, 108)
         Me.txtDigito.Margin = New System.Windows.Forms.Padding(2)
         Me.txtDigito.MaxLength = 1
         Me.txtDigito.Name = "txtDigito"
@@ -322,32 +284,6 @@ Partial Class frmDelincuente
         Me.lblGuion.Size = New System.Drawing.Size(15, 20)
         Me.lblGuion.TabIndex = 22
         Me.lblGuion.Text = "-"
-        '
-        'Panel3
-        '
-        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel3.Controls.Add(Me.cmbBanda)
-        Me.Panel3.Controls.Add(Me.lblApodo)
-        Me.Panel3.Controls.Add(Me.lblEstado)
-        Me.Panel3.Controls.Add(Me.txtApodo)
-        Me.Panel3.Controls.Add(Me.lblBanda)
-        Me.Panel3.Controls.Add(Me.cmbEstado)
-        Me.Panel3.Font = New System.Drawing.Font("Segoe UI", 11.25!)
-        Me.Panel3.Location = New System.Drawing.Point(782, 28)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(352, 248)
-        Me.Panel3.TabIndex = 2
-        '
-        'lblInfo
-        '
-        Me.lblInfo.AutoSize = True
-        Me.lblInfo.Font = New System.Drawing.Font("Segoe UI", 9.25!)
-        Me.lblInfo.ForeColor = System.Drawing.Color.Transparent
-        Me.lblInfo.Location = New System.Drawing.Point(782, 3)
-        Me.lblInfo.Name = "lblInfo"
-        Me.lblInfo.Size = New System.Drawing.Size(165, 17)
-        Me.lblInfo.TabIndex = 27
-        Me.lblInfo.Text = "INFORMACIÓN ADICIONAL"
         '
         'Panel2
         '
@@ -388,17 +324,17 @@ Partial Class frmDelincuente
         '
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel4.Controls.Add(Me.lblNombre)
-        Me.Panel4.Controls.Add(Me.lblRUT)
-        Me.Panel4.Controls.Add(Me.lblGuion)
-        Me.Panel4.Controls.Add(Me.lblNacimiento)
-        Me.Panel4.Controls.Add(Me.txtRut)
         Me.Panel4.Controls.Add(Me.txtApellido)
+        Me.Panel4.Controls.Add(Me.lblNacimiento)
+        Me.Panel4.Controls.Add(Me.lblRUT)
         Me.Panel4.Controls.Add(Me.lblFono)
         Me.Panel4.Controls.Add(Me.lblApellido)
-        Me.Panel4.Controls.Add(Me.txtNombre)
-        Me.Panel4.Controls.Add(Me.txtDigito)
-        Me.Panel4.Controls.Add(Me.dtpFechaNac)
         Me.Panel4.Controls.Add(Me.txtTelefono)
+        Me.Panel4.Controls.Add(Me.txtNombre)
+        Me.Panel4.Controls.Add(Me.txtRut)
+        Me.Panel4.Controls.Add(Me.dtpFechaNac)
+        Me.Panel4.Controls.Add(Me.txtDigito)
+        Me.Panel4.Controls.Add(Me.lblGuion)
         Me.Panel4.Location = New System.Drawing.Point(6, 28)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(379, 248)
@@ -410,14 +346,14 @@ Partial Class frmDelincuente
         Me.TableLayoutPanel1.ColumnCount = 3
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 385.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 385.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 394.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 403.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.lblDato2, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.lblInfo, 2, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Panel4, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Panel2, 1, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Panel3, 2, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.lblDato1, 0, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(12, 89)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(12, 105)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
@@ -436,6 +372,54 @@ Partial Class frmDelincuente
         Me.lblDato2.TabIndex = 31
         Me.lblDato2.Text = "INFORMACIÓN DOMICILIARIA"
         '
+        'lblInfo
+        '
+        Me.lblInfo.AutoSize = True
+        Me.lblInfo.Font = New System.Drawing.Font("Segoe UI", 9.25!)
+        Me.lblInfo.ForeColor = System.Drawing.Color.Transparent
+        Me.lblInfo.Location = New System.Drawing.Point(782, 3)
+        Me.lblInfo.Name = "lblInfo"
+        Me.lblInfo.Size = New System.Drawing.Size(165, 17)
+        Me.lblInfo.TabIndex = 27
+        Me.lblInfo.Text = "INFORMACIÓN ADICIONAL"
+        '
+        'Panel3
+        '
+        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel3.Controls.Add(Me.cmbBanda)
+        Me.Panel3.Controls.Add(Me.lblApodo)
+        Me.Panel3.Controls.Add(Me.lblEstado)
+        Me.Panel3.Controls.Add(Me.lblBanda)
+        Me.Panel3.Controls.Add(Me.txtApodo)
+        Me.Panel3.Controls.Add(Me.cmbEstado)
+        Me.Panel3.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.Panel3.Location = New System.Drawing.Point(782, 28)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(352, 248)
+        Me.Panel3.TabIndex = 2
+        '
+        'cmbBanda
+        '
+        Me.cmbBanda.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.cmbBanda.FormattingEnabled = True
+        Me.cmbBanda.Location = New System.Drawing.Point(108, 92)
+        Me.cmbBanda.Margin = New System.Windows.Forms.Padding(2)
+        Me.cmbBanda.Name = "cmbBanda"
+        Me.cmbBanda.Size = New System.Drawing.Size(199, 28)
+        Me.cmbBanda.TabIndex = 9
+        '
+        'lblBanda
+        '
+        Me.lblBanda.AutoSize = True
+        Me.lblBanda.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.lblBanda.ForeColor = System.Drawing.Color.White
+        Me.lblBanda.Location = New System.Drawing.Point(31, 92)
+        Me.lblBanda.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblBanda.Name = "lblBanda"
+        Me.lblBanda.Size = New System.Drawing.Size(60, 20)
+        Me.lblBanda.TabIndex = 19
+        Me.lblBanda.Text = "BANDA"
+        '
         'lblDato1
         '
         Me.lblDato1.AutoSize = True
@@ -447,29 +431,45 @@ Partial Class frmDelincuente
         Me.lblDato1.TabIndex = 25
         Me.lblDato1.Text = "DATOS PERSONALES"
         '
-        'frmDelincuente
+        'btnRegistrar
+        '
+        Me.btnRegistrar.BackColor = System.Drawing.Color.Transparent
+        Me.btnRegistrar.BackgroundImage = Global.SIRP.My.Resources.Resources.boton
+        Me.btnRegistrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnRegistrar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.btnRegistrar.ForeColor = System.Drawing.Color.White
+        Me.btnRegistrar.Location = New System.Drawing.Point(482, 418)
+        Me.btnRegistrar.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnRegistrar.Name = "btnRegistrar"
+        Me.btnRegistrar.Size = New System.Drawing.Size(194, 33)
+        Me.btnRegistrar.TabIndex = 11
+        Me.btnRegistrar.Text = "REGISTRAR DELINCUENTE"
+        Me.btnRegistrar.UseVisualStyleBackColor = False
+        '
+        'IngresaDelincuente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1165, 457)
+        Me.ClientSize = New System.Drawing.Size(1165, 493)
         Me.Controls.Add(Me.btnRegistrar)
         Me.Controls.Add(Me.lblTitulo)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
-        Me.Name = "frmDelincuente"
+        Me.Name = "IngresaDelincuente"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Ingreso de Delincuente"
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -492,12 +492,8 @@ Partial Class frmDelincuente
     Friend WithEvents txtDomicilio As TextBox
     Friend WithEvents txtTelefono As TextBox
     Friend WithEvents btnRegistrar As Button
-    Friend WithEvents lblBanda As Label
-    Friend WithEvents cmbBanda As ComboBox
     Friend WithEvents txtDigito As TextBox
     Friend WithEvents lblGuion As Label
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents lblInfo As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents cmbComuna As ComboBox
     Friend WithEvents lblComuna As Label
@@ -505,4 +501,8 @@ Partial Class frmDelincuente
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents lblDato1 As Label
     Friend WithEvents lblDato2 As Label
+    Friend WithEvents lblInfo As Label
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents cmbBanda As ComboBox
+    Friend WithEvents lblBanda As Label
 End Class

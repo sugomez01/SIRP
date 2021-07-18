@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 
-Public Class frmDelincuente
+Public Class IngresaDelincuente
 
     Dim id_user, id_int, banda As Integer
     Dim estado, fechaNac, id_comuna, fono As String
@@ -71,7 +71,7 @@ Public Class frmDelincuente
     End Sub
 
     Private Sub cmbBanda_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbBanda.SelectedIndexChanged
-        banda = cmbBanda.SelectedValue()
+        'banda = cmbBanda.SelectedValue()
     End Sub
 
     Public dt As DataTable
@@ -140,9 +140,9 @@ Public Class frmDelincuente
         da = New SqlDataAdapter(comando)
         dt = New DataTable()
         da.Fill(dt)
-        cmbBanda.DisplayMember = "desc_banda"
-        cmbBanda.ValueMember = "id_banda"
-        cmbBanda.DataSource = dt
+        'cmbBanda.DisplayMember = "desc_banda"
+        'cmbBanda.ValueMember = "id_banda"
+        'cmbBanda.DataSource = dt
 
         comando = New SqlCommand("select * from l_comuna", conn)
         da = New SqlDataAdapter(comando)

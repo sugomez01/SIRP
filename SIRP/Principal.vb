@@ -67,7 +67,7 @@ Public Class Principal
     End Sub
 
     Private Sub RegistrarDelincuenteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CreaDelincuente.Click
-        frmDelincuente.Show()
+        IngresaDelincuente.Show()
     End Sub
 
     'Metodo para conectar
@@ -144,7 +144,7 @@ Public Class Principal
         Me.Close()
         ActualizaDelincuente.Close()
         CambioInstitucion.Close()
-        frmDelincuente.Close()
+        IngresaDelincuente.Close()
         IngresoBanda.Close()
         IngresoControl.Close()
         IngresoDelito.Close()

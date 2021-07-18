@@ -224,7 +224,7 @@ Public Class IngresoDelito
             If validaRut() = True Then
                 If (ExisteRut() = False) Then
                     MsgBox("Delincuente no se encuentra registrado, se direccionará al menú de registro de delincuente")
-                    frmDelincuente.Show()
+                    IngresaDelincuente.Show()
                     Me.Close()
                 Else
                     If (InsertarDelito(InsertDel)) Then

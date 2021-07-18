@@ -24,17 +24,12 @@ Partial Class IngresoUsuario
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(IngresoUsuario))
         Me.lblTitulo = New System.Windows.Forms.Label()
-        Me.lblNombre = New System.Windows.Forms.Label()
-        Me.lblApellido = New System.Windows.Forms.Label()
         Me.lblRut = New System.Windows.Forms.Label()
         Me.lblUser = New System.Windows.Forms.Label()
         Me.lblPass = New System.Windows.Forms.Label()
         Me.lblInst = New System.Windows.Forms.Label()
         Me.lblTipo = New System.Windows.Forms.Label()
         Me.btnIngresa = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtNomb = New System.Windows.Forms.TextBox()
-        Me.txtApe = New System.Windows.Forms.TextBox()
         Me.txtRut = New System.Windows.Forms.TextBox()
         Me.txtDV = New System.Windows.Forms.TextBox()
         Me.txtUser = New System.Windows.Forms.TextBox()
@@ -44,6 +39,11 @@ Partial Class IngresoUsuario
         Me.lblSexo = New System.Windows.Forms.Label()
         Me.cmbSexo = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblNombre = New System.Windows.Forms.Label()
+        Me.lblApellido = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txtNomb = New System.Windows.Forms.TextBox()
+        Me.txtApe = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'lblTitulo
@@ -57,30 +57,6 @@ Partial Class IngresoUsuario
         Me.lblTitulo.Size = New System.Drawing.Size(191, 30)
         Me.lblTitulo.TabIndex = 0
         Me.lblTitulo.Text = "Registro de usuario"
-        '
-        'lblNombre
-        '
-        Me.lblNombre.AutoSize = True
-        Me.lblNombre.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNombre.ForeColor = System.Drawing.Color.White
-        Me.lblNombre.Location = New System.Drawing.Point(43, 103)
-        Me.lblNombre.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.lblNombre.Name = "lblNombre"
-        Me.lblNombre.Size = New System.Drawing.Size(78, 20)
-        Me.lblNombre.TabIndex = 2
-        Me.lblNombre.Text = "NOMBRES"
-        '
-        'lblApellido
-        '
-        Me.lblApellido.AutoSize = True
-        Me.lblApellido.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblApellido.ForeColor = System.Drawing.Color.White
-        Me.lblApellido.Location = New System.Drawing.Point(43, 149)
-        Me.lblApellido.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.lblApellido.Name = "lblApellido"
-        Me.lblApellido.Size = New System.Drawing.Size(83, 20)
-        Me.lblApellido.TabIndex = 3
-        Me.lblApellido.Text = "APELLIDOS"
         '
         'lblRut
         '
@@ -156,39 +132,6 @@ Partial Class IngresoUsuario
         Me.btnIngresa.TabIndex = 9
         Me.btnIngresa.Text = "REGISTRAR USUARIO"
         Me.btnIngresa.UseVisualStyleBackColor = True
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(382, 180)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(13, 18)
-        Me.Label2.TabIndex = 18
-        Me.Label2.Text = "-"
-        '
-        'txtNomb
-        '
-        Me.txtNomb.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtNomb.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNomb.Location = New System.Drawing.Point(227, 100)
-        Me.txtNomb.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtNomb.MaxLength = 50
-        Me.txtNomb.Name = "txtNomb"
-        Me.txtNomb.Size = New System.Drawing.Size(239, 27)
-        Me.txtNomb.TabIndex = 0
-        '
-        'txtApe
-        '
-        Me.txtApe.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtApe.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtApe.Location = New System.Drawing.Point(227, 146)
-        Me.txtApe.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtApe.MaxLength = 50
-        Me.txtApe.Name = "txtApe"
-        Me.txtApe.Size = New System.Drawing.Size(239, 27)
-        Me.txtApe.TabIndex = 1
         '
         'txtRut
         '
@@ -287,6 +230,63 @@ Partial Class IngresoUsuario
         Me.Label1.TabIndex = 30
         Me.Label1.Text = "-"
         '
+        'lblNombre
+        '
+        Me.lblNombre.AutoSize = True
+        Me.lblNombre.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNombre.ForeColor = System.Drawing.Color.White
+        Me.lblNombre.Location = New System.Drawing.Point(43, 103)
+        Me.lblNombre.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblNombre.Name = "lblNombre"
+        Me.lblNombre.Size = New System.Drawing.Size(78, 20)
+        Me.lblNombre.TabIndex = 2
+        Me.lblNombre.Text = "NOMBRES"
+        '
+        'lblApellido
+        '
+        Me.lblApellido.AutoSize = True
+        Me.lblApellido.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblApellido.ForeColor = System.Drawing.Color.White
+        Me.lblApellido.Location = New System.Drawing.Point(43, 149)
+        Me.lblApellido.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblApellido.Name = "lblApellido"
+        Me.lblApellido.Size = New System.Drawing.Size(83, 20)
+        Me.lblApellido.TabIndex = 3
+        Me.lblApellido.Text = "APELLIDOS"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(382, 180)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(13, 18)
+        Me.Label2.TabIndex = 18
+        Me.Label2.Text = "-"
+        '
+        'txtNomb
+        '
+        Me.txtNomb.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtNomb.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNomb.Location = New System.Drawing.Point(227, 100)
+        Me.txtNomb.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtNomb.MaxLength = 50
+        Me.txtNomb.Name = "txtNomb"
+        Me.txtNomb.Size = New System.Drawing.Size(239, 27)
+        Me.txtNomb.TabIndex = 0
+        '
+        'txtApe
+        '
+        Me.txtApe.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtApe.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtApe.Location = New System.Drawing.Point(227, 146)
+        Me.txtApe.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtApe.MaxLength = 50
+        Me.txtApe.Name = "txtApe"
+        Me.txtApe.Size = New System.Drawing.Size(239, 27)
+        Me.txtApe.TabIndex = 1
+        '
         'IngresoUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -327,17 +327,12 @@ Partial Class IngresoUsuario
     End Sub
 
     Friend WithEvents lblTitulo As Label
-    Friend WithEvents lblNombre As Label
-    Friend WithEvents lblApellido As Label
     Friend WithEvents lblRut As Label
     Friend WithEvents lblUser As Label
     Friend WithEvents lblPass As Label
     Friend WithEvents lblInst As Label
     Friend WithEvents lblTipo As Label
     Friend WithEvents btnIngresa As Button
-    Friend WithEvents Label2 As Label
-    Friend WithEvents txtNomb As TextBox
-    Friend WithEvents txtApe As TextBox
     Friend WithEvents txtRut As TextBox
     Friend WithEvents txtDV As TextBox
     Friend WithEvents txtUser As TextBox
@@ -347,4 +342,9 @@ Partial Class IngresoUsuario
     Friend WithEvents lblSexo As Label
     Friend WithEvents cmbSexo As ComboBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents lblNombre As Label
+    Friend WithEvents lblApellido As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents txtNomb As TextBox
+    Friend WithEvents txtApe As TextBox
 End Class

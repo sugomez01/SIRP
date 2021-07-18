@@ -104,10 +104,10 @@
     <Compile Include="CambioInstitucion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cargando.Designer.vb">
-      <DependentUpon>Cargando.vb</DependentUpon>
+    <Compile Include="EliminaUsuario.Designer.vb">
+      <DependentUpon>EliminaUsuario.vb</DependentUpon>
     </Compile>
-    <Compile Include="Cargando.vb">
+    <Compile Include="EliminaUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="IngresaDelincuente.Designer.vb">
@@ -196,8 +196,8 @@
     <EmbeddedResource Include="CambioInstitucion.resx">
       <DependentUpon>CambioInstitucion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cargando.resx">
-      <DependentUpon>Cargando.vb</DependentUpon>
+    <EmbeddedResource Include="EliminaUsuario.resx">
+      <DependentUpon>EliminaUsuario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IngresaDelincuente.resx">
       <DependentUpon>IngresaDelincuente.vb</DependentUpon>
@@ -311,6 +311,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\fondo2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actualiza.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

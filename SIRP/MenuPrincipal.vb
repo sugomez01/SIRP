@@ -13,7 +13,6 @@ Public Class MenuPrincipal
     Public conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-EUII0N8;User ID=sa;Password=sasa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
 
     'declaracion de variables para realizar consultas SQL
-    Private cmb As SqlCommandBuilder
     Public ds As DataSet = New DataSet
     Public da As SqlDataAdapter
     Public comando As SqlCommand
@@ -40,10 +39,9 @@ Public Class MenuPrincipal
             validaUser(Login.id_tip_user)
             bienvenidaUser(Login.id_int)
         End If
-
     End Sub
 
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer.Tick
         lblFechaActual.Text = "Fecha y hora actual: " + DateTime.Now.ToLongDateString + " " + DateTime.Now.ToLongTimeString
     End Sub
 
@@ -68,7 +66,7 @@ Public Class MenuPrincipal
         CambioInstitucion.lblElimina.Show()
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles btnAddUser.Click
         IngresoUsuario.Show()
     End Sub
 
@@ -93,50 +91,44 @@ Public Class MenuPrincipal
     End Sub
 
     Private Sub btnDelincuente_Click(sender As Object, e As EventArgs) Handles btnDelincuente.Click
-        frmDelincuente.Show()
+        IngresaDelincuente.Show()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnDelUser.Click
+        EliminaUsuario.Show()
     End Sub
 
     Public Sub validaUser(ByVal id As Integer)
         If id = 1 Then
             PanelAdmin.Visible = True
-            PanelJefe.Visible = False
+            PanelAddIns.Visible = True
+            PanelAddUser.Visible = True
+            PanelDelIns.Visible = True
+            PanelDelUser.Visible = True
+            PanelReporte.Visible = False
+            PanelOperador.Visible = False
+            PanelJefeZona.Visible = False
+        ElseIf id = 2 Then
+            PanelAdmin.Visible = True
+            PanelAddIns.Visible = False
+            PanelAddUser.Visible = True
+            PanelDelIns.Visible = False
+            PanelDelUser.Visible = True
+            PanelReporte.Visible = False
+            PanelOperador.Visible = False
+            PanelJefeZona.Visible = False
+            PanelAdmin.Height = 278
         ElseIf id = 3 Then
             PanelAdmin.Visible = False
-            PanelJefe.Visible = True
+            PanelOperador.Visible = True
+            PanelJefeZona.Visible = True
+            PanelReporte.Visible = True
         Else
             PanelAdmin.Visible = False
-            PanelJefe.Visible = False
+            PanelOperador.Visible = True
+            PanelJefeZona.Visible = False
+            PanelReporte.Visible = False
         End If
-        '    CreaUser.Visible = True
-        '    CreaInstitucion.Visible = True
-        '    Espacio.Visible = True
-        '    DelUser.Visible = True
-        '    DelInst.Visible = True
-        'ElseIf id = 2 Then
-        '    CreaUser.Visible = True
-        '    CreaZona.Visible = True
-        '    CreaSector.Visible = True
-        '    CreaDelito.Visible = True
-        '    CreaControl.Visible = True
-        '    CreaBanda.Visible = True
-        '    CreaDelincuente.Visible = True
-        '    ActDelincuente.Visible = True
-        'ElseIf id = 3 Then
-        '    CreaUser.Visible = True
-        '    CreaZona.Visible = True
-        '    CreaSector.Visible = True
-        '    CreaDelito.Visible = True
-        '    CreaControl.Visible = True
-        '    CreaBanda.Visible = True
-        '    CreaDelincuente.Visible = True
-        '    ActDelincuente.Visible = True
-        '    Reportes.Visible = True
-        'Else
-        '    CreaDelincuente.Visible = True
-        '    CreaControl.Visible = True
-        '    CreaDelito.Visible = True
-        '    ActDelincuente.Visible = True
-        'End If
     End Sub
     Function datosUser(ByVal idUser As String)
         'conn.Close()
@@ -193,7 +185,8 @@ Public Class MenuPrincipal
         Me.Close()
         ActualizaDelincuente.Close()
         CambioInstitucion.Close()
-        frmDelincuente.Close()
+        EliminaUsuario.Close()
+        IngresaDelincuente.Close()
         IngresoBanda.Close()
         IngresoControl.Close()
         IngresoDelito.Close()
@@ -202,7 +195,7 @@ Public Class MenuPrincipal
         ModuloReportes.Close()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         op = MsgBox("¿Está seguro que desea salir?", MsgBoxStyle.YesNo, "Salir del Sistema")
         If (op = 6) Then
             Login.Show()
