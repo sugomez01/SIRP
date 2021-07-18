@@ -37,10 +37,9 @@ Partial Class CambioInstitucion
         Me.lblIngresa.AutoSize = True
         Me.lblIngresa.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblIngresa.ForeColor = System.Drawing.Color.White
-        Me.lblIngresa.Location = New System.Drawing.Point(159, 29)
-        Me.lblIngresa.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblIngresa.Location = New System.Drawing.Point(212, 36)
         Me.lblIngresa.Name = "lblIngresa"
-        Me.lblIngresa.Size = New System.Drawing.Size(173, 25)
+        Me.lblIngresa.Size = New System.Drawing.Size(219, 32)
         Me.lblIngresa.TabIndex = 1
         Me.lblIngresa.Text = "Registro Institución"
         '
@@ -49,10 +48,9 @@ Partial Class CambioInstitucion
         Me.lblInstitucion.AutoSize = True
         Me.lblInstitucion.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblInstitucion.ForeColor = System.Drawing.Color.White
-        Me.lblInstitucion.Location = New System.Drawing.Point(60, 98)
-        Me.lblInstitucion.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblInstitucion.Location = New System.Drawing.Point(80, 121)
         Me.lblInstitucion.Name = "lblInstitucion"
-        Me.lblInstitucion.Size = New System.Drawing.Size(162, 20)
+        Me.lblInstitucion.Size = New System.Drawing.Size(206, 25)
         Me.lblInstitucion.TabIndex = 2
         Me.lblInstitucion.Text = "NOMBRE INSTITUCIÓN"
         '
@@ -60,19 +58,20 @@ Partial Class CambioInstitucion
         '
         Me.txtInst.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtInst.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtInst.Location = New System.Drawing.Point(238, 95)
-        Me.txtInst.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtInst.Location = New System.Drawing.Point(317, 117)
+        Me.txtInst.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtInst.Name = "txtInst"
-        Me.txtInst.Size = New System.Drawing.Size(160, 25)
+        Me.txtInst.Size = New System.Drawing.Size(212, 29)
         Me.txtInst.TabIndex = 3
         '
         'cmbInstituciones
         '
         Me.cmbInstituciones.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.cmbInstituciones.FormattingEnabled = True
-        Me.cmbInstituciones.Location = New System.Drawing.Point(238, 95)
+        Me.cmbInstituciones.Location = New System.Drawing.Point(317, 117)
+        Me.cmbInstituciones.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmbInstituciones.Name = "cmbInstituciones"
-        Me.cmbInstituciones.Size = New System.Drawing.Size(206, 28)
+        Me.cmbInstituciones.Size = New System.Drawing.Size(273, 33)
         Me.cmbInstituciones.TabIndex = 6
         '
         'lblElimina
@@ -80,10 +79,9 @@ Partial Class CambioInstitucion
         Me.lblElimina.AutoSize = True
         Me.lblElimina.Font = New System.Drawing.Font("Segoe UI", 16.25!)
         Me.lblElimina.ForeColor = System.Drawing.Color.White
-        Me.lblElimina.Location = New System.Drawing.Point(159, 29)
-        Me.lblElimina.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblElimina.Location = New System.Drawing.Point(212, 36)
         Me.lblElimina.Name = "lblElimina"
-        Me.lblElimina.Size = New System.Drawing.Size(185, 30)
+        Me.lblElimina.Size = New System.Drawing.Size(242, 38)
         Me.lblElimina.TabIndex = 7
         Me.lblElimina.Text = "Elimina Institución"
         '
@@ -95,10 +93,10 @@ Partial Class CambioInstitucion
         Me.btnElimina.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnElimina.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.btnElimina.ForeColor = System.Drawing.Color.Transparent
-        Me.btnElimina.Location = New System.Drawing.Point(181, 177)
-        Me.btnElimina.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnElimina.Location = New System.Drawing.Point(241, 218)
+        Me.btnElimina.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnElimina.Name = "btnElimina"
-        Me.btnElimina.Size = New System.Drawing.Size(118, 25)
+        Me.btnElimina.Size = New System.Drawing.Size(157, 31)
         Me.btnElimina.TabIndex = 5
         Me.btnElimina.Text = "ELIMINAR"
         Me.btnElimina.UseVisualStyleBackColor = False
@@ -111,20 +109,20 @@ Partial Class CambioInstitucion
         Me.btnRegistra.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnRegistra.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.btnRegistra.ForeColor = System.Drawing.Color.Transparent
-        Me.btnRegistra.Location = New System.Drawing.Point(181, 177)
-        Me.btnRegistra.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnRegistra.Location = New System.Drawing.Point(241, 218)
+        Me.btnRegistra.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnRegistra.Name = "btnRegistra"
-        Me.btnRegistra.Size = New System.Drawing.Size(118, 25)
+        Me.btnRegistra.Size = New System.Drawing.Size(157, 31)
         Me.btnRegistra.TabIndex = 4
         Me.btnRegistra.Text = "&REGISTRAR"
         Me.btnRegistra.UseVisualStyleBackColor = False
         '
         'CambioInstitucion
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(498, 271)
+        Me.ClientSize = New System.Drawing.Size(664, 334)
         Me.Controls.Add(Me.lblElimina)
         Me.Controls.Add(Me.cmbInstituciones)
         Me.Controls.Add(Me.btnElimina)
@@ -134,7 +132,7 @@ Partial Class CambioInstitucion
         Me.Controls.Add(Me.lblIngresa)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "CambioInstitucion"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Ingresa Institucion"
