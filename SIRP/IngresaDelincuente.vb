@@ -5,15 +5,12 @@ Public Class IngresaDelincuente
     Dim id_user, id_int, banda As Integer
     Dim estado, fechaNac, id_comuna, fono As String
 
-
-
     'Ruta para conectar a la DB
     'descomentar segun pc
     'Public conn As SqlConnection = New SqlConnection("Data Source=LAPTOP-6GF7OE4K;Initial Catalog=SIRP;Integrated Security=True")
     Public conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-EUII0N8;User ID=sa;Password=sasa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
 
     'declaracion de variables para realizar consultas SQL
-    Private cmb As SqlCommandBuilder
     Public ds As DataSet = New DataSet
     Public da As SqlDataAdapter
     Public comando As SqlCommand

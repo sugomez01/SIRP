@@ -109,40 +109,6 @@ Public Class IngresoDelito
     End Sub
 
 
-
-    'Public Sub llenaSector()
-    '    comando = New SqlCommand("select * from l_sector where l_id_institucion = " + inst + "", conn)
-    '    ' dr = comando.ExecuteReader
-    '    da = New SqlDataAdapter(comando)
-    '    dt = New DataTable()
-    '    da.Fill(dt)
-    '    cmbSector.DisplayMember = "desc_sector"
-    '    cmbSector.ValueMember = "id_sector"
-    '    cmbSector.DataSource = dt
-    'End Sub
-
-    'Public Sub llenaZona()
-    '    comando = New SqlCommand("select * from l_zona", conn)
-    '    ' dr = comando.ExecuteReader
-    '    da = New SqlDataAdapter(comando)
-    '    dt = New DataTable()
-    '    da.Fill(dt)
-    '    cmbZona.DisplayMember = "desc_zona"
-    '    cmbZona.ValueMember = "id_zona"
-    '    cmbZona.DataSource = dt
-    'End Sub
-
-    'Public Sub llenaComuna()
-    '    comando = New SqlCommand("select * from l_comuna", conn)
-    '    ' dr = comando.ExecuteReader
-    '    da = New SqlDataAdapter(comando)
-    '    dt = New DataTable()
-    '    da.Fill(dt)
-    '    cmbComuna.DisplayMember = "desc_comuna"
-    '    cmbComuna.ValueMember = "id_comuna"
-    '    cmbComuna.DataSource = dt
-    'End Sub
-
     Function validaRut()
         Dim rut As String = txtRut.Text
         Dim digito As String = txtDigito.Text

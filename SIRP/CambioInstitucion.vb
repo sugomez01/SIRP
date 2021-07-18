@@ -1,7 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class CambioInstitucion
-    Dim id_user, id_int, id_tip_user, op As Integer
-    Dim pass, nombre, apellido As String
+    Dim op As Integer
 
     'Ruta para conectar a la DB
     'descomentar segun pc
@@ -9,7 +8,6 @@ Public Class CambioInstitucion
     Public conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-EUII0N8;User ID=sa;Password=sasa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
 
     'declaracion de variables para realizar consultas SQL
-    Private cmb As SqlCommandBuilder
     Public ds As DataSet = New DataSet
     Public da As SqlDataAdapter
     Public comando As SqlCommand

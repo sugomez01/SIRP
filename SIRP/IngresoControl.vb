@@ -100,8 +100,6 @@ Public Class IngresoControl
 
     End Function
 
-    '************************* FUNCIONES PARA VALIDACIONES DE CAMPOS
-    '** VALIDA RUT
 
     Function validaRut()
         Dim rut As String = txtRut.Text
