@@ -129,8 +129,8 @@ Public Class CambioInstitucion
         If txtInst.Text = "" Then
             MsgBox("Debe ingresar Institución!",, "Error")
         ElseIf validaRegistro(consulta) = True Then
-
-            MsgBox("Institución Duplicada",, "Error")
+            MsgBox("Institución ya existe",, "Error")
+            Me.Close()
 
         Else
             'AGREGAR VALIDACION (EXISTE INSTITUCION)
