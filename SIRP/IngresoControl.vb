@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class IngresoControl
-    Dim id_institucion As Integer
+    Dim id_institucion, id_zona, id_sector, id_comuna As Integer
     Dim fechaControl As String
 
     'CONEXION A SQL
@@ -15,35 +15,7 @@ Public Class IngresoControl
     Public dt As DataTable
 
     Private Sub IngresoControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        llenaCombo()
-    End Sub
-    '************************ FUNCIONES PARA LLENAR COMBOBOX
-    Sub llenaCombo()
-        id_institucion = Login.id_int
-
-        comando = New SqlCommand("select * from l_comuna", conn)
-        da = New SqlDataAdapter(comando)
-        dt = New DataTable()
-        da.Fill(dt)
-        cmbComuna.DisplayMember = "desc_comuna"
-        cmbComuna.ValueMember = "id_comuna"
-        cmbComuna.DataSource = dt
-
-        comando = New SqlCommand("select * from l_sector where l_id_institucion = " + id_institucion.ToString() + "", conn)
-        da = New SqlDataAdapter(comando)
-        dt = New DataTable()
-        da.Fill(dt)
-        cmbSector.DisplayMember = "desc_sector"
-        cmbSector.ValueMember = "id_sector"
-        cmbSector.DataSource = dt
-
-        comando = New SqlCommand("select * from l_zona", conn)
-        da = New SqlDataAdapter(comando)
-        dt = New DataTable()
-        da.Fill(dt)
-        cmbZona.DisplayMember = "desc_zona"
-        cmbZona.ValueMember = "id_zona"
-        cmbZona.DataSource = dt
+        llenaComboZona()
     End Sub
 
     Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
@@ -140,6 +112,9 @@ Public Class IngresoControl
 
         Return retorno
     End Function
+
+
+
     Private Sub txtNombre_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtObservaciones.KeyPress
         If Char.IsLetter(e.KeyChar) Then
             e.Handled = False
@@ -164,5 +139,58 @@ Public Class IngresoControl
             e.Handled = True
             MsgBox("Solo puede ingresar números")
         End If
+    End Sub
+
+    Private Sub cmbZona_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbZona.SelectedIndexChanged
+        id_zona = cmbZona.SelectedValue()
+        llenaComboComuna(id_zona)
+    End Sub
+    Private Sub cmbComuna_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbComuna.SelectedIndexChanged
+        id_comuna = cmbComuna.SelectedValue()
+        llenaComboSector(id_zona, id_comuna)
+
+    End Sub
+
+    Private Sub cmbSector_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbSector.SelectedIndexChanged
+        id_sector = cmbSector.SelectedValue()
+    End Sub
+
+    Private Sub txtUbicacion_TextChanged(sender As Object, e As EventArgs) Handles txtUbicacion.TextChanged
+    End Sub
+    '************************ FUNCIONES PARA LLENAR COMBOBOX
+    Sub llenaComboComuna(id_zona As String)
+        id_institucion = Login.id_int
+
+        comando = New SqlCommand("select * from l_comuna where l_id_zona =" + id_zona + "", conn)
+        da = New SqlDataAdapter(comando)
+        dt = New DataTable()
+        da.Fill(dt)
+        cmbComuna.DisplayMember = "desc_comuna"
+        cmbComuna.ValueMember = "id_comuna"
+        cmbComuna.DataSource = dt
+    End Sub
+
+    Sub llenaComboSector(id_zona As String, id_comuna As String)
+        Dim zona, comuna As String
+        zona = id_zona.ToString
+        comuna = id_comuna.ToString
+        comando = New SqlCommand("select * from l_sector where l_id_zona = " + zona + "and l_id_comuna=" + comuna + " and l_id_institucion=" + Login.id_int.ToString, conn)
+        da = New SqlDataAdapter(comando)
+        dt = New DataTable()
+        da.Fill(dt)
+        cmbSector.DisplayMember = "desc_sector"
+        cmbSector.ValueMember = "id_sector"
+        cmbSector.DataSource = dt
+    End Sub
+
+    Sub llenaComboZona()
+        comando = New SqlCommand("select * from l_zona", conn)
+        da = New SqlDataAdapter(comando)
+        dt = New DataTable()
+        da.Fill(dt)
+        cmbZona.DisplayMember = "desc_zona"
+        cmbZona.ValueMember = "id_zona"
+        cmbZona.DataSource = dt
+
     End Sub
 End Class

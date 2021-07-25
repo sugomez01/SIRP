@@ -68,7 +68,7 @@ Public Class IngresaDelincuente
     End Sub
 
     Private Sub cmbBanda_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbBanda.SelectedIndexChanged
-        'banda = cmbBanda.SelectedValue()
+        banda = cmbBanda.SelectedValue()
     End Sub
 
     Public dt As DataTable

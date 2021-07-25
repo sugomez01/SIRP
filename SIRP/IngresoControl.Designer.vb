@@ -56,7 +56,7 @@ Partial Class IngresoControl
         Me.lblTitulo.ForeColor = System.Drawing.Color.White
         Me.lblTitulo.Location = New System.Drawing.Point(419, 20)
         Me.lblTitulo.Name = "lblTitulo"
-        Me.lblTitulo.Size = New System.Drawing.Size(270, 30)
+        Me.lblTitulo.Size = New System.Drawing.Size(342, 38)
         Me.lblTitulo.TabIndex = 0
         Me.lblTitulo.Text = "Ingreso control preventivo"
         '
@@ -67,7 +67,7 @@ Partial Class IngresoControl
         Me.lblRut.ForeColor = System.Drawing.Color.White
         Me.lblRut.Location = New System.Drawing.Point(26, 41)
         Me.lblRut.Name = "lblRut"
-        Me.lblRut.Size = New System.Drawing.Size(36, 20)
+        Me.lblRut.Size = New System.Drawing.Size(46, 25)
         Me.lblRut.TabIndex = 1
         Me.lblRut.Text = "RUT"
         '
@@ -77,7 +77,7 @@ Partial Class IngresoControl
         Me.txtRut.Location = New System.Drawing.Point(171, 37)
         Me.txtRut.MaxLength = 8
         Me.txtRut.Name = "txtRut"
-        Me.txtRut.Size = New System.Drawing.Size(171, 27)
+        Me.txtRut.Size = New System.Drawing.Size(171, 32)
         Me.txtRut.TabIndex = 0
         '
         'txtDigito
@@ -87,7 +87,7 @@ Partial Class IngresoControl
         Me.txtDigito.Location = New System.Drawing.Point(368, 37)
         Me.txtDigito.MaxLength = 1
         Me.txtDigito.Name = "txtDigito"
-        Me.txtDigito.Size = New System.Drawing.Size(41, 27)
+        Me.txtDigito.Size = New System.Drawing.Size(41, 32)
         Me.txtDigito.TabIndex = 1
         '
         'lblNombre
@@ -97,7 +97,7 @@ Partial Class IngresoControl
         Me.lblNombre.ForeColor = System.Drawing.Color.White
         Me.lblNombre.Location = New System.Drawing.Point(26, 127)
         Me.lblNombre.Name = "lblNombre"
-        Me.lblNombre.Size = New System.Drawing.Size(123, 20)
+        Me.lblNombre.Size = New System.Drawing.Size(156, 25)
         Me.lblNombre.TabIndex = 9
         Me.lblNombre.Text = "OBSERVACIONES"
         '
@@ -108,7 +108,7 @@ Partial Class IngresoControl
         Me.lblFecha.ForeColor = System.Drawing.Color.White
         Me.lblFecha.Location = New System.Drawing.Point(26, 85)
         Me.lblFecha.Name = "lblFecha"
-        Me.lblFecha.Size = New System.Drawing.Size(124, 20)
+        Me.lblFecha.Size = New System.Drawing.Size(156, 25)
         Me.lblFecha.TabIndex = 10
         Me.lblFecha.Text = "FECHA CONTROL"
         '
@@ -119,7 +119,7 @@ Partial Class IngresoControl
         Me.lblUbicacion.ForeColor = System.Drawing.Color.White
         Me.lblUbicacion.Location = New System.Drawing.Point(51, 65)
         Me.lblUbicacion.Name = "lblUbicacion"
-        Me.lblUbicacion.Size = New System.Drawing.Size(50, 20)
+        Me.lblUbicacion.Size = New System.Drawing.Size(64, 25)
         Me.lblUbicacion.TabIndex = 11
         Me.lblUbicacion.Text = "CALLE"
         '
@@ -130,7 +130,7 @@ Partial Class IngresoControl
         Me.lblZona.ForeColor = System.Drawing.Color.White
         Me.lblZona.Location = New System.Drawing.Point(51, 108)
         Me.lblZona.Name = "lblZona"
-        Me.lblZona.Size = New System.Drawing.Size(50, 20)
+        Me.lblZona.Size = New System.Drawing.Size(63, 25)
         Me.lblZona.TabIndex = 12
         Me.lblZona.Text = "ZONA"
         '
@@ -141,7 +141,7 @@ Partial Class IngresoControl
         Me.lblComuna.ForeColor = System.Drawing.Color.White
         Me.lblComuna.Location = New System.Drawing.Point(51, 154)
         Me.lblComuna.Name = "lblComuna"
-        Me.lblComuna.Size = New System.Drawing.Size(73, 20)
+        Me.lblComuna.Size = New System.Drawing.Size(93, 25)
         Me.lblComuna.TabIndex = 13
         Me.lblComuna.Text = "COMUNA"
         '
@@ -163,7 +163,7 @@ Partial Class IngresoControl
         Me.txtUbicacion.Location = New System.Drawing.Point(141, 61)
         Me.txtUbicacion.MaxLength = 500
         Me.txtUbicacion.Name = "txtUbicacion"
-        Me.txtUbicacion.Size = New System.Drawing.Size(221, 27)
+        Me.txtUbicacion.Size = New System.Drawing.Size(221, 32)
         Me.txtUbicacion.TabIndex = 4
         '
         'dtpFecha
@@ -174,7 +174,7 @@ Partial Class IngresoControl
         Me.dtpFecha.MaxDate = New Date(2025, 12, 31, 0, 0, 0, 0)
         Me.dtpFecha.MinDate = New Date(1900, 1, 1, 0, 0, 0, 0)
         Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(171, 27)
+        Me.dtpFecha.Size = New System.Drawing.Size(171, 32)
         Me.dtpFecha.TabIndex = 2
         Me.dtpFecha.Value = New Date(2021, 6, 21, 0, 0, 0, 0)
         '
@@ -185,7 +185,7 @@ Partial Class IngresoControl
         Me.lblSector.ForeColor = System.Drawing.Color.White
         Me.lblSector.Location = New System.Drawing.Point(51, 201)
         Me.lblSector.Name = "lblSector"
-        Me.lblSector.Size = New System.Drawing.Size(61, 20)
+        Me.lblSector.Size = New System.Drawing.Size(78, 25)
         Me.lblSector.TabIndex = 20
         Me.lblSector.Text = "SECTOR"
         '
@@ -195,7 +195,7 @@ Partial Class IngresoControl
         Me.cmbZona.FormattingEnabled = True
         Me.cmbZona.Location = New System.Drawing.Point(141, 105)
         Me.cmbZona.Name = "cmbZona"
-        Me.cmbZona.Size = New System.Drawing.Size(221, 28)
+        Me.cmbZona.Size = New System.Drawing.Size(221, 33)
         Me.cmbZona.TabIndex = 5
         '
         'cmbComuna
@@ -204,7 +204,7 @@ Partial Class IngresoControl
         Me.cmbComuna.FormattingEnabled = True
         Me.cmbComuna.Location = New System.Drawing.Point(141, 152)
         Me.cmbComuna.Name = "cmbComuna"
-        Me.cmbComuna.Size = New System.Drawing.Size(221, 28)
+        Me.cmbComuna.Size = New System.Drawing.Size(221, 33)
         Me.cmbComuna.TabIndex = 6
         '
         'cmbSector
@@ -213,7 +213,7 @@ Partial Class IngresoControl
         Me.cmbSector.FormattingEnabled = True
         Me.cmbSector.Location = New System.Drawing.Point(141, 199)
         Me.cmbSector.Name = "cmbSector"
-        Me.cmbSector.Size = New System.Drawing.Size(221, 28)
+        Me.cmbSector.Size = New System.Drawing.Size(221, 33)
         Me.cmbSector.TabIndex = 7
         '
         'btnRegistrar
@@ -236,7 +236,7 @@ Partial Class IngresoControl
         Me.lblGuion.ForeColor = System.Drawing.Color.White
         Me.lblGuion.Location = New System.Drawing.Point(347, 44)
         Me.lblGuion.Name = "lblGuion"
-        Me.lblGuion.Size = New System.Drawing.Size(15, 20)
+        Me.lblGuion.Size = New System.Drawing.Size(20, 25)
         Me.lblGuion.TabIndex = 25
         Me.lblGuion.Text = "-"
         '
@@ -287,7 +287,7 @@ Partial Class IngresoControl
         '
         'IngresoControl
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(51, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1076, 450)

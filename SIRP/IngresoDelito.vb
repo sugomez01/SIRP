@@ -56,7 +56,7 @@ Public Class IngresoDelito
 
     Private Sub cmbComuna_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbComuna.SelectedIndexChanged
         id_comuna = cmbComuna.SelectedValue()
-        llenaComboSector()
+        llenaComboSector(id_zona, id_comuna)
     End Sub
 
     Private Sub txtRut_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtRut.KeyPress
@@ -221,7 +221,7 @@ Public Class IngresoDelito
         cmbComuna.ValueMember = "id_comuna"
         cmbComuna.DataSource = dt
     End Sub
-    Sub llenaComboSector()
+    Sub llenaComboSector(id_zona As String, id_comuna As String)
         Dim zona, comuna As String
         zona = id_zona.ToString
         comuna = id_comuna.ToString
